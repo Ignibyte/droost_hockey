@@ -58,3 +58,5 @@ ddev composer audit --locked
 ```
 
 The historical editor suites intentionally mutate a local restore and expect its original editable forms. Do not run them against a live site. Hockey test credentials now use cryptographic randomness and its editor accounts are blocked in teardown.
+
+The original design ZIP archives are kept private because they contain embedded Git metadata. The extracted design source is included. Public history omits those archives. Drupal package dependencies were updated on 27 October 2026; the observability records still describe the original build.
