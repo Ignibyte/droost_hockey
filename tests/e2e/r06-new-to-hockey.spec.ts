@@ -1,3 +1,4 @@
+import { randomBytes } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { test, expect, type Page, type Browser } from '@playwright/test';
 
@@ -122,8 +123,10 @@ test.beforeAll(() => {
   // The Content editor these tests act as: created once, kept for re-runs.
   const exists = php(`echo (int) (bool) user_load_by_name('${EDITOR}');`);
   if (exists !== '1') {
-    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=r06-${Date.now()}`);
+    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=${randomBytes(32).toString('hex')}`);
   }
+  drush('user:password', EDITOR, randomBytes(32).toString('hex'));
+  drush('user:unblock', EDITOR);
   drush('user:role:add', 'content_editor', EDITOR);
 });
 
@@ -309,4 +312,9 @@ test('AC-5: with no JavaScript, each question still opens to show its answer', a
     await expect(answer(page, question)).toBeVisible();
   }
   await page.context().close();
+});
+
+// Test identities must never remain usable after the suite.
+test.afterAll(() => {
+  drush('user:block', EDITOR);
 });

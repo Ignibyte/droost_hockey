@@ -1,3 +1,4 @@
+import { randomBytes } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -90,8 +91,9 @@ test.beforeAll(() => {
   // The Content editor these tests act as, holding that role and no other.
   const exists = php(`echo (int) (bool) user_load_by_name('${EDITOR}');`);
   if (exists !== '1') {
-    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=r08-${Date.now()}`);
+    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=${randomBytes(32).toString('hex')}`);
   }
+  drush('user:password', EDITOR, randomBytes(32).toString('hex'));
   php(`$u = user_load_by_name('${EDITOR}'); foreach ($u->getRoles(TRUE) as $r) { $u->removeRole($r); } $u->addRole('content_editor'); $u->activate()->save();`);
 });
 
@@ -341,4 +343,9 @@ test('AC-5: every page at 1280 and 390px: no sideways scroll, one h1, labelled f
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+// Test identities must never remain usable after the suite.
+test.afterAll(() => {
+  drush('user:block', EDITOR);
 });

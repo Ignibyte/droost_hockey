@@ -1,3 +1,4 @@
+import { randomBytes } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { test, expect, type Page, type Browser } from '@playwright/test';
 
@@ -96,8 +97,10 @@ async function send(page: Page): Promise<void> {
 test.beforeAll(() => {
   const exists = php(`echo (int) (bool) user_load_by_name('${EDITOR}');`);
   if (exists !== '1') {
-    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=r02-${Date.now()}`);
+    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=${randomBytes(32).toString('hex')}`);
   }
+  drush('user:password', EDITOR, randomBytes(32).toString('hex'));
+  drush('user:unblock', EDITOR);
   drush('user:role:add', 'content_editor', EDITOR);
 });
 
@@ -275,4 +278,9 @@ test('AC-8: a Site details change shows in Contact Info', async ({ browser }) =>
   }
   const page = await visit(browser, '/contact');
   await expect(page.locator('[data-component-id="kchockey:contact_info"]')).toContainText('Kansas City Metro Area');
+});
+
+// Test identities must never remain usable after the suite.
+test.afterAll(() => {
+  drush('user:block', EDITOR);
 });

@@ -1,48 +1,60 @@
-# Drupal CMS
+# droost_hockey
 
-Drupal CMS is a fast-moving open source product that enables site builders to easily create new Drupal sites and extend them with smart defaults, all using their browser.
+KC Hockey is a Drupal CMS example built with Droost. Visit [the demonstration](https://hockey.droost.org).
 
-## Getting started
+## What is here
 
-If you want to use [DDEV](https://ddev.com) (recommended) to run Drupal CMS locally, follow these instructions:
+- `web/modules/custom/kchockey_site`: site-specific Drupal behavior.
+- `web/themes/custom/kchockey`: Single Directory Components and the site theme.
+- `config/sync`: exported demonstration configuration.
+- `droost` and `tools/droost`: the original development workflow and its Composer requirements.
+- `observability`: the historical plans, evaluations, workflow reports, status snapshots and source patches. Start with its subject runbook and series summary.
+- `tests`: the original behavioral suites plus `tests/e2e/demo-safety.spec.ts`.
 
-1. Install DDEV following the [documentation](https://ddev.com/get-started/)
-2. Open the command line and `cd` to the root directory of this project
-3. Run `ddev launch`
+The observability files describe the original build. They retain failed attempts, review limitations and any original truncation notices; they are not results from a fresh security test. The exported artifacts were reviewed for accidental disclosure before this copy was prepared.
 
-To use a different web root, run `ddev config --docroot=new_web_root` _before_ `ddev launch`.
+## Run locally
 
-Drupal CMS has the same system requirements as Drupal core, so you can use your preferred setup to run it locally. [See the Drupal User Guide for more information](https://www.drupal.org/docs/user_guide/en/installation-chapter.html) on how to set up Drupal.
+Use DDEV when available:
 
-### Installation options
-
-The Drupal CMS installer offers a list of features preconfigured with smart defaults. You will be able to customize whatever you choose, and add additional features, once you are logged in.
-
-After the installer is complete, you will land on the dashboard.
-
-If you want to install Drupal CMS using Drush, use the following commands:
-
-```shell
-# Download a site template -- for example, Starter.
-ddev composer require drupal/drupal_cms_starter --update-with-all-dependencies
-
-# Use it to install Drupal.
-ddev drush site:install /var/www/html/recipes/drupal_cms_starter --yes
+```sh
+ddev start
+ddev composer install
+# Obtain a sanitized content/database backup separately; it is not in Git.
+ddev import-db --file=/path/to/sanitized-demo.sql.gz
+ddev drush cache:rebuild
+ddev drush user:login
 ```
 
-## Documentation
+For the historical Droost tooling:
 
-* [Drupal CMS User Guide](https://project.pages.drupalcode.org/drupal_cms/)
-* Learn more about managing a Drupal-based application in the [Drupal User Guide](https://www.drupal.org/docs/user_guide/en/index.html).
+```sh
+ddev composer --working-dir=tools/droost install
+ddev exec tools/droost/vendor/bin/droost workflow:status
+```
 
-## Contributing & Support
+The lockfiles preserve the versions used by these examples. The workflow packages reference their historical development branch. Runtime workflow state and code indexes are intentionally ignored.
 
-[Report issues in the queue](https://drupal.org/node/add/project-issue/drupal_cms), providing as much detail as you can. You can also join the #drupal-cms-support channel in the [Drupal Slack community](https://www.drupal.org/slack).
+Uploaded media, installed dependencies, databases, local settings, salts, passwords and session material are excluded from Git. A database restore is required to reproduce the original Canvas content and content entities. Generate independent settings and credentials for every restore; never reuse a production backup as a public fixture.
 
-Drupal CMS is developed in [a separate repository on Drupal.org](https://www.drupal.org/project/drupal_cms). See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+## Demonstration controls
 
-## License
+- Core mail uses a null transport, and Symfony Mailer Lite delivery is disabled.
+- Webforms are closed. Wild Bills’ inquiry component shows a non-submitting notice while demo notices are enabled.
+- Imported Hockey editor identities are blocked, stripped of roles and anonymized; the sole enabled administrator has a newly generated password. Previous sessions, mail records, contact submissions and logs are removed.
+- Live salts are independent from the local restore and from each other.
+- Public login, registration and password-request routes are blocked at the web server. Administration uses `vendor/bin/drush --uri=https://hockey.droost.org user:login` from the live project root. One-time links are private credentials; do not save them in reports.
+- Only `web/` is served. Database backups, observability and development tooling are not HTTP directories. PHP execution is restricted to the front controller; source/config files are denied.
 
-Drupal CMS and all derivative works are licensed under the [GNU General Public License, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+The Caddy access logs omit request URLs and headers so one-time login tokens are not retained there. These host controls are deployment configuration, not behavior supplied by the theme.
 
-Learn about the [Drupal trademark and logo policy here](https://www.drupal.com/trademark).
+## Checks
+
+```sh
+npm ci
+npx playwright install chromium
+PLAYWRIGHT_BASE_URL=https://droost-hockey.ddev.site:8843 npx playwright test tests/e2e/demo-safety.spec.ts --workers=1
+ddev composer audit --locked
+```
+
+The historical editor suites intentionally mutate a local restore and expect its original editable forms. Do not run them against a live site. Hockey test credentials now use cryptographic randomness and its editor accounts are blocked in teardown.

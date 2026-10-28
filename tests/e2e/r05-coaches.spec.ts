@@ -1,3 +1,4 @@
+import { randomBytes } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { test, expect, type Page, type Browser } from '@playwright/test';
@@ -78,8 +79,10 @@ test.beforeAll(() => {
   // The Content editor these tests act as: created once, kept for re-runs.
   const exists = php(`echo (int) (bool) user_load_by_name('${EDITOR}');`);
   if (exists !== '1') {
-    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=r05-${Date.now()}`);
+    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=${randomBytes(32).toString('hex')}`);
   }
+  drush('user:password', EDITOR, randomBytes(32).toString('hex'));
+  drush('user:unblock', EDITOR);
   drush('user:role:add', 'content_editor', EDITOR);
   deleteTestCoach();
 });
@@ -261,4 +264,9 @@ test("AC-7: a coach's own address forwards to /private-lessons", async ({ reques
     expect(response.status(), route).toBe(301);
     expect(new URL(response.headers()['location'], BASE).pathname, route).toBe('/private-lessons');
   }
+});
+
+// Test identities must never remain usable after the suite.
+test.afterAll(() => {
+  drush('user:block', EDITOR);
 });

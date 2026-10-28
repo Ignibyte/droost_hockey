@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: 486f78b6-50ca-4e88-873b-9ffbf50f339d
 name: 'KC Hockey'
-mail: info@kchockey.com
+mail: admin@example.invalid
 slogan: ''
 page:
   403: /user/login

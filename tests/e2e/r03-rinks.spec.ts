@@ -1,3 +1,4 @@
+import { randomBytes } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { test, expect, type Page, type Browser } from '@playwright/test';
 
@@ -85,8 +86,10 @@ test.beforeAll(() => {
   // The Content editor these tests act as: created once, kept for re-runs.
   const exists = php(`echo (int) (bool) user_load_by_name('${EDITOR}');`);
   if (exists !== '1') {
-    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=r03-${Date.now()}`);
+    drush('user:create', EDITOR, `--mail=${EDITOR}@example.com`, `--password=${randomBytes(32).toString('hex')}`);
   }
+  drush('user:password', EDITOR, randomBytes(32).toString('hex'));
+  drush('user:unblock', EDITOR);
   drush('user:role:add', 'content_editor', EDITOR);
   deleteTestRink();
 });
@@ -243,4 +246,9 @@ test("AC-6: a rink's own address forwards to /rinks", async ({ request }) => {
     expect(response.status(), path).toBe(301);
     expect(new URL(response.headers()['location'], BASE).pathname, path).toBe('/rinks');
   }
+});
+
+// Test identities must never remain usable after the suite.
+test.afterAll(() => {
+  drush('user:block', EDITOR);
 });

@@ -1,6 +1,6 @@
 uuid: 27b1cae4-6c94-490f-8abf-0be445a459bb
 langcode: en
-status: open
+status: closed
 dependencies:
   module:
     - honeypot
@@ -187,7 +187,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -248,7 +248,7 @@ handlers:
     handler_id: email_notification
     label: 'Email to info@kchockey.com'
     notes: ''
-    status: true
+    status: false
     conditions: {  }
     weight: 0
     settings:
