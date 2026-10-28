@@ -1,0 +1,86 @@
+uuid: fb501176-f4bc-40ae-849d-08a4eb6adffd
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: 3a63e8621defeff5
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        name:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Coach Mike Donovan'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        specialty:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Power skating specialist'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        experience:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '15 years coaching, former ECHL player'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        rate:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 75
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        inquire_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: '/contact?subject=Private%20Lessons'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        photo:
+          title: Photo
+          description: "The coach's photo, filling the square; the initials show while it is empty."
+label: 'Coach card'
+id: sdc.kchockey.coach_card
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:coach_card'

@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Amenity tag
+description: 'One of a rink''s amenities, as a small tag.'
+status: stable
+group: Rinks
+props:
+  type: object
+  required:
+    - label
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    label:
+      type: string
+      title: Label
+      description: 'The amenity.'
+      examples:
+        - 'Pro Shop'
+    variant:
+      type: string
+      title: Look
+      description: 'Light on a white card, dark on the home page''s navy band.'
+      enum:
+        - light
+        - dark
+      'meta:enum':
+        light: Light
+        dark: Dark
+      default: light
+      examples:
+        - light

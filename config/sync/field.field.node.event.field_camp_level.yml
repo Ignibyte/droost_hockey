@@ -1,0 +1,19 @@
+uuid: 57c53d3a-e215-42de-9b31-ff07e4546401
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_level
+    - node.type.event
+id: node.event.field_camp_level
+field_name: field_camp_level
+entity_type: node
+bundle: event
+label: 'Skill level'
+description: 'As it should read, for example "All Skill Levels" or "Intermediate/Advanced".'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

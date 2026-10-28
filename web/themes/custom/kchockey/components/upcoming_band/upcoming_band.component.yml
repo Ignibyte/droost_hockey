@@ -1,0 +1,37 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Upcoming camps band
+description: 'The home page''s "Upcoming Action" section: a heading with its gold rule, a link to every camp, and a few camps.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    heading:
+      type: string
+      title: Heading
+      description: 'The section''s heading.'
+      examples:
+        - 'Upcoming Action'
+    link_label:
+      type: string
+      title: Link label
+      description: 'The link beside the heading.'
+      examples:
+        - 'View All Events'
+    link_url:
+      type: string
+      format: uri-reference
+      title: Link
+      description: 'Where the link goes.'
+      examples:
+        - '/camps'
+slots:
+  camps:
+    title: Camps
+    description: 'The camps shown: the "Camps: home page upcoming" block.'

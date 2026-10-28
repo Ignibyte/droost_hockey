@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Contact info
+description: 'The contact page''s email and location, from Site details. Placed by the Contact info block, not by editors.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    heading:
+      type: string
+      title: Heading
+      description: 'The heading over the details.'
+      examples:
+        - 'Contact Info'
+    email:
+      type: string
+      title: Email
+      description: 'Shown as a mail link; the row is left out when empty.'
+      examples:
+        - info@kchockey.com
+    area:
+      type: string
+      title: Location
+      description: 'The area the site serves; the row is left out when empty.'
+      examples:
+        - 'Kansas City Metro Area'
+    note:
+      type: string
+      title: Location note
+      description: 'A line under the location.'
+      examples:
+        - 'We operate out of rinks across KC.'

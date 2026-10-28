@@ -1,0 +1,41 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: First step
+description: 'One numbered step card: an icon, a title and a sentence. Its number comes from its place among the first steps.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    icon:
+      type: string
+      title: Icon
+      description: 'The gold icon above the title.'
+      enum:
+        - ice
+        - shield
+        - sparkles
+      meta:enum:
+        ice: 'Ice (a bowl)'
+        shield: Shield
+        sparkles: Sparkles
+      default: ice
+      examples:
+        - ice
+    title:
+      type: string
+      title: Title
+      description: 'The step''s title.'
+      examples:
+        - 'Find the ice'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence about the step.'
+      examples:
+        - 'Start with a rink that offers learn-to-skate or beginner hockey programs.'

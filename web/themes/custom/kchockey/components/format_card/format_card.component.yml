@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Format card
+description: 'One league format: a gold icon, its level, a title and a description.'
+status: stable
+group: Leagues
+props:
+  type: object
+  required:
+    - title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    icon:
+      type: string
+      title: Icon
+      description: 'The gold icon in the corner.'
+      enum:
+        - users
+        - clock
+        - check_circle
+      meta:enum:
+        users: People
+        clock: Clock
+        check_circle: 'Check in a circle'
+      default: users
+      examples:
+        - users
+    level:
+      type: string
+      title: Level
+      description: 'Who it is for, beside the icon.'
+      examples:
+        - 'All skill levels'
+    title:
+      type: string
+      title: Title
+      description: 'The format''s name.'
+      examples:
+        - 'Recreational'
+    description:
+      type: string
+      title: Description
+      description: 'A sentence or two about the format.'
+      examples:
+        - 'Low-pressure games, new friends, and a reason to leave work on time. A great place to get back on the ice or learn the adult game.'

@@ -1,0 +1,19 @@
+services:
+  kchockey_site.record_forward_subscriber:
+    class: Drupal\kchockey_site\EventSubscriber\RecordForwardSubscriber
+    arguments: ['@current_route_match']
+    tags:
+      - { name: event_subscriber }
+  kchockey_site.camp_calendar:
+    class: Drupal\kchockey_site\CampCalendar
+    arguments: ['@datetime.time']
+  cache_context.kchockey_day:
+    class: Drupal\kchockey_site\Cache\Context\CampDayCacheContext
+    arguments: ['@kchockey_site.camp_calendar']
+    tags:
+      - { name: cache.context }
+  kchockey_site.camp_day_expiry_subscriber:
+    class: Drupal\kchockey_site\EventSubscriber\CampDayExpirySubscriber
+    arguments: ['@kchockey_site.camp_calendar']
+    tags:
+      - { name: event_subscriber }

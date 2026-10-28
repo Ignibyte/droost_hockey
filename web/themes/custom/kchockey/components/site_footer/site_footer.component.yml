@@ -1,0 +1,76 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site footer
+description: 'The footer: the mark, the blurb, the social icons, the Explore menu, the contact details, the copyright and the legal links. The details come from Site details; a missing phone shows no row. Placed by the frame, not by editors.'
+status: stable
+group: Frame
+props:
+  type: object
+  required:
+    - home_url
+    - copyright
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    home_url:
+      type: string
+      format: uri-reference
+      title: Home URL
+      description: Where the mark links.
+      examples:
+        - '/'
+    blurb:
+      type: string
+      title: Blurb
+      description: The paragraph under the mark.
+      examples:
+        - 'Kansas City''s premier hockey resource.'
+    location_line_1:
+      type: string
+      title: Location, first line
+      description: 'The location''s first line.'
+      examples:
+        - 'Kansas City, MO'
+    location_line_2:
+      type: string
+      title: Location, second line
+      description: 'The location''s second line.'
+      examples:
+        - 'The Hockey Capital of the Midwest'
+    email:
+      type: string
+      format: email
+      title: Email
+      description: 'Shown as a mail link.'
+      examples:
+        - 'info@kchockey.com'
+    phone:
+      type: string
+      title: Phone
+      description: Shown as a call link; no row when empty.
+      examples:
+        - '(816) 555-0100'
+    phone_href:
+      type: string
+      format: uri-reference
+      title: Phone link
+      description: The tel link for the phone.
+      examples:
+        - 'tel:+18165550100'
+    copyright:
+      type: string
+      title: Copyright line
+      description: 'The bottom line''s copyright text.'
+      examples:
+        - '© 2026 KCHockey. All rights reserved.'
+slots:
+  social:
+    title: Social links
+    description: One social_link per address that is set.
+  explore:
+    title: Explore links
+    description: The footer menu's links (nav_link, footer), one per item.
+  legal:
+    title: Legal links
+    description: The legal menu's links (nav_link, legal).

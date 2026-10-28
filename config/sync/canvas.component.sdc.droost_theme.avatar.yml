@@ -1,0 +1,72 @@
+uuid: e32cd69b-9e67-482e-9cf1-cc8d6a1cc398
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - droost_theme
+active_version: 34a024fd212d1175
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        name:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Sadie Kowalski'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        role:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Co-Founder & CEO'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        note:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Favorite: Sundown Saison'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        image_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /sites/default/files/sadie.jpg
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions: {  }
+label: Avatar
+id: sdc.droost_theme.avatar
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:avatar'

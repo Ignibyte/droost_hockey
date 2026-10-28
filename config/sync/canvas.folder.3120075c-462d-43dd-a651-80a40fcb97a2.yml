@@ -1,0 +1,25 @@
+uuid: 3120075c-462d-43dd-a651-80a40fcb97a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.kchockey.division_guide
+    - canvas.component.sdc.kchockey.division_row
+    - canvas.component.sdc.kchockey.event_spotlight
+    - canvas.component.sdc.kchockey.format_card
+    - canvas.component.sdc.kchockey.format_section
+    - canvas.component.sdc.kchockey.season_snapshot
+    - canvas.component.sdc.kchockey.start_panel
+    - canvas.component.sdc.kchockey.stat_figure
+name: Leagues
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.kchockey.division_guide
+  - sdc.kchockey.division_row
+  - sdc.kchockey.event_spotlight
+  - sdc.kchockey.format_card
+  - sdc.kchockey.format_section
+  - sdc.kchockey.season_snapshot
+  - sdc.kchockey.start_panel
+  - sdc.kchockey.stat_figure

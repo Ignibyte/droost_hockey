@@ -1,0 +1,36 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Social link
+description: 'A square social icon linking to one of the site''s social addresses. Placed by the frame, not by editors.'
+status: stable
+group: Frame
+props:
+  type: object
+  required:
+    - network
+    - url
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Link HTML attributes.
+    network:
+      type: string
+      title: Network
+      description: Which icon to show.
+      enum:
+        - instagram
+        - twitter
+        - facebook
+      'meta:enum':
+        instagram: Instagram
+        twitter: X / Twitter
+        facebook: Facebook
+      examples:
+        - instagram
+    url:
+      type: string
+      format: uri
+      title: Address
+      description: The profile's address.
+      examples:
+        - 'https://www.instagram.com/kchockey'

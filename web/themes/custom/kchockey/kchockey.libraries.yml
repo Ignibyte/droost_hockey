@@ -1,0 +1,6 @@
+# css/kchockey.css is compiled from css/src/kchockey.css by `npm run build`
+# and committed, so the site never needs node to serve the theme.
+global:
+  css:
+    theme:
+      css/kchockey.css: { minified: true }

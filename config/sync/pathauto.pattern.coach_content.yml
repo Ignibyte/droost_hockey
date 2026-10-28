@@ -1,0 +1,23 @@
+uuid: 1504dc23-b19a-4474-9024-639c1c3fa6e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.coach
+  module:
+    - node
+id: coach_content
+label: Coach
+type: 'canonical_entities:node'
+pattern: '/private-lessons/[node:title]'
+selection_criteria:
+  6f1c3a52-8d4e-4b7a-9c21-5e0d7b3a9f64:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      coach: coach
+selection_logic: and
+weight: -5
+relationships: {  }

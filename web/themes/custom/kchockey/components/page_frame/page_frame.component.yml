@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Page frame
+description: 'The site''s page shell: the header, the main content and the footer, full height. Placed by page.html.twig, not by editors.'
+status: stable
+group: Frame
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+slots:
+  header:
+    title: Header
+    description: The site header.
+  content:
+    title: Content
+    description: The page's main content.
+  footer:
+    title: Footer
+    description: The site footer.

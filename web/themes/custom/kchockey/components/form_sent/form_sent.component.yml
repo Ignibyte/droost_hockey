@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Form sent
+description: 'The panel that replaces a form once it is sent: a heading, a thank-you and a link back to an empty form. Placed by the contact form, not by editors.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    heading:
+      type: string
+      title: Heading
+      description: 'Says the form was sent.'
+      examples:
+        - 'Message Sent!'
+    message:
+      type: string
+      title: Message
+      description: 'The thank-you under the heading.'
+      examples:
+        - 'Thanks for reaching out. We''ll get back to you between periods.'
+    back_url:
+      type: string
+      format: uri-reference
+      title: Back link
+      description: 'Where the button goes: the empty form. The button is left out when empty.'
+      examples:
+        - /contact
+    back_label:
+      type: string
+      title: Back label
+      description: 'The button''s words.'
+      examples:
+        - 'Send Another'

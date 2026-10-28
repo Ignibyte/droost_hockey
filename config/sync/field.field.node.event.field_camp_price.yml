@@ -1,0 +1,23 @@
+uuid: c95db168-d95b-4cc7-9750-25ff1e00b7b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_price
+    - node.type.event
+id: node.event.field_camp_price
+field_name: field_camp_price
+entity_type: node
+bundle: event
+label: Price
+description: 'In whole dollars. 0 shows as free.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

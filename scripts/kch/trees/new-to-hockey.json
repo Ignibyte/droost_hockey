@@ -1,0 +1,182 @@
+{
+  "items": [
+    {
+      "uuid": "3f7900e2-47e9-4e18-89c6-a230b110a931",
+      "component_id": "sdc.kchockey.page_intro",
+      "inputs": {
+        "variant": "guide_lines",
+        "eyebrow": "Your first shift starts here",
+        "heading": "New to",
+        "heading_accent": "Hockey?",
+        "text": "Every hockey player starts somewhere. Here is the no-jargon guide to finding the right rink, gear, and first skate in Kansas City."
+      }
+    },
+    {
+      "uuid": "2a6c6fbc-dedb-452b-9c7f-590a9370c0aa",
+      "component_id": "sdc.kchockey.first_steps",
+      "inputs": {}
+    },
+    {
+      "uuid": "398b15ad-db07-4343-95ea-27dfdaa877a6",
+      "component_id": "sdc.kchockey.first_step",
+      "parent_uuid": "2a6c6fbc-dedb-452b-9c7f-590a9370c0aa",
+      "slot": "steps",
+      "inputs": {
+        "icon": "ice",
+        "title": "Find the ice",
+        "text": "Start with a rink that offers learn-to-skate or beginner hockey programs."
+      }
+    },
+    {
+      "uuid": "800d4be1-6206-495b-bad8-d8ec78f6823c",
+      "component_id": "sdc.kchockey.first_step",
+      "parent_uuid": "2a6c6fbc-dedb-452b-9c7f-590a9370c0aa",
+      "slot": "steps",
+      "inputs": {
+        "icon": "shield",
+        "title": "Get fitted",
+        "text": "Ask the rink about rental gear or a proper equipment fitting before buying."
+      }
+    },
+    {
+      "uuid": "6f1d2265-b9b9-4c86-8e10-cd1d1f322efc",
+      "component_id": "sdc.kchockey.first_step",
+      "parent_uuid": "2a6c6fbc-dedb-452b-9c7f-590a9370c0aa",
+      "slot": "steps",
+      "inputs": {
+        "icon": "sparkles",
+        "title": "Take the first stride",
+        "text": "Book an intro class, clinic, or private lesson and have fun learning."
+      }
+    },
+    {
+      "uuid": "60075ad0-a65f-498f-b6f1-9cba8b6ec34d",
+      "component_id": "sdc.kchockey.question_section",
+      "inputs": {
+        "intro_width": "standard"
+      }
+    },
+    {
+      "uuid": "5ccce859-393b-4407-895a-ebaf38b76dc6",
+      "component_id": "sdc.kchockey.question_intro",
+      "parent_uuid": "60075ad0-a65f-498f-b6f1-9cba8b6ec34d",
+      "slot": "intro",
+      "inputs": {
+        "eyebrow": "The beginner's bench",
+        "eyebrow_icon": "help",
+        "heading": "Questions?",
+        "heading_size": "large",
+        "heading_line_2": "We've got you.",
+        "text": "No question is too basic. Hockey has a lot of gear, lingo, and rink schedules to decode. Start with the answers below, then reach out if you still need a hand.",
+        "button_label": "Find a beginner rink",
+        "button_url": "/rinks"
+      }
+    },
+    {
+      "uuid": "86b9eb58-26df-4a9b-b6cb-4f5a474cb578",
+      "component_id": "sdc.kchockey.checklist",
+      "parent_uuid": "5ccce859-393b-4407-895a-ebaf38b76dc6",
+      "slot": "checklist",
+      "inputs": {
+        "layout": "stacked"
+      }
+    },
+    {
+      "uuid": "e8565fde-ea4b-4a04-9aba-453b4d45475e",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "86b9eb58-26df-4a9b-b6cb-4f5a474cb578",
+      "slot": "items",
+      "inputs": {
+        "icon": "circle",
+        "text": "No skating experience required"
+      }
+    },
+    {
+      "uuid": "15c73be3-3e1d-4fa2-843b-edea4ad5af21",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "86b9eb58-26df-4a9b-b6cb-4f5a474cb578",
+      "slot": "items",
+      "inputs": {
+        "icon": "circle",
+        "text": "Rental gear is available at many rinks"
+      }
+    },
+    {
+      "uuid": "27b4d07f-80ce-45f3-af81-d111b8cff3de",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "86b9eb58-26df-4a9b-b6cb-4f5a474cb578",
+      "slot": "items",
+      "inputs": {
+        "icon": "circle",
+        "text": "Programs for kids and adults"
+      }
+    },
+    {
+      "uuid": "94c3a35f-d850-4fc8-a548-6093e5e749e5",
+      "component_id": "sdc.kchockey.faq_accordion",
+      "parent_uuid": "60075ad0-a65f-498f-b6f1-9cba8b6ec34d",
+      "slot": "questions",
+      "inputs": {}
+    },
+    {
+      "uuid": "16db5a58-8291-40bd-8f08-f91c35110073",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "94c3a35f-d850-4fc8-a548-6093e5e749e5",
+      "slot": "items",
+      "inputs": {
+        "question": "What age can my child start hockey?",
+        "answer": "Most KC rinks welcome skaters as young as three through introductory programs. Your child does not need to know how to skate first. Learn-to-skate classes are a friendly first step, and coaches will help you choose the right next program when they are ready."
+      }
+    },
+    {
+      "uuid": "c1194fd1-b39a-46b3-ae08-5e7fe41d8d0c",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "94c3a35f-d850-4fc8-a548-6093e5e749e5",
+      "slot": "items",
+      "inputs": {
+        "question": "What equipment do we need to begin?",
+        "answer": "A helmet with a full face cage, skates, shoulder and elbow pads, hockey pants, shin guards, gloves, and a stick are the usual basics. Many local programs offer equipment rentals or starter packages, so you do not need to buy everything before your first skate."
+      }
+    },
+    {
+      "uuid": "35167fe0-1220-4166-b721-fe6300b529fa",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "94c3a35f-d850-4fc8-a548-6093e5e749e5",
+      "slot": "items",
+      "inputs": {
+        "question": "Does my player need to know how to skate?",
+        "answer": "Not at all. Hockey starts with skating, stopping, and feeling comfortable on the ice. A learn-to-skate class or beginner clinic is designed for brand-new skaters and builds those skills before players join a team."
+      }
+    },
+    {
+      "uuid": "a7259299-b936-472a-bde7-2a81604ea0dd",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "94c3a35f-d850-4fc8-a548-6093e5e749e5",
+      "slot": "items",
+      "inputs": {
+        "question": "How much does it cost to get started?",
+        "answer": "Introductory classes vary by rink, but most families can try a first session for a modest registration fee. Ask about rental equipment, seasonal packages, and scholarship options before purchasing gear. Our rink directory is a good place to compare programs."
+      }
+    },
+    {
+      "uuid": "c5f656dc-18b0-4699-b09a-d289b6783e3d",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "94c3a35f-d850-4fc8-a548-6093e5e749e5",
+      "slot": "items",
+      "inputs": {
+        "question": "Is hockey safe for kids?",
+        "answer": "Hockey has contact and speed, but youth programs teach body control, awareness, and safe play from day one. Properly fitted equipment, certified coaches, and age-appropriate rules are all part of a strong program. Talk with the coach about your child's experience level and comfort."
+      }
+    },
+    {
+      "uuid": "bbd08ddc-bbcf-49d8-bf36-47028613c8ad",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "94c3a35f-d850-4fc8-a548-6093e5e749e5",
+      "slot": "items",
+      "inputs": {
+        "question": "What is the difference between a clinic, camp, and league?",
+        "answer": "A clinic focuses on one skill or topic, like skating or shooting. A camp usually combines several skills over multiple days. A league is a season of practices and games with a team. New players often start with lessons or learn-to-skate, then move into a league when they are ready."
+      }
+    }
+  ]
+}

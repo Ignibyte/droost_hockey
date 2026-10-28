@@ -1,0 +1,101 @@
+uuid: 805309f2-0691-4784-8b3a-ffeeeb601ec8
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: c270076cd917c616
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Summer Power Skating Camp'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        summary:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Join the biggest power skating development camp in the Midwest. Limited spots available for the upcoming session.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        location:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Pepsi Ice Midwest'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        ages:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 8–14
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        price:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 275
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        register_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: '/contact?subject=Camp%20Inquiry'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        date:
+          title: Date
+          description: 'The camp''s dates as the design writes them ("July 28–Aug 1").'
+        image:
+          title: Photo
+          description: "The camp's photo, shown in grey until hovered."
+label: 'Featured camp'
+id: sdc.kchockey.featured_camp
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:featured_camp'

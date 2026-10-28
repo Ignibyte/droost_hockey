@@ -1,0 +1,49 @@
+uuid: c0c1afe1-0877-4a59-b2db-ce4debf3bf7e
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+    - options
+  theme:
+    - kchockey
+active_version: af79c862036a1799
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        network:
+          required: true
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: instagram
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 16
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'https://www.instagram.com/kchockey'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Social link'
+id: sdc.kchockey.social_link
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:social_link'

@@ -1,0 +1,96 @@
+uuid: de280c8f-526b-41a4-b717-05d92bbafafa
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: 2222809bfc56001b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Error 404'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Off the'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading_accent:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Ice
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'The page you were looking for is not here.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Back to Home'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Not found'
+id: sdc.kchockey.not_found
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:not_found'

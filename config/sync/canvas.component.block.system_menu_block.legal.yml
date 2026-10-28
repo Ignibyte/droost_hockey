@@ -1,0 +1,27 @@
+uuid: e89db340-0cab-4070-b3b0-b39fed2b7829
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.legal
+  module:
+    - system
+active_version: ff4e292c4e7039fa
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:legal'
+        label: Legal
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+label: Legal
+id: block.system_menu_block.legal
+provider: system
+source: block
+source_local_id: 'system_menu_block:legal'

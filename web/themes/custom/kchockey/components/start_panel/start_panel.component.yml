@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Start panel
+description: 'A bordered card: a gold eyebrow with a trophy, a heading, a sentence or two and a row of checks, beside a season snapshot. One above the other on narrow screens.'
+status: stable
+group: Leagues
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'The small gold line above the heading.'
+      examples:
+        - 'Start here'
+    heading:
+      type: string
+      title: Heading
+      description: 'The panel''s heading.'
+      examples:
+        - 'A team for every stage.'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence or two under the heading.'
+      examples:
+        - 'KC youth hockey has room for first-time skaters, weekend players, and serious competitors. Choose a program that matches your player''s age, experience, and goals, then let the rink handle the rest.'
+slots:
+  checklist:
+    title: Checklist
+    description: 'A checklist in a row, under the text.'
+  snapshot:
+    title: Snapshot
+    description: 'A season snapshot, beside the words.'

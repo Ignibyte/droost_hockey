@@ -1,0 +1,33 @@
+uuid: 62978e22-ea8f-4ec3-a977-b31522793b6f
+langcode: en
+status: false
+dependencies:
+  theme:
+    - kchockey
+active_version: 575d74c3f6d9e19c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Filter By:'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        choices:
+          title: Choices
+          description: 'The filter links, "All Events" first.'
+label: 'Camp filter'
+id: sdc.kchockey.camp_filter
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:camp_filter'

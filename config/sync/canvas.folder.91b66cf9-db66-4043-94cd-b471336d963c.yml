@@ -1,0 +1,17 @@
+uuid: 91b66cf9-db66-4043-94cd-b471336d963c
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.kchockey.faq_accordion
+    - canvas.component.sdc.kchockey.faq_item
+    - canvas.component.sdc.kchockey.question_intro
+    - canvas.component.sdc.kchockey.question_section
+name: Questions
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.kchockey.faq_accordion
+  - sdc.kchockey.faq_item
+  - sdc.kchockey.question_intro
+  - sdc.kchockey.question_section

@@ -1,0 +1,22 @@
+uuid: f1809f88-9366-4474-94ed-885ca007713c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+_core:
+  default_config_hash: B8hZEctzrZ4_85e7Ry9CZypJCy4qwRvP3cRy0-Mg8_Y
+id: droost_theme_tabs
+theme: droost_theme
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: tabs
+  label_display: '0'
+  provider: system
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: No camps found
+description: 'What /camps shows when a filter matches no camp: a dashed panel and a link back to every camp.'
+status: stable
+group: Camps
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    heading:
+      type: string
+      title: Heading
+      description: 'The panel''s heading.'
+      examples:
+        - 'No camps found'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence under the heading.'
+      examples:
+        - 'Try adjusting your filters to see more events.'
+    reset_label:
+      type: string
+      title: Reset label
+      description: 'The link back to every camp.'
+      examples:
+        - 'Reset Filters'
+    reset_url:
+      type: string
+      format: uri-reference
+      title: Reset link
+      description: 'The unfiltered listing.'
+      examples:
+        - '/camps'

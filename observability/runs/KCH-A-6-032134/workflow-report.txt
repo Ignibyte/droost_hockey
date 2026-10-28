@@ -1,0 +1,21 @@
+Workflow run run-c00b866e6506
+  started 2026-10-21T07:12:58+00:00 · effort low · mode agentic · lead autonomous · browser none · tasks claude-code
+  ✓ plan: passed
+  ✓ code: passed
+      phpcs          passed
+      phpstan        passed
+      eslint         off — by preset low
+      stylelint      off — by preset low
+      prettier       off — by preset low
+      phpunit        off — by preset low
+      mutation       off — by preset low
+      coverage       off — by preset low
+      house_rules    passed
+      custom:component_lint passed
+  ✓ test: passed
+      playwright     passed — [the run `droost workflow:specs` recorded at 2026-10-21T08:18:24+00:00, on this tree: not run again]
+      parity         passed
+      house_rules    passed
+  ✓ complete: passed
+      wiki_fresh     off — by preset low
+  criteria: 16 verified by a test, 0 manual, 0 unverified

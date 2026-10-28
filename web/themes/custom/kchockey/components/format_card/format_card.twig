@@ -1,0 +1,19 @@
+{% set icons = {
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/>',
+  clock: '<path d="M12 6v6h4.5"/><circle cx="12" cy="12" r="10"/>',
+  check_circle: '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+} %}
+<div{{ attributes.addClass('bg-card', 'border', 'border-border', 'p-7', 'group', 'hover:border-primary', 'hover:shadow-lg', 'transition-all') }}>
+  <div class="flex items-start justify-between mb-7">
+    <div class="w-12 h-12 bg-accent/15 text-accent flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ (icons[icon] ?? icons.users)|raw }}</svg>
+    </div>
+    {% if level %}
+      <span class="text-xs font-bold uppercase tracking-wider text-accent">{{ level }}</span>
+    {% endif %}
+  </div>
+  <h3 class="font-serif text-2xl font-bold uppercase tracking-tight mb-3 group-hover:text-primary transition-colors">{{ title }}</h3>
+  {% if description %}
+    <p class="text-sm text-muted-foreground leading-relaxed">{{ description }}</p>
+  {% endif %}
+</div>

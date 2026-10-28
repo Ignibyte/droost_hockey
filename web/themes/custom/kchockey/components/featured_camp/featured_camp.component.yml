@@ -1,0 +1,58 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Featured camp
+description: 'The home page''s featured camp: the red "Featured Camp" tag, title, summary, Date, Location, Ages and Price, "Register Now", and the camp''s photo captioned "Level Up."'
+status: stable
+group: Camps
+props:
+  type: object
+  required:
+    - title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    title:
+      type: string
+      title: Title
+      description: 'The camp''s name.'
+      examples:
+        - 'Summer Power Skating Camp'
+    summary:
+      type: string
+      title: Summary
+      description: 'A sentence or two about the camp.'
+      examples:
+        - 'Join the biggest power skating development camp in the Midwest. Limited spots available for the upcoming session.'
+    location:
+      type: string
+      title: Location
+      description: 'The name of the rink the camp is held at.'
+      examples:
+        - 'Pepsi Ice Midwest'
+    ages:
+      type: string
+      title: Ages
+      description: 'Who it is for, as it should read.'
+      examples:
+        - '8–14'
+    price:
+      type: integer
+      title: Price
+      description: 'In whole dollars; 0 reads "Free".'
+      examples:
+        - 275
+    register_url:
+      type: string
+      format: uri-reference
+      title: Register link
+      description: 'Where "Register Now" goes: the contact form with Camp Inquiry chosen, unless set.'
+      examples:
+        - '/contact?subject=Camp%20Inquiry'
+slots:
+  date:
+    title: Date
+    description: 'The camp''s dates as the design writes them ("July 28–Aug 1").'
+  image:
+    title: Photo
+    description: 'The camp''s photo, shown in grey until hovered.'

@@ -1,0 +1,20 @@
+Workflow run run-800db1ae3b86
+  started 2026-10-20T21:31:59-05:00 · effort low · mode agentic · lead autonomous · browser none · tasks claude-code
+  ✓ plan: passed
+  ✓ code: passed
+      phpcs          passed
+      phpstan        passed
+      eslint         off — by preset low
+      stylelint      off — by preset low
+      prettier       off — by preset low
+      phpunit        off — by preset low
+      mutation       off — by preset low
+      coverage       off — by preset low
+      house_rules    reported — report — house_rules — 1 break(s) of the house rules (HR1): web/themes/custom/kchockey/templates/page.html.twig (HR1)
+      custom:component_lint passed
+  ✗ test: failed
+      playwright     passed — [the run `droost workflow:specs` recorded at 2026-10-20T22:01:42-05:00, on this tree: not run again]
+      parity         error-tool-missing — could not run: /var/www/html/vendor/bin/droost-parity judge --reference droost/parity --scope frame --json [budget spent after 2 attempt(s) — LAST VERDICT, not a re-measurement]
+      house_rules    reported — report — house_rules — 1 break(s) of the house rules (HR1): web/themes/custom/kchockey/templates/page.html.twig (HR1)
+  • complete: pending
+  criteria: 13 verified by a test, 0 manual, 0 unverified

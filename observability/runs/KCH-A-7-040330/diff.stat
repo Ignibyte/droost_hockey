@@ -1,0 +1,9 @@
+ ...folder.2c27e259-99ff-4efd-b174-a1908c1ade1e.yml |  2 +
+ ...folder.ba183539-1f97-4f94-b2b2-5da47f2c8d29.yml |  4 ++
+ config/sync/user.role.content_editor.yml           |  8 +++
+ config/sync/workflows.workflow.basic_editorial.yml |  2 +
+ scripts/kch/trees/private-lessons.json             | 72 ++++++++++++++++++++++
+ web/modules/custom/kchockey_site/README.md         |  4 +-
+ web/themes/custom/kchockey/README.md               | 30 ++++++++-
+ web/themes/custom/kchockey/css/kchockey.css        |  2 +-
+ 8 files changed, 119 insertions(+), 5 deletions(-)

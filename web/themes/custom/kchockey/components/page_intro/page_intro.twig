@@ -1,0 +1,77 @@
+{% set look = variant|default('glow') %}
+{% set guide = look starts with 'guide_' %}
+
+{% if guide %}
+  {% set patterns = {
+    guide_lines: 'background-image: repeating-linear-gradient(135deg, transparent, transparent 18px, #ffffff 18px, #ffffff 20px)',
+    guide_dots: 'background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 18px 18px',
+    guide_diagonal: 'background-image: repeating-linear-gradient(45deg, transparent, transparent 12px, #ffffff 12px, #ffffff 14px)',
+  } %}
+  {% set rings = {
+    guide_lines: '-right-20 -top-28 border-[32px] border-accent/10',
+    guide_dots: 'right-[-5rem] top-[-8rem] border-[28px] border-accent/15',
+    guide_diagonal: 'left-[-6rem] bottom-[-11rem] border-[30px] border-accent/15',
+  } %}
+  <div{{ attributes.addClass('bg-foreground', 'text-background', 'py-16', 'md:py-20', 'relative', 'overflow-hidden', 'border-b-4', 'border-accent') }}>
+    <div class="absolute inset-0 opacity-10" style="{{ patterns[look] }}"></div>
+    <div class="absolute w-80 h-80 rounded-full {{ rings[look] }}"></div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl animate-rise-short [--kch-rise-from:20px]">
+        {% if eyebrow %}
+          <p class="text-accent font-bold uppercase tracking-[0.22em] text-sm mb-5">{{ eyebrow }}</p>
+        {% endif %}
+        <h1 class="text-5xl md:text-7xl font-serif font-bold uppercase tracking-tight leading-[0.9] text-white mb-6">
+          {{ heading }}{% if heading_accent %}<br><span class="text-accent">{{ heading_accent }}</span>{% endif %}
+        </h1>
+        {% if text %}
+          <p class="text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed">{{ text }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+{% else %}
+  {% set dark = look != 'light' %}
+  {% set centred = look != 'photo' %}
+  {% if look == 'photo' %}
+    {% set band = ['bg-foreground', 'text-background', 'py-16', 'relative', 'overflow-hidden'] %}
+  {% elseif look == 'glow' %}
+    {% set band = ['bg-foreground', 'text-background', 'py-16', 'relative', 'overflow-hidden', 'border-b-4', 'border-accent'] %}
+  {% elseif look == 'light' %}
+    {% set band = ['bg-muted', 'py-16', 'border-b', 'border-border'] %}
+  {% else %}
+    {% set band = ['bg-foreground', 'py-16', 'relative', 'overflow-hidden'] %}
+  {% endif %}
+  <div{{ attributes.addClass(band) }}>
+    {% if look == 'photo' %}
+      {% if image.src %}
+        <div class="absolute inset-0 z-0 opacity-20 mix-blend-overlay bg-cover bg-center" style="background-image: url('{{ image.src }}')"></div>
+      {% endif %}
+      <div class="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-transparent z-0"></div>
+    {% elseif look == 'glow' %}
+      <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-2xl transform -translate-x-1/2 translate-y-1/2"></div>
+    {% elseif look == 'stripes' %}
+      <div class="absolute top-0 right-0 w-full h-full opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #ffffff 10px, #ffffff 20px)"></div>
+    {% endif %}
+    <div class="container mx-auto px-4{{ dark ? ' relative z-10' }}{{ centred ? ' text-center' }}">
+      {% if not centred %}<div class="max-w-2xl">{% endif %}
+        {% if eyebrow %}
+          <p class="text-accent font-bold uppercase tracking-[0.22em] text-sm mb-5">{{ eyebrow }}</p>
+        {% endif %}
+        <h1 class="text-4xl md:text-6xl font-serif font-bold uppercase tracking-tight mb-4{{ look == 'light' ? ' text-foreground' }}{{ look == 'stripes' ? ' text-white' }}">
+          {{ heading }}{% if heading_accent %}<br><span class="text-accent">{{ heading_accent }}</span>{% endif %}
+        </h1>
+        {% if text %}
+          {% if look == 'photo' %}
+            <p class="text-white/80 text-lg leading-relaxed">{{ text }}</p>
+          {% elseif look == 'light' %}
+            <p class="text-muted-foreground text-lg max-w-2xl mx-auto">{{ text }}</p>
+          {% else %}
+            <p class="text-white/80 text-lg max-w-2xl mx-auto">{{ text }}</p>
+          {% endif %}
+        {% endif %}
+      {% if not centred %}</div>{% endif %}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Contact section
+description: 'The contact page''s body: a narrow column of contact details beside a card holding the form.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - form_heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    form_heading:
+      type: string
+      title: Form heading
+      description: 'The heading over the form''s card.'
+      examples:
+        - 'Send a Message'
+slots:
+  aside:
+    title: Beside the form
+    description: 'The narrow column: contact details, notes.'
+  form:
+    title: Form
+    description: 'The card''s content: the contact form.'

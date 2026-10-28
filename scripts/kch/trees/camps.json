@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "uuid": "7633c411-5705-4ffb-a597-dbedef655796",
+      "component_id": "sdc.kchockey.page_intro",
+      "inputs": {
+        "variant": "photo",
+        "heading": "Camps & Clinics",
+        "text": "From learn-to-skate to elite power skating. Find the right development program to elevate your game this season.",
+        "image": {
+          "target_id": "__MEDIA_CAMPS__"
+        }
+      }
+    },
+    {
+      "uuid": "8db3a231-73dd-4cef-86a4-b6760c8a3eab",
+      "component_id": "sdc.kchockey.camps_section",
+      "inputs": {}
+    },
+    {
+      "uuid": "c41f7a2e-9b3d-4e85-a6f0-2d8e1b7c5a93",
+      "component_id": "block.kchockey_site_camp_filter",
+      "parent_uuid": "8db3a231-73dd-4cef-86a4-b6760c8a3eab",
+      "slot": "content",
+      "inputs": {
+        "label": "Camp filter",
+        "label_display": "0"
+      }
+    },
+    {
+      "uuid": "73e781e0-0dcf-4da3-a3d9-0c857831a4ea",
+      "component_id": "block.views_block.camps-listing",
+      "parent_uuid": "8db3a231-73dd-4cef-86a4-b6760c8a3eab",
+      "slot": "content",
+      "inputs": {
+        "label": "Camps: listing",
+        "label_display": "0",
+        "views_label": "",
+        "items_per_page": null
+      }
+    }
+  ]
+}

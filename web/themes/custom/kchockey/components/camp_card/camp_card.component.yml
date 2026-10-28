@@ -1,0 +1,61 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Camp card
+description: 'A camp on /camps: the "Featured Event" band when featured, the title, date, rink, ages and level, then the price and "Register".'
+status: stable
+group: Camps
+props:
+  type: object
+  required:
+    - title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    title:
+      type: string
+      title: Title
+      description: 'The camp''s name.'
+      examples:
+        - 'Summer Power Skating Camp'
+    location:
+      type: string
+      title: Location
+      description: 'The name of the rink the camp is held at.'
+      examples:
+        - 'Pepsi Ice Midwest'
+    ages:
+      type: string
+      title: Ages
+      description: 'Who it is for, as it should read.'
+      examples:
+        - '8–14'
+    level:
+      type: string
+      title: Level
+      description: 'The skill level, as it should read.'
+      examples:
+        - 'All Skill Levels'
+    price:
+      type: integer
+      title: Price
+      description: 'In whole dollars; 0 reads "FREE".'
+      examples:
+        - 275
+    featured:
+      type: boolean
+      title: Featured
+      description: 'Carries the gold "Featured Event" band.'
+      examples:
+        - true
+    register_url:
+      type: string
+      format: uri-reference
+      title: Register link
+      description: 'Where "Register" goes: the contact form with Camp Inquiry chosen, unless set.'
+      examples:
+        - '/contact?subject=Camp%20Inquiry'
+slots:
+  date:
+    title: Date
+    description: 'The camp''s dates as the design writes them ("July 28–Aug 1").'

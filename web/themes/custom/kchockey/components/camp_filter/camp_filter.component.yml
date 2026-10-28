@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Camp filter
+description: 'The "Filter By:" bar over the camps: its label, then a filter link per program.'
+status: stable
+group: Camps
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    label:
+      type: string
+      title: Label
+      description: 'The words before the choices.'
+      examples:
+        - 'Filter By:'
+slots:
+  choices:
+    title: Choices
+    description: 'The filter links, "All Events" first.'

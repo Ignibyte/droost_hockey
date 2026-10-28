@@ -1,0 +1,60 @@
+uuid: 3faee93a-d170-436f-8a5b-58e30f90cb8f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: 7fdd1ffa8b54f17d
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Start here'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A team for every stage.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "KC youth hockey has room for first-time skaters, weekend players, and serious competitors. Choose a program that matches your player's age, experience, and goals, then let the rink handle the rest."
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        checklist:
+          title: Checklist
+          description: 'A checklist in a row, under the text.'
+        snapshot:
+          title: Snapshot
+          description: 'A season snapshot, beside the words.'
+label: 'Start panel'
+id: sdc.kchockey.start_panel
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:start_panel'

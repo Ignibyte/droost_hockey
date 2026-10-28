@@ -1,0 +1,49 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Coach card
+description: 'A coach on /private-lessons: the photo (or the initials worked out from the name), name, specialty, experience, the hourly rate and "Inquire".'
+status: stable
+group: Coaches
+props:
+  type: object
+  required:
+    - name
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    name:
+      type: string
+      title: Name
+      description: 'The coach''s name as it should read; its initials stand in for a photo ("MD" for "Coach Mike Donovan": a leading "Coach" is dropped).'
+      examples:
+        - 'Coach Mike Donovan'
+    specialty:
+      type: string
+      title: Specialty
+      description: 'What the coach teaches.'
+      examples:
+        - 'Power skating specialist'
+    experience:
+      type: string
+      title: Experience
+      description: 'A line on the coach''s background.'
+      examples:
+        - '15 years coaching, former ECHL player'
+    rate:
+      type: integer
+      title: Rate
+      description: 'In whole dollars per hour.'
+      examples:
+        - 75
+    inquire_url:
+      type: string
+      format: uri-reference
+      title: Inquire link
+      description: 'Where "Inquire" goes: the contact form with Private Lessons chosen, unless set.'
+      examples:
+        - '/contact?subject=Private%20Lessons'
+slots:
+  photo:
+    title: Photo
+    description: 'The coach''s photo, filling the square; the initials show while it is empty.'

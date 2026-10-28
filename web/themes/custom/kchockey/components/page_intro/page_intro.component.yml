@@ -1,0 +1,66 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Page intro
+description: 'The band that opens a page: heading, optional eyebrow, accented second line and text, on one of the site''s backgrounds.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    variant:
+      type: string
+      title: Background
+      description: 'The band''s look. Photo, Glow, Light and Stripes are short bands; the three Guide looks are tall ones with an eyebrow and an accented second line.'
+      enum:
+        - photo
+        - glow
+        - light
+        - stripes
+        - guide_lines
+        - guide_dots
+        - guide_diagonal
+      'meta:enum':
+        photo: 'Photo (dark, faded image, left aligned)'
+        glow: 'Glow (dark, centred, gold rule)'
+        light: 'Light (pale, centred)'
+        stripes: 'Stripes (dark, centred)'
+        guide_lines: 'Guide: fine lines'
+        guide_dots: 'Guide: dots'
+        guide_diagonal: 'Guide: diagonal lines'
+      default: glow
+      examples:
+        - glow
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: A short gold line above the heading.
+      examples:
+        - 'Your first shift starts here'
+    heading:
+      type: string
+      title: Heading
+      description: 'The page''s heading (the page''s one h1).'
+      examples:
+        - 'KC Rink Directory'
+    heading_accent:
+      type: string
+      title: Heading, gold line
+      description: A second heading line drawn in gold.
+      examples:
+        - 'Hockey?'
+    text:
+      type: string
+      title: Text
+      description: 'The sentence or two under the heading.'
+      examples:
+        - 'Every sheet of ice in the Kansas City metro area.'
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Background image
+      description: 'Faded behind the Photo look.'
+      type: object

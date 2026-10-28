@@ -1,0 +1,35 @@
+uuid: bc1a5da6-80ca-42e9-b812-5c3eec6057e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - droost_theme
+active_version: 051ea3fa1e04540b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        height:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: half
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        slides:
+          title: Slides
+          description: 'Slide components shown one at a time.'
+label: Carousel
+id: sdc.droost_theme.carousel
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:carousel'

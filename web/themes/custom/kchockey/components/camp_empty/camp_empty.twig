@@ -1,0 +1,9 @@
+<div{{ attributes.addClass('text-center', 'py-20', 'bg-muted/30', 'border', 'border-dashed', 'border-border') }}>
+  <h3 class="text-xl font-serif font-bold uppercase text-muted-foreground mb-2">{{ heading }}</h3>
+  {% if text %}
+    <p class="text-muted-foreground">{{ text }}</p>
+  {% endif %}
+  {% if reset_label and reset_url %}
+    <a href="{{ reset_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border [border-color:var(--button-outline)] shadow-xs min-h-9 px-4 py-2 mt-6 rounded-none uppercase font-serif">{{ reset_label }}</a>
+  {% endif %}
+</div>

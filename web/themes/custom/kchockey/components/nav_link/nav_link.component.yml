@@ -1,0 +1,52 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Navigation link
+description: 'One link of the header or footer menus, styled for where it sits; the current page''s link is highlighted. Placed by the frame, not by editors.'
+status: stable
+group: Frame
+props:
+  type: object
+  required:
+    - label
+    - url
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Link HTML attributes.
+    label:
+      type: string
+      title: Label
+      description: The link text.
+      examples:
+        - 'Camps & Clinics'
+    url:
+      type: string
+      format: uri-reference
+      title: URL
+      description: Where the link goes.
+      examples:
+        - '/camps'
+    active:
+      type: boolean
+      title: Current page
+      description: Highlights the link of the page the visitor is on.
+      default: false
+      examples:
+        - false
+    variant:
+      type: string
+      title: Placement
+      description: Where the link sits, which decides how it looks.
+      enum:
+        - desktop
+        - mobile
+        - footer
+        - legal
+      'meta:enum':
+        desktop: Header
+        mobile: Header menu panel
+        footer: Footer menu
+        legal: Footer legal line
+      default: desktop
+      examples:
+        - desktop

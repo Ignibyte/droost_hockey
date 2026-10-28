@@ -1,0 +1,21 @@
+uuid: b5bcf77a-0121-4706-b86d-e3ac861f7cc0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: 95702e45488525d1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'One timeline item per milestone or event, in order.'
+label: Timeline
+id: sdc.droost_theme.timeline
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:timeline'

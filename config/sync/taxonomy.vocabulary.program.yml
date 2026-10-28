@@ -1,0 +1,9 @@
+uuid: 219dcffc-c9c2-4c3f-9e5c-f4f7a2e12b74
+langcode: en
+status: true
+dependencies: {  }
+name: Program
+vid: program
+description: 'The programs a camp belongs to: the /camps filter.'
+weight: 0
+new_revision: false

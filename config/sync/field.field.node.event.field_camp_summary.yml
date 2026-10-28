@@ -1,0 +1,19 @@
+uuid: 48a9d145-269f-4637-a906-ca9ec46806a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_summary
+    - node.type.event
+id: node.event.field_camp_summary
+field_name: field_camp_summary
+entity_type: node
+bundle: event
+label: Summary
+description: 'A sentence or two, shown when the home page features the camp.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

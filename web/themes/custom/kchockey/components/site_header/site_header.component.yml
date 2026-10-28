@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site header
+description: 'The sticky header: the KC Hockey mark, the main menu, the Contact Us button, and under 768px a toggle that opens the same links in a panel. Placed by the frame, not by editors.'
+status: stable
+group: Frame
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
+props:
+  type: object
+  required:
+    - home_url
+    - contact_url
+    - contact_label
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    home_url:
+      type: string
+      format: uri-reference
+      title: Home URL
+      description: Where the mark links.
+      examples:
+        - '/'
+    contact_url:
+      type: string
+      format: uri-reference
+      title: Contact URL
+      description: Where the Contact Us button links.
+      examples:
+        - '/contact'
+    contact_label:
+      type: string
+      title: Contact label
+      description: The button's text.
+      examples:
+        - 'Contact Us'
+slots:
+  links:
+    title: Links
+    description: The main menu's links for wide windows (nav_link, desktop).
+  mobile_links:
+    title: Panel links
+    description: The same links for the narrow-width panel (nav_link, mobile).

@@ -1,0 +1,16 @@
+<div{{ attributes.addClass('container', 'mx-auto', 'px-4') }}>
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-end justify-between gap-6 mb-8">
+      <div>
+        {% if eyebrow %}
+          <p class="text-accent font-bold uppercase tracking-[0.2em] text-xs mb-3">{{ eyebrow }}</p>
+        {% endif %}
+        <h2 class="text-4xl md:text-5xl font-serif font-bold uppercase tracking-tight leading-none">{{ heading }}</h2>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden sm:block text-accent" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+    </div>
+    <div class="border-t-2 border-foreground mb-20">
+      {{ divisions }}
+    </div>
+  </div>
+</div>

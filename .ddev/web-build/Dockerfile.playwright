@@ -1,0 +1,7 @@
+# Playwright's browser system libraries, so a headless chromium launches in
+# the web container where droost runs its gates (the playwright gate, the
+# intake's audit). Baked into the image so it survives a rebuild. Nothing here
+# is under test: it is the harness.
+ARG BASE_IMAGE
+FROM $BASE_IMAGE
+RUN npx -y playwright@1.64.1 install-deps chromium

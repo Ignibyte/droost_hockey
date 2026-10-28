@@ -1,0 +1,21 @@
+uuid: 3aaf15d8-f5b4-45fe-863f-29cc4b26a067
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rink_state
+    - node.type.rink
+  module:
+    - options
+id: node.rink.field_rink_state
+field_name: field_rink_state
+entity_type: node
+bundle: rink
+label: State
+description: 'Shown after the city: "Overland Park, KS".'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 67054501-6a91-427d-8de8-a72f380948a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.kchockey.nav_link
+    - canvas.component.sdc.kchockey.page_frame
+    - canvas.component.sdc.kchockey.site_footer
+    - canvas.component.sdc.kchockey.site_header
+    - canvas.component.sdc.kchockey.social_link
+name: Frame
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.kchockey.nav_link
+  - sdc.kchockey.page_frame
+  - sdc.kchockey.site_footer
+  - sdc.kchockey.site_header
+  - sdc.kchockey.social_link

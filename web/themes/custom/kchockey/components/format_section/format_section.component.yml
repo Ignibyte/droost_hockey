@@ -1,0 +1,42 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Format section
+description: 'A gold eyebrow and a two-line heading with a gold-ruled note beside it, over format cards three to a row.'
+status: stable
+group: Leagues
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'The small gold line above the heading.'
+      examples:
+        - 'Pick your pace'
+    heading:
+      type: string
+      title: Heading
+      description: 'The heading''s first line.'
+      examples:
+        - 'A league for'
+    heading_line_2:
+      type: string
+      title: Heading, second line
+      description: 'The heading''s second line, if it has one.'
+      examples:
+        - 'every level.'
+    note:
+      type: string
+      title: Note
+      description: 'A sentence beside the heading, behind a gold rule.'
+      examples:
+        - 'From first-time adult players to former college skaters, the right division makes every game more fun.'
+slots:
+  formats:
+    title: Formats
+    description: 'Format cards, in order.'

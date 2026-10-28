@@ -1,0 +1,53 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Not found
+description: 'The page a visitor sees at an address the site does not have: a dark band saying so, with a button home.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+    - link_label
+    - link_url
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'A short gold line above the heading.'
+      examples:
+        - 'Error 404'
+    heading:
+      type: string
+      title: Heading
+      description: 'The first heading line, in white.'
+      examples:
+        - 'Off the'
+    heading_accent:
+      type: string
+      title: Heading, gold line
+      description: 'The second heading line, in gold.'
+      examples:
+        - 'Ice'
+    text:
+      type: string
+      title: Text
+      description: 'What happened, and what to do.'
+      examples:
+        - 'The page you were looking for is not here.'
+    link_label:
+      type: string
+      title: Button
+      description: 'The button''s text.'
+      examples:
+        - 'Back to Home'
+    link_url:
+      type: string
+      format: uri-reference
+      title: Button link
+      description: 'Where the button links.'
+      examples:
+        - '/'

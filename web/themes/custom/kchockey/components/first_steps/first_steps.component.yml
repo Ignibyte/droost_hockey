@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: First steps
+description: 'Numbered step cards, one then three to a row. The steps are numbered 01, 02, 03… from their order, so reordering them renumbers them.'
+status: stable
+group: Sections
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+slots:
+  steps:
+    title: Steps
+    description: 'First step cards, in order.'

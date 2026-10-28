@@ -1,0 +1,6 @@
+{% if variant == 'dark' %}
+  {% set look = ['text-xs', 'px-2', 'py-1', 'bg-white/10', 'text-white/80', 'rounded', 'uppercase', 'tracking-wider'] %}
+{% else %}
+  {% set look = ['text-xs', 'font-semibold', 'px-2.5', 'py-1', 'bg-muted', 'text-foreground', 'border', 'border-border'] %}
+{% endif %}
+<span{{ attributes.addClass(look) }}>{{ label }}</span>

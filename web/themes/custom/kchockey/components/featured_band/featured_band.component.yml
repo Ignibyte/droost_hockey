@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Featured camp band
+description: 'The home page section holding the featured camp.'
+status: stable
+group: Sections
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+slots:
+  camp:
+    title: Camp
+    description: 'The featured camp: the "Camps: home page featured" block.'

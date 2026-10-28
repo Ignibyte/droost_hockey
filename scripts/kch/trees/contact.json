@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "uuid": "11cc8eb5-24bc-4093-8dca-9e0f8e0075cb",
+      "component_id": "sdc.kchockey.page_intro",
+      "inputs": {
+        "variant": "stripes",
+        "heading": "Hit Us Up",
+        "text": "Got a question about a camp? Want to list your clinic? Just want to talk hockey? Drop us a line."
+      }
+    },
+    {
+      "uuid": "6a0f3c9e-2b7d-4e51-9c8a-0d4f1e2a7b31",
+      "component_id": "sdc.kchockey.contact_section",
+      "inputs": {
+        "form_heading": "Send a Message"
+      }
+    },
+    {
+      "uuid": "b3e1d7c2-5f84-4a96-8e0b-71c2a9d4f605",
+      "component_id": "block.kchockey_site_contact_info",
+      "parent_uuid": "6a0f3c9e-2b7d-4e51-9c8a-0d4f1e2a7b31",
+      "slot": "aside",
+      "inputs": {
+        "label": "Contact info",
+        "label_display": "0"
+      }
+    },
+    {
+      "uuid": "e8c4a1f0-93d2-4b7e-a5c6-2f1b0d9e8a47",
+      "component_id": "sdc.kchockey.callout",
+      "parent_uuid": "6a0f3c9e-2b7d-4e51-9c8a-0d4f1e2a7b31",
+      "slot": "aside",
+      "inputs": {
+        "heading": "Are you a coach?",
+        "text": "We're always looking to add qualified instructors to our directory. Send us an email with your resume and USA Hockey credentials."
+      }
+    },
+    {
+      "uuid": "4d9b2e6a-c1f3-47a8-b05e-93a7c6d2e1f8",
+      "component_id": "block.webform_block",
+      "parent_uuid": "6a0f3c9e-2b7d-4e51-9c8a-0d4f1e2a7b31",
+      "slot": "form",
+      "inputs": {
+        "label": "Contact form",
+        "label_display": "0",
+        "webform_id": "contact",
+        "default_data": "",
+        "redirect": false,
+        "lazy": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Division row
+description: 'One division: its name, its ages, a description and a detail. On narrow screens the description takes its own line and the detail is left out.'
+status: stable
+group: Leagues
+props:
+  type: object
+  required:
+    - name
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    name:
+      type: string
+      title: Division
+      description: 'The division''s name.'
+      examples:
+        - 'Squirt'
+    ages:
+      type: string
+      title: Ages
+      description: 'The ages it is for, as they should read.'
+      examples:
+        - '10U'
+    description:
+      type: string
+      title: Description
+      description: 'A sentence about the division.'
+      examples:
+        - 'Players build stronger fundamentals while learning positioning, passing, and playing as a team.'
+    detail:
+      type: string
+      title: Detail
+      description: 'A short note in the last column, shown on wider screens.'
+      examples:
+        - 'Full-ice development and game play'

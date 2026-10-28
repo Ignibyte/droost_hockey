@@ -1,0 +1,19 @@
+uuid: eb8efc04-085d-4da3-bdf9-ea5724aa1b9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rink_city
+    - node.type.rink
+id: node.rink.field_rink_city
+field_name: field_rink_city
+entity_type: node
+bundle: rink
+label: City
+description: 'The town the rink is in, as the cards show it: "Overland Park".'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

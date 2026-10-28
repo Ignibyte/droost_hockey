@@ -1,0 +1,39 @@
+{% set icons = {
+  help: '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>',
+  shield_check: '<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>',
+  users: '<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>',
+} %}
+{% set button = 'inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring min-h-9 px-4 py-2 font-serif uppercase tracking-wider rounded-none transform -skew-x-12' %}
+<div{{ attributes }}>
+  {% if eyebrow %}
+    <div class="flex items-center gap-3 text-accent mb-4">
+      {{ (icons[eyebrow_icon] ?? icons.help)|raw }}
+      <span class="text-xs font-bold uppercase tracking-[0.2em]">{{ eyebrow }}</span>
+    </div>
+  {% endif %}
+  <h2 class="text-4xl {{ heading_size == 'medium' ? '' : 'md:text-5xl ' }}font-serif font-bold uppercase tracking-tight leading-none mb-5">{{ heading }}{% if heading_line_2 %}<br>{{ heading_line_2 }}{% endif %}</h2>
+  {% if text %}
+    <p class="text-muted-foreground leading-relaxed mb-7">{{ text }}</p>
+  {% endif %}
+  {% if checklist is not empty %}
+    <div class="mb-8">{{ checklist }}</div>
+  {% endif %}
+  {% set primary = button_label and button_url %}
+  {% set secondary = second_button_label and second_button_url %}
+  {% if primary or secondary %}
+    <div class="flex flex-col sm:flex-row lg:flex-col items-start gap-3">
+      {% if primary %}
+        <a href="{{ button_url }}" class="{{ button }} bg-primary text-primary-foreground border border-primary-border">
+          <span class="skew-x-12 inline-flex items-center gap-2">{{ button_label }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      {% endif %}
+      {% if secondary %}
+        <a href="{{ second_button_url }}" class="{{ button }} border [border-color:var(--button-outline)] shadow-xs">
+          <span class="skew-x-12">{{ second_button_label }}</span>
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

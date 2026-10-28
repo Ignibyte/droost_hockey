@@ -1,0 +1,55 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Camp tile
+description: 'A camp in the home page''s "Upcoming Action": title, rink, then date, ages, level and price, and "Details".'
+status: stable
+group: Camps
+props:
+  type: object
+  required:
+    - title
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    title:
+      type: string
+      title: Title
+      description: 'The camp''s name.'
+      examples:
+        - 'Goalie Clinic'
+    location:
+      type: string
+      title: Location
+      description: 'The name of the rink the camp is held at.'
+      examples:
+        - 'Central Park Ice Arena'
+    ages:
+      type: string
+      title: Ages
+      description: 'Who it is for, as it should read.'
+      examples:
+        - '10–18'
+    level:
+      type: string
+      title: Level
+      description: 'The skill level, as it should read.'
+      examples:
+        - 'Intermediate/Advanced'
+    price:
+      type: integer
+      title: Price
+      description: 'In whole dollars; 0 reads "Free".'
+      examples:
+        - 95
+    details_url:
+      type: string
+      format: uri-reference
+      title: Details link
+      description: 'Where "Details" goes: /camps, unless set.'
+      examples:
+        - '/camps'
+slots:
+  date:
+    title: Date
+    description: 'The camp''s dates as the design writes them ("Aug 10").'

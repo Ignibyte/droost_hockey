@@ -1,0 +1,146 @@
+uuid: 0ef4ad4c-69da-4da9-adb9-ed02f3d1b70f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: 61cdff32606bb567
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Featured Instructor'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        kicker:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'This month at KCHockey'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Level Up.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        specialty:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Power Skating & Edge Work'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        name:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Coach Mike Donovan'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        rate_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Featured rate'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        rate:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 75
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        bio:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Former ECHL player with 15 years behind the bench, Mike helps players build speed, balance, and confidence one stride at a time. His sessions are a great fit for players ready to make their skating the foundation of their game.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        button_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Book a session'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        button_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /contact
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        highlights:
+          title: Highlights
+          description: 'Short lines, two to a row, as check items.'
+label: 'Instructor spotlight'
+id: sdc.kchockey.instructor_spotlight
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:instructor_spotlight'

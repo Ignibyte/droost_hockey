@@ -1,0 +1,35 @@
+uuid: 158c8681-5b0a-4040-9966-9de410a3b4d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - kchockey
+active_version: 6782f674e4ae7ebd
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        layout:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: stacked
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Lines
+          description: 'Check items, in order.'
+label: Checklist
+id: sdc.kchockey.checklist
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:checklist'

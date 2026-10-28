@@ -1,0 +1,9 @@
+{
+  "repositories": [
+    {"type": "vcs", "url": "git@github.com:Ignibyte/droost-workflow.git"},
+    {"type": "vcs", "url": "git@github.com:Ignibyte/droost-engine.git"}
+  ],
+  "require": {"droost/workflow": "dev-off-drupal", "droost/engine": "dev-off-drupal as 0.11.99"},
+  "config": {"platform": {"php": "8.3.0"}},
+  "minimum-stability": "dev", "prefer-stable": true
+}

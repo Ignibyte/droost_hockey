@@ -1,0 +1,3866 @@
+{
+  "schema": "droost-source/audit@1",
+  "at": "2026-10-21T02:16:09.061Z",
+  "source": {
+    "url": "http://localhost:5199/",
+    "files": "/var/www/html/design/KC-Hockey-Hub",
+    "width": 1280,
+    "documents": [
+      "replit.md"
+    ],
+    "html": [
+      "artifacts/kchockey/index.html",
+      "artifacts/mockup-sandbox/index.html"
+    ],
+    "filesRead": 201
+  },
+  "routes": [
+    {
+      "id": "r:/",
+      "path": "/",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    },
+    {
+      "id": "r:/camps",
+      "path": "/camps",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    },
+    {
+      "id": "r:/rinks",
+      "path": "/rinks",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    },
+    {
+      "id": "r:/private-lessons",
+      "path": "/private-lessons",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    },
+    {
+      "id": "r:/new-to-hockey",
+      "path": "/new-to-hockey",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    },
+    {
+      "id": "r:/youth-leagues",
+      "path": "/youth-leagues",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    },
+    {
+      "id": "r:/adult-leagues",
+      "path": "/adult-leagues",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    },
+    {
+      "id": "r:/contact",
+      "path": "/contact",
+      "status": 200,
+      "declared": true,
+      "pattern": null,
+      "notFound": false
+    }
+  ],
+  "pages": [
+    {
+      "id": "p:/",
+      "route": "/",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "Kansas City's Ice Headquarters"
+        },
+        {
+          "level": 2,
+          "text": "Summer Power Skating Camp"
+        },
+        {
+          "level": 2,
+          "text": "Upcoming Action"
+        },
+        {
+          "level": 3,
+          "text": "Goalie Clinic"
+        },
+        {
+          "level": 3,
+          "text": "Back-to-School Skills Camp"
+        },
+        {
+          "level": 3,
+          "text": "Fall Puck Development Clinic"
+        },
+        {
+          "level": 2,
+          "text": "Find Your Ice"
+        },
+        {
+          "level": 3,
+          "text": "Pepsi Ice Midwest"
+        },
+        {
+          "level": 3,
+          "text": "Cable Dahmer Arena"
+        },
+        {
+          "level": 3,
+          "text": "Central Park Ice Arena"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/#s1",
+          "heading": {
+            "level": 1,
+            "text": "Kansas City's Ice Headquarters"
+          },
+          "words": 35,
+          "start": "The Heart of KC Hockey Kansas City's Ice Headquarters Built by rink rats, for ri"
+        },
+        {
+          "id": "p:/#s2",
+          "heading": null,
+          "words": 102,
+          "start": "Next USAH Level 1 Clinic: Oct 4-5 Adult League Reg Open Fall Puck Dev Clinic fil"
+        },
+        {
+          "id": "p:/#s3",
+          "heading": {
+            "level": 2,
+            "text": "Summer Power Skating Camp"
+          },
+          "words": 41,
+          "start": "Featured Camp Summer Power Skating Camp Join the biggest power skating developme",
+          "records": [
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-1"
+          ]
+        },
+        {
+          "id": "p:/#s4",
+          "heading": {
+            "level": 2,
+            "text": "Upcoming Action"
+          },
+          "words": 54,
+          "start": "Upcoming Action View All Events Goalie Clinic Central Park Ice Arena Date Aug 10",
+          "records": [
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-2",
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-3",
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-4"
+          ]
+        },
+        {
+          "id": "p:/#s5",
+          "heading": {
+            "level": 2,
+            "text": "Find Your Ice"
+          },
+          "words": 78,
+          "start": "Find Your Ice Whether you're looking for drop-in hockey, a learn-to-skate progra"
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/#r1",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/#r2",
+          "count": 6,
+          "kind": "chips",
+          "container": "div.flex.whitespace-nowrap.animate-marquee",
+          "shape": "div(span+)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Next USAH Level 1 Clinic: Oct 4-5",
+                "Next USAH Level 1 Clinic: Oct 4-5",
+                "Next USAH Level 1 Clinic: Oct 4-5",
+                "Next USAH Level 1 Clinic: Oct 4-5",
+                "Next USAH Level 1 Clinic: Oct 4-5",
+                "Next USAH Level 1 Clinic: Oct 4-5"
+              ],
+              "pattern": "date"
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Adult League Reg Open",
+                "Adult League Reg Open",
+                "Adult League Reg Open",
+                "Adult League Reg Open",
+                "Adult League Reg Open",
+                "Adult League Reg Open"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Fall Puck Dev Clinic filling fast!",
+                "Fall Puck Dev Clinic filling fast!",
+                "Fall Puck Dev Clinic filling fast!",
+                "Fall Puck Dev Clinic filling fast!",
+                "Fall Puck Dev Clinic filling fast!",
+                "Fall Puck Dev Clinic filling fast!"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": []
+        },
+        {
+          "id": "p:/#r3",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        },
+        {
+          "id": "p:/#r4",
+          "count": 3,
+          "kind": "items",
+          "container": "div.grid.grid-cols-2.gap-4",
+          "shape": "div(svg,div(p+))",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Date",
+                "Location",
+                "Ages"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "July 28–Aug 1",
+                "Pepsi Ice Midwest",
+                "8–14"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": []
+        },
+        {
+          "id": "p:/#r5",
+          "count": 3,
+          "kind": "cards",
+          "container": "div.grid.grid-cols-1.md:grid-cols-2",
+          "shape": "div(div,h3,div(svg,span),div(div(p+)+),a(button))",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Goalie Clinic",
+                "Back-to-School Skills Camp",
+                "Fall Puck Development Clinic"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Central Park Ice Arena",
+                "Cable Dahmer Arena",
+                "Pepsi Ice Midwest"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Date",
+                "Date",
+                "Date"
+              ]
+            },
+            {
+              "n": 4,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Aug 10",
+                "Aug 18–22",
+                "Sept 6"
+              ],
+              "pattern": "date"
+            },
+            {
+              "n": 5,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Ages",
+                "Ages",
+                "Ages"
+              ]
+            },
+            {
+              "n": 6,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "10–18",
+                "6–16",
+                "12–18"
+              ],
+              "pattern": "range"
+            },
+            {
+              "n": 7,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Level",
+                "Level",
+                "Level"
+              ]
+            },
+            {
+              "n": 8,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Intermediate/Advanced",
+                "Beginner/Intermediate",
+                "Advanced"
+              ]
+            },
+            {
+              "n": 9,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Price",
+                "Price",
+                "Price"
+              ]
+            },
+            {
+              "n": 10,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "$95",
+                "$250",
+                "$85"
+              ],
+              "pattern": "price"
+            },
+            {
+              "n": 11,
+              "role": "link",
+              "varies": false,
+              "values": [
+                "Details",
+                "Details",
+                "Details"
+              ],
+              "targets": [
+                "/camps",
+                "/camps",
+                "/camps"
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS",
+            "fields": {
+              "1": "title",
+              "2": "location",
+              "4": "date",
+              "6": "ages",
+              "8": "skillLevel",
+              "10": "price"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-2",
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-3",
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-4"
+            ]
+          },
+          "seenOn": [
+            "p:/camps#r3"
+          ]
+        },
+        {
+          "id": "p:/#r6",
+          "count": 3,
+          "kind": "cards",
+          "container": "div.grid.grid-cols-1.md:grid-cols-3",
+          "shape": "div(h3,p,div(span+),a(svg))",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Pepsi Ice Midwest",
+                "Cable Dahmer Arena",
+                "Central Park Ice Arena"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Overland Park , KS",
+                "Independence , MO",
+                "Kansas City , MO"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "list",
+              "varies": true,
+              "values": [
+                "NHL Sheet | Pro Shop | Lessons",
+                "Professional Venue | Event Seating | Concessions",
+                "Public Skate | Learn-to-Skate | Youth Leagues"
+              ],
+              "items": [
+                3,
+                3,
+                3
+              ]
+            },
+            {
+              "n": 4,
+              "role": "link",
+              "varies": false,
+              "values": [
+                "View Rink",
+                "View Rink",
+                "View Rink"
+              ],
+              "targets": [
+                "/rinks",
+                "/rinks",
+                "/rinks"
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/data/mock-data.ts#RINKS",
+            "fields": {
+              "1": "name",
+              "2": "city",
+              "3": "amenities"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-1",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-2",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-3"
+            ]
+          },
+          "seenOn": [
+            "p:/rinks#r1"
+          ]
+        }
+      ],
+      "forms": [],
+      "looseFields": [],
+      "media": {
+        "images": 1,
+        "embeds": [],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    },
+    {
+      "id": "p:/camps",
+      "route": "/camps",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "Camps & Clinics"
+        },
+        {
+          "level": 3,
+          "text": "Summer Power Skating Camp"
+        },
+        {
+          "level": 3,
+          "text": "Goalie Clinic"
+        },
+        {
+          "level": 3,
+          "text": "Back-to-School Skills Camp"
+        },
+        {
+          "level": 3,
+          "text": "Fall Puck Development Clinic"
+        },
+        {
+          "level": 3,
+          "text": "Adult Hockey League Showcase"
+        },
+        {
+          "level": 3,
+          "text": "USAH Level 1 Coaching Clinic"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/camps#s1",
+          "heading": {
+            "level": 1,
+            "text": "Camps & Clinics"
+          },
+          "words": 20,
+          "start": "Camps & Clinics From learn-to-skate to elite power skating. Find the right devel"
+        },
+        {
+          "id": "p:/camps#s2",
+          "heading": {
+            "level": 3,
+            "text": "Summer Power Skating Camp"
+          },
+          "words": 104,
+          "start": "Filter By: All Events Youth Hockey Adult/Coaches Goalies Featured Event Summer P",
+          "records": [
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-1",
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-2",
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-3",
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-4",
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-5",
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-6"
+          ]
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/camps#r1",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/camps#r2",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        },
+        {
+          "id": "p:/camps#r3",
+          "count": 5,
+          "kind": "cards",
+          "container": "div.grid.grid-cols-1.md:grid-cols-2",
+          "shape": "div(div(h3,div(div+),div(div,button)))",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Goalie Clinic",
+                "Back-to-School Skills Camp",
+                "Fall Puck Development Clinic",
+                "Adult Hockey League Showcase",
+                "USAH Level 1 Coaching Clinic"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Aug 10",
+                "Aug 18–22",
+                "Sept 6",
+                "Sept 14",
+                "Oct 4–5"
+              ],
+              "pattern": "date"
+            },
+            {
+              "n": 3,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Central Park Ice Arena",
+                "Cable Dahmer Arena",
+                "Pepsi Ice Midwest",
+                "Twin Rinks Ice Pavilion",
+                "Olathe Ice Arena"
+              ]
+            },
+            {
+              "n": 4,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Ages:",
+                "Ages:",
+                "Ages:",
+                "Ages:",
+                "Ages:"
+              ]
+            },
+            {
+              "n": 5,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "10–18",
+                "6–16",
+                "12–18",
+                "18+",
+                "Adults"
+              ]
+            },
+            {
+              "n": 6,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Level:",
+                "Level:",
+                "Level:",
+                "Level:",
+                "Level:"
+              ]
+            },
+            {
+              "n": 7,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Intermediate/Advanced",
+                "Beginner/Intermediate",
+                "Advanced",
+                "All Levels",
+                "Coaches"
+              ]
+            },
+            {
+              "n": 8,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "$95",
+                "$250",
+                "$85",
+                "FREE",
+                "$150"
+              ]
+            },
+            {
+              "n": 9,
+              "role": "button",
+              "varies": false,
+              "values": [
+                "Register",
+                "Register",
+                "Register",
+                "Register",
+                "Register"
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS",
+            "fields": {
+              "1": "title",
+              "2": "date",
+              "3": "location",
+              "5": "ages",
+              "7": "skillLevel",
+              "8": "price"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-2",
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-3",
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-4",
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-5",
+              "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-6"
+            ]
+          },
+          "seenOn": [
+            "p:/#r5"
+          ]
+        },
+        {
+          "id": "p:/camps#r4",
+          "count": 4,
+          "kind": "buttons",
+          "container": "div.flex.flex-wrap.gap-2",
+          "shape": "button(span)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "button",
+              "varies": true,
+              "values": [
+                "All Events",
+                "Youth Hockey",
+                "Adult/Coaches",
+                "Goalies"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": []
+        }
+      ],
+      "forms": [],
+      "looseFields": [],
+      "media": {
+        "images": 0,
+        "embeds": [],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    },
+    {
+      "id": "p:/rinks",
+      "route": "/rinks",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "KC Rink Directory"
+        },
+        {
+          "level": 2,
+          "text": "Find your sheet."
+        },
+        {
+          "level": 2,
+          "text": "Pepsi Ice Midwest"
+        },
+        {
+          "level": 2,
+          "text": "Cable Dahmer Arena"
+        },
+        {
+          "level": 2,
+          "text": "Central Park Ice Arena"
+        },
+        {
+          "level": 2,
+          "text": "Twin Rinks Ice Pavilion"
+        },
+        {
+          "level": 2,
+          "text": "Olathe Ice Arena"
+        },
+        {
+          "level": 2,
+          "text": "Blade Runners Ice Complex"
+        },
+        {
+          "level": 2,
+          "text": "Summit Ice Arena"
+        },
+        {
+          "level": 2,
+          "text": "Swope Memorial Ice Rink"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/rinks#s1",
+          "heading": {
+            "level": 1,
+            "text": "KC Rink Directory"
+          },
+          "words": 19,
+          "start": "KC Rink Directory Every sheet of ice in the Kansas City metro area. Find locatio"
+        },
+        {
+          "id": "p:/rinks#s2",
+          "heading": {
+            "level": 2,
+            "text": "Find your sheet."
+          },
+          "words": 304,
+          "start": "The KC Ice Map Find your sheet. From the Northland to Johnson County, the metro'",
+          "records": [
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-1",
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-2",
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-3",
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-4",
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-5",
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-6",
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-7",
+            "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-8"
+          ]
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/rinks#r1",
+          "count": 8,
+          "kind": "cards",
+          "container": "div.grid.grid-cols-1.md:grid-cols-2",
+          "shape": "div(div,div(div(h2,p)),p,div(p,div(span+)),div(div(svg),a(svg+)))",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Pepsi Ice Midwest",
+                "Cable Dahmer Arena",
+                "Central Park Ice Arena",
+                "Twin Rinks Ice Pavilion",
+                "Olathe Ice Arena",
+                "Blade Runners Ice Complex",
+                "Summit Ice Arena",
+                "Swope Memorial Ice Rink"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Overland Park , KS",
+                "Independence , MO",
+                "Kansas City , MO",
+                "Liberty , MO",
+                "Olathe , KS",
+                "Blue Springs , MO",
+                "Lee's Summit , MO",
+                "Kansas City , MO"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "A premier facility offering a full NHL sheet, dedicated pro shop, and extensive programming for all ages.",
+                "Home of the ECHL's Kansas City Mavericks. A professional venue with excellent ice quality and seating.",
+                "The heart of KC's recreational skating. Great for families, beginners, and casual drop-in hockey.",
+                "A massive dual-sheet facility hosting the region's largest tournaments and figure skating competitions.",
+                "A tight-knit community rink focused on youth development and consistent stick-and-puck sessions.",
+                "State-of-the-art training center with two sheets of ice, dedicated off-ice facilities, and competitive leagues.",
+                "Family-friendly environment perfect for birthday parties, introductory classes, and local youth hockey.",
+                "A historic, seasonal outdoor rink offering a classic winter skating experience right in the city."
+              ]
+            },
+            {
+              "n": 4,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Amenities",
+                "Amenities",
+                "Amenities",
+                "Amenities",
+                "Amenities",
+                "Amenities",
+                "Amenities",
+                "Amenities"
+              ]
+            },
+            {
+              "n": 5,
+              "role": "list",
+              "varies": true,
+              "values": [
+                "NHL Sheet | Pro Shop | Lessons | Leagues",
+                "Professional Venue | Event Seating | Concessions | Team Store",
+                "Public Skate | Learn-to-Skate | Youth Leagues | Snack Bar",
+                "Two Sheets | Tournaments | Figure Skating | Meeting Rooms",
+                "Community Rink | Youth Leagues | Stick-and-Puck | Party Rooms",
+                "Two Sheets | Leagues | Camps | Dryland Training",
+                "Public Skate | Youth Hockey | Birthday Parties | Cafe",
+                "Historic Venue | Outdoor Skating | Seasonal Events | Skate Rentals"
+              ],
+              "items": [
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4
+              ]
+            },
+            {
+              "n": 6,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "(913) 555-0101",
+                "(816) 555-0202",
+                "(816) 555-0303",
+                "(816) 555-0404",
+                "(913) 555-0505",
+                "(816) 555-0606",
+                "(816) 555-0707",
+                "(816) 555-0808"
+              ],
+              "pattern": "phone"
+            },
+            {
+              "n": 7,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Visit Website",
+                "Visit Website",
+                "Visit Website",
+                "Visit Website",
+                "Visit Website",
+                "Visit Website",
+                "Visit Website",
+                "Visit Website"
+              ],
+              "targets": [
+                "https://example.com/pepsi-ice",
+                "https://example.com/cable-dahmer",
+                "https://example.com/central-park",
+                "https://example.com/twin-rinks",
+                "https://example.com/olathe-ice",
+                "https://example.com/blade-runners",
+                "https://example.com/summit-ice",
+                "https://example.com/swope-memorial"
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/data/mock-data.ts#RINKS",
+            "fields": {
+              "1": "name",
+              "2": "city",
+              "3": "description",
+              "5": "amenities",
+              "6": "phone",
+              "7": "website"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-1",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-2",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-3",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-4",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-5",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-6",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-7",
+              "d:artifacts/kchockey/src/data/mock-data.ts#RINKS@rink-8"
+            ]
+          },
+          "seenOn": [
+            "p:/#r6"
+          ]
+        },
+        {
+          "id": "p:/rinks#r2",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/rinks#r3",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        }
+      ],
+      "forms": [],
+      "looseFields": [],
+      "media": {
+        "images": 0,
+        "embeds": [
+          "www.google.com"
+        ],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "https://example.com/blade-runners",
+          "https://example.com/cable-dahmer",
+          "https://example.com/central-park",
+          "https://example.com/olathe-ice",
+          "https://example.com/pepsi-ice",
+          "https://example.com/summit-ice",
+          "https://example.com/swope-memorial",
+          "https://example.com/twin-rinks",
+          "https://www.google.com/maps/search/ice+rinks+in+Kansas+City/",
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    },
+    {
+      "id": "p:/private-lessons",
+      "route": "/private-lessons",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "Private Lessons"
+        },
+        {
+          "level": 2,
+          "text": "Coach Mike Donovan"
+        },
+        {
+          "level": 3,
+          "text": "Coach Mike Donovan"
+        },
+        {
+          "level": 3,
+          "text": "Coach Sarah Tillman"
+        },
+        {
+          "level": 3,
+          "text": "Coach Jake Reardon"
+        },
+        {
+          "level": 3,
+          "text": "Coach Elena Voss"
+        },
+        {
+          "level": 2,
+          "text": "Need a Coach Recommendation?"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/private-lessons#s1",
+          "heading": {
+            "level": 1,
+            "text": "Private Lessons"
+          },
+          "words": 23,
+          "start": "Private Lessons 1-on-1 and small group development. Work with Kansas City's top "
+        },
+        {
+          "id": "p:/private-lessons#s2",
+          "heading": {
+            "level": 2,
+            "text": "Coach Mike Donovan"
+          },
+          "words": 205,
+          "start": "Featured Instructor This month at KCHockey Level Up. Power Skating & Edge Work C",
+          "records": [
+            "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-1",
+            "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-2",
+            "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-3",
+            "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-4"
+          ]
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/private-lessons#r1",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/private-lessons#r2",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        },
+        {
+          "id": "p:/private-lessons#r3",
+          "count": 4,
+          "kind": "chips",
+          "container": "div.grid.grid-cols-1.sm:grid-cols-2",
+          "shape": "div(svg)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Former ECHL player",
+                "15 years coaching",
+                "Youth through adult",
+                "Individual game plan"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": [
+            "p:/new-to-hockey#r5",
+            "p:/youth-leagues#r6",
+            "p:/adult-leagues#r5"
+          ]
+        },
+        {
+          "id": "p:/private-lessons#r4",
+          "count": 4,
+          "kind": "cards",
+          "container": "div.grid.grid-cols-1.md:grid-cols-2",
+          "shape": "div(div(div,span,div(span)),div(h3,p,div(div+),div(div,button)))",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "MD",
+                "ST",
+                "JR",
+                "EV"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "View Profile",
+                "View Profile",
+                "View Profile",
+                "View Profile"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Coach Mike Donovan",
+                "Coach Sarah Tillman",
+                "Coach Jake Reardon",
+                "Coach Elena Voss"
+              ]
+            },
+            {
+              "n": 4,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Power skating specialist",
+                "Youth development & learn-to-skate",
+                "Goalie coach",
+                "Figure skating & edge work"
+              ]
+            },
+            {
+              "n": 5,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "15 years coaching, former ECHL player",
+                "USAH certified Level 4",
+                "Former D1 college goalie",
+                "ISU certified, crossover training expert"
+              ]
+            },
+            {
+              "n": 6,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "All Ages & Skill Levels",
+                "All Ages & Skill Levels",
+                "All Ages & Skill Levels",
+                "All Ages & Skill Levels"
+              ]
+            },
+            {
+              "n": 7,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "Rate",
+                "Rate",
+                "Rate",
+                "Rate"
+              ]
+            },
+            {
+              "n": 8,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "$ 75",
+                "$ 60",
+                "$ 80",
+                "$ 65"
+              ],
+              "pattern": "price"
+            },
+            {
+              "n": 9,
+              "role": "text",
+              "varies": false,
+              "values": [
+                "/hr",
+                "/hr",
+                "/hr",
+                "/hr"
+              ]
+            },
+            {
+              "n": 10,
+              "role": "button",
+              "varies": false,
+              "values": [
+                "Inquire",
+                "Inquire",
+                "Inquire",
+                "Inquire"
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/data/mock-data.ts#COACHES",
+            "fields": {
+              "1": "imageFallback",
+              "3": "name",
+              "4": "specialty",
+              "5": "experience",
+              "8": "rate"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-1",
+              "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-2",
+              "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-3",
+              "d:artifacts/kchockey/src/data/mock-data.ts#COACHES@coach-4"
+            ]
+          },
+          "seenOn": []
+        }
+      ],
+      "forms": [],
+      "looseFields": [],
+      "media": {
+        "images": 0,
+        "embeds": [],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    },
+    {
+      "id": "p:/new-to-hockey",
+      "route": "/new-to-hockey",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "New to Hockey?"
+        },
+        {
+          "level": 2,
+          "text": "Find the ice"
+        },
+        {
+          "level": 2,
+          "text": "Get fitted"
+        },
+        {
+          "level": 2,
+          "text": "Take the first stride"
+        },
+        {
+          "level": 2,
+          "text": "Questions? We've got you."
+        },
+        {
+          "level": 3,
+          "text": "What age can my child start hockey?"
+        },
+        {
+          "level": 3,
+          "text": "What equipment do we need to begin?"
+        },
+        {
+          "level": 3,
+          "text": "Does my player need to know how to skate?"
+        },
+        {
+          "level": 3,
+          "text": "How much does it cost to get started?"
+        },
+        {
+          "level": 3,
+          "text": "Is hockey safe for kids?"
+        },
+        {
+          "level": 3,
+          "text": "What is the difference between a clinic, camp, and league?"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/new-to-hockey#s1",
+          "heading": {
+            "level": 1,
+            "text": "New to Hockey?"
+          },
+          "words": 30,
+          "start": "Your first shift starts here New to Hockey? Every hockey player starts somewhere"
+        },
+        {
+          "id": "p:/new-to-hockey#s2",
+          "heading": {
+            "level": 2,
+            "text": "Find the ice"
+          },
+          "words": 409,
+          "start": "01 Find the ice Start with a rink that offers learn-to-skate or beginner hockey "
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/new-to-hockey#r1",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/new-to-hockey#r2",
+          "count": 6,
+          "kind": "cards",
+          "container": "div.bg-card.border.border-border",
+          "shape": "div(h3(button(svg)),div)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "What age can my child start hockey?",
+                "What equipment do we need to begin?",
+                "Does my player need to know how to skate?",
+                "How much does it cost to get started?",
+                "Is hockey safe for kids?",
+                "What is the difference between a clinic, camp, and league?"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Most KC rinks welcome skaters as young as three through introductory programs. Your child does not need to know how to skate first. Learn-to-skate classes are a friendly first step, and coaches will help you choose the right next program when they are ready.",
+                "A helmet with a full face cage, skates, shoulder and elbow pads, hockey pants, shin guards, gloves, and a stick are the usual basics. Many local programs offer equipment rentals or starter packages, so you do not need to buy everything before your first skate.",
+                "Not at all. Hockey starts with skating, stopping, and feeling comfortable on the ice. A learn-to-skate class or beginner clinic is designed for brand-new skaters and builds those skills before players join a team.",
+                "Introductory classes vary by rink, but most families can try a first session for a modest registration fee. Ask about rental equipment, seasonal packages, and scholarship options before purchasing gear. Our rink directory is a good place to compare programs.",
+                "Hockey has contact and speed, but youth programs teach body control, awareness, and safe play from day one. Properly fitted equipment, certified coaches, and age-appropriate rules are all part of a strong program. Talk with the coach about your child's experience level and comfort.",
+                "A clinic focuses on one skill or topic, like skating or shooting. A camp usually combines several skills over multiple days. A league is a season of practices and games with a team. New players often start with lessons or learn-to-skate, then move into a league when they are ready."
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs",
+            "fields": {
+              "1": "question",
+              "2": "answer"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs@0",
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs@1",
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs@2",
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs@3",
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs@4",
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs@5"
+            ]
+          },
+          "seenOn": [
+            "p:/youth-leagues#r5",
+            "p:/adult-leagues#r3"
+          ]
+        },
+        {
+          "id": "p:/new-to-hockey#r3",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        },
+        {
+          "id": "p:/new-to-hockey#r4",
+          "count": 3,
+          "kind": "cards",
+          "container": "div.grid.grid-cols-1.md:grid-cols-3",
+          "shape": "div(span,div(svg),h2,p)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "01",
+                "02",
+                "03"
+              ],
+              "pattern": "number"
+            },
+            {
+              "n": 2,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Find the ice",
+                "Get fitted",
+                "Take the first stride"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Start with a rink that offers learn-to-skate or beginner hockey programs.",
+                "Ask the rink about rental gear or a proper equipment fitting before buying.",
+                "Book an intro class, clinic, or private lesson and have fun learning."
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#firstSteps",
+            "fields": {
+              "2": "title",
+              "3": "text"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#firstSteps@0",
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#firstSteps@1",
+              "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#firstSteps@2"
+            ]
+          },
+          "seenOn": []
+        },
+        {
+          "id": "p:/new-to-hockey#r5",
+          "count": 3,
+          "kind": "chips",
+          "container": "div.space-y-3.text-sm.text-muted-foreground",
+          "shape": "div(svg)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "No skating experience required",
+                "Rental gear is available at many rinks",
+                "Programs for kids and adults"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": [
+            "p:/private-lessons#r3",
+            "p:/youth-leagues#r6",
+            "p:/adult-leagues#r5"
+          ]
+        }
+      ],
+      "forms": [],
+      "looseFields": [],
+      "media": {
+        "images": 0,
+        "embeds": [],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    },
+    {
+      "id": "p:/youth-leagues",
+      "route": "/youth-leagues",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "Youth Leagues"
+        },
+        {
+          "level": 2,
+          "text": "A team for every stage."
+        },
+        {
+          "level": 2,
+          "text": "Division guide"
+        },
+        {
+          "level": 3,
+          "text": "Mite"
+        },
+        {
+          "level": 3,
+          "text": "Squirt"
+        },
+        {
+          "level": 3,
+          "text": "Peewee"
+        },
+        {
+          "level": 3,
+          "text": "Bantam"
+        },
+        {
+          "level": 3,
+          "text": "High School"
+        },
+        {
+          "level": 2,
+          "text": "Parents, we've got answers."
+        },
+        {
+          "level": 3,
+          "text": "Does my child need prior hockey experience?"
+        },
+        {
+          "level": 3,
+          "text": "How are players placed on teams?"
+        },
+        {
+          "level": 3,
+          "text": "What does a typical season include?"
+        },
+        {
+          "level": 3,
+          "text": "Where can I find youth league registration?"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/youth-leagues#s1",
+          "heading": {
+            "level": 1,
+            "text": "Youth Leagues"
+          },
+          "words": 29,
+          "start": "Build the next generation Youth Leagues Find the right place for your young play"
+        },
+        {
+          "id": "p:/youth-leagues#s2",
+          "heading": {
+            "level": 2,
+            "text": "A team for every stage."
+          },
+          "words": 370,
+          "start": "Start here A team for every stage. KC youth hockey has room for first-time skate",
+          "records": [
+            "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@0",
+            "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@1",
+            "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@2",
+            "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@3",
+            "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@4"
+          ]
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/youth-leagues#r1",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/youth-leagues#r2",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        },
+        {
+          "id": "p:/youth-leagues#r3",
+          "count": 5,
+          "kind": "cards",
+          "container": "div.border-t-2.border-foreground.mb-20",
+          "shape": "div(h3,span,p+)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Mite",
+                "Squirt",
+                "Peewee",
+                "Bantam",
+                "High School"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "6U–8U",
+                "10U",
+                "12U",
+                "14U",
+                "15U–18U"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "A welcoming introduction to team hockey with an emphasis on skating, confidence, and fun.",
+                "Players build stronger fundamentals while learning positioning, passing, and playing as a team.",
+                "A faster pace with more tactical detail, helping players find their strengths on the ice.",
+                "Players sharpen decision-making, systems, and physical confidence in an age-appropriate environment.",
+                "A place to keep playing, compete hard, and prepare for the next level of hockey."
+              ]
+            },
+            {
+              "n": 4,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Half-ice games and skill-first practices",
+                "Full-ice development and game play",
+                "Competitive rec and travel pathways",
+                "Team systems and skill development",
+                "School-year and club opportunities"
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions",
+            "fields": {
+              "1": "age",
+              "2": "ages",
+              "3": "description",
+              "4": "detail"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@0",
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@1",
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@2",
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@3",
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions@4"
+            ]
+          },
+          "seenOn": []
+        },
+        {
+          "id": "p:/youth-leagues#r4",
+          "count": 4,
+          "kind": "items",
+          "container": "div.grid.grid-cols-2.gap-6",
+          "shape": "div(p+)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "5",
+                "8+",
+                "1",
+                "100%"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Age pathways",
+                "KC rinks",
+                "Great first step",
+                "Team energy"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": []
+        },
+        {
+          "id": "p:/youth-leagues#r5",
+          "count": 4,
+          "kind": "cards",
+          "container": "div.bg-card.border.border-border",
+          "shape": "div(h3(button(svg)),div)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Does my child need prior hockey experience?",
+                "How are players placed on teams?",
+                "What does a typical season include?",
+                "Where can I find youth league registration?"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "No. Many players begin with learn-to-skate and introductory hockey before joining a league. If your child can skate, stop, and follow a coach's directions, a rink coordinator can usually point you toward the right entry-level program.",
+                "Most programs use age group and a short evaluation skate to create balanced teams. The goal is to give every player a positive challenge and a chance to contribute, not to create a perfect ranking.",
+                "A recreational season commonly includes weekly practices, scheduled games, jersey use, and optional tournaments. The exact schedule varies by rink and division, so check the registration details for your preferred facility.",
+                "Start with the rink directory to find a facility near you, then use its website or registration desk for current dates and pricing. League calendars change throughout the year, and KCHockey can help you compare options."
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/pages/youth-leagues.tsx#faqs",
+            "fields": {
+              "1": "question",
+              "2": "answer"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#faqs@0",
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#faqs@1",
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#faqs@2",
+              "d:artifacts/kchockey/src/pages/youth-leagues.tsx#faqs@3"
+            ]
+          },
+          "seenOn": [
+            "p:/new-to-hockey#r2",
+            "p:/adult-leagues#r3"
+          ]
+        },
+        {
+          "id": "p:/youth-leagues#r6",
+          "count": 3,
+          "kind": "chips",
+          "container": "div.flex.flex-wrap.gap-x-6",
+          "shape": "div(svg)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Beginner-friendly programs",
+                "Certified coaches",
+                "Rec and competitive paths"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": [
+            "p:/private-lessons#r3",
+            "p:/new-to-hockey#r5",
+            "p:/adult-leagues#r5"
+          ]
+        }
+      ],
+      "forms": [],
+      "looseFields": [],
+      "media": {
+        "images": 0,
+        "embeds": [],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    },
+    {
+      "id": "p:/adult-leagues",
+      "route": "/adult-leagues",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "Adult Leagues"
+        },
+        {
+          "level": 2,
+          "text": "A league for every level."
+        },
+        {
+          "level": 3,
+          "text": "Recreational"
+        },
+        {
+          "level": 3,
+          "text": "Intermediate"
+        },
+        {
+          "level": 3,
+          "text": "Advanced"
+        },
+        {
+          "level": 2,
+          "text": "Adult Hockey League Showcase"
+        },
+        {
+          "level": 2,
+          "text": "New to the adult game?"
+        },
+        {
+          "level": 3,
+          "text": "Do I need a full team to register?"
+        },
+        {
+          "level": 3,
+          "text": "What equipment do adult players need?"
+        },
+        {
+          "level": 3,
+          "text": "What level should I sign up for?"
+        },
+        {
+          "level": 3,
+          "text": "Where are adult leagues played?"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/adult-leagues#s1",
+          "heading": {
+            "level": 1,
+            "text": "Adult Leagues"
+          },
+          "words": 34,
+          "start": "Your week needs a skate Adult Leagues Find your next league, join a team, or lac"
+        },
+        {
+          "id": "p:/adult-leagues#s2",
+          "heading": {
+            "level": 2,
+            "text": "A league for every level."
+          },
+          "words": 357,
+          "start": "Pick your pace A league for every level. From first-time adult players to former",
+          "records": [
+            "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS@camp-5",
+            "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats@0",
+            "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats@1",
+            "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats@2"
+          ]
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/adult-leagues#r1",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/adult-leagues#r2",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        },
+        {
+          "id": "p:/adult-leagues#r3",
+          "count": 4,
+          "kind": "cards",
+          "container": "div.bg-card.border.border-border",
+          "shape": "div(h3(button(svg)),div)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Do I need a full team to register?",
+                "What equipment do adult players need?",
+                "What level should I sign up for?",
+                "Where are adult leagues played?"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Not always. Many KC adult leagues accept individual free agents and place them on a team, while other sessions are built for established teams. Contact the rink before registration closes to ask about open spots.",
+                "Players should bring a properly fitted helmet with a full cage or shield, skates, gloves, shoulder and elbow pads, hockey pants, shin guards, socks, and a stick. Your league may have additional safety requirements.",
+                "Be honest about your skating, pace, and playing experience. Recreational leagues are welcoming to newer adults, while intermediate and advanced divisions are better for players with established game experience. A league director can help place you.",
+                "Adult league games run at rinks across the metro, including facilities in Overland Park, Independence, Liberty, Olathe, and Blue Springs. Use the rink directory to see what is closest to home or work."
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/pages/adult-leagues.tsx#faqs",
+            "fields": {
+              "1": "question",
+              "2": "answer"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/pages/adult-leagues.tsx#faqs@0",
+              "d:artifacts/kchockey/src/pages/adult-leagues.tsx#faqs@1",
+              "d:artifacts/kchockey/src/pages/adult-leagues.tsx#faqs@2",
+              "d:artifacts/kchockey/src/pages/adult-leagues.tsx#faqs@3"
+            ]
+          },
+          "seenOn": [
+            "p:/new-to-hockey#r2",
+            "p:/youth-leagues#r5"
+          ]
+        },
+        {
+          "id": "p:/adult-leagues#r4",
+          "count": 3,
+          "kind": "cards",
+          "container": "div.grid.grid-cols-1.md:grid-cols-3",
+          "shape": "div(div(div(svg),span),h3,p)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "All skill levels",
+                "C / B level",
+                "A / AA level"
+              ]
+            },
+            {
+              "n": 2,
+              "role": "heading",
+              "varies": true,
+              "values": [
+                "Recreational",
+                "Intermediate",
+                "Advanced"
+              ]
+            },
+            {
+              "n": 3,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Low-pressure games, new friends, and a reason to leave work on time. A great place to get back on the ice or learn the adult game.",
+                "Competitive enough to matter and friendly enough to grab a drink afterward. Balanced teams keep every shift moving.",
+                "Fast, structured hockey for players who want a serious skate and a full 60 minutes of pace."
+              ]
+            }
+          ],
+          "inside": "main",
+          "data": {
+            "id": "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats",
+            "fields": {
+              "1": "level",
+              "2": "title",
+              "3": "description"
+            },
+            "records": [
+              "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats@0",
+              "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats@1",
+              "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats@2"
+            ]
+          },
+          "seenOn": []
+        },
+        {
+          "id": "p:/adult-leagues#r5",
+          "count": 3,
+          "kind": "chips",
+          "container": "div.md:border-l.md:border-foreground/20.md:pl-8",
+          "shape": "div(svg)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Sept 14",
+                "Twin Rinks Ice Pavilion",
+                "18+ · All levels"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": [
+            "p:/private-lessons#r3",
+            "p:/new-to-hockey#r5",
+            "p:/youth-leagues#r6"
+          ]
+        }
+      ],
+      "forms": [],
+      "looseFields": [],
+      "media": {
+        "images": 0,
+        "embeds": [],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    },
+    {
+      "id": "p:/contact",
+      "route": "/contact",
+      "status": 200,
+      "title": "KC Hockey",
+      "description": "KC Hockey — built on Replit. Update this description to reflect the app.",
+      "landmarks": [
+        "nav",
+        "main",
+        "footer"
+      ],
+      "outline": [
+        {
+          "level": 1,
+          "text": "Hit Us Up"
+        },
+        {
+          "level": 2,
+          "text": "Contact Info"
+        },
+        {
+          "level": 3,
+          "text": "Are you a coach?"
+        },
+        {
+          "level": 2,
+          "text": "Send a Message"
+        },
+        {
+          "level": 3,
+          "text": "Explore"
+        },
+        {
+          "level": 3,
+          "text": "Contact"
+        }
+      ],
+      "sections": [
+        {
+          "id": "p:/contact#s1",
+          "heading": {
+            "level": 1,
+            "text": "Hit Us Up"
+          },
+          "words": 23,
+          "start": "Hit Us Up Got a question about a camp? Want to list your clinic? Just want to ta"
+        },
+        {
+          "id": "p:/contact#s2",
+          "heading": {
+            "level": 2,
+            "text": "Contact Info"
+          },
+          "words": 57,
+          "start": "Contact Info Email info@kchockey.com Location Kansas City Metro Area We operate "
+        }
+      ],
+      "repeats": [
+        {
+          "id": "p:/contact#r1",
+          "count": 7,
+          "kind": "links",
+          "container": "div.flex.gap-1",
+          "shape": "a",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Home",
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rinks",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/",
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "nav",
+          "seenOn": []
+        },
+        {
+          "id": "p:/contact#r2",
+          "count": 6,
+          "kind": "links",
+          "container": "ul.space-y-3",
+          "shape": "li(a)",
+          "slots": [
+            {
+              "n": 1,
+              "role": "link",
+              "varies": true,
+              "values": [
+                "Camps & Clinics",
+                "Private Lessons",
+                "KC Rink Directory",
+                "New to Hockey",
+                "Youth Leagues",
+                "Adult Leagues"
+              ],
+              "targets": [
+                "/camps",
+                "/private-lessons",
+                "/rinks",
+                "/new-to-hockey",
+                "/youth-leagues",
+                "/adult-leagues"
+              ]
+            }
+          ],
+          "inside": "footer",
+          "seenOn": []
+        },
+        {
+          "id": "p:/contact#r3",
+          "count": 4,
+          "kind": "chips",
+          "container": "select.w-full.bg-background.border",
+          "shape": "option",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Camp Inquiry",
+                "Private Lessons",
+                "Rink Information",
+                "Other"
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": []
+        },
+        {
+          "id": "p:/contact#r4",
+          "count": 3,
+          "kind": "chips",
+          "container": "div",
+          "shape": "p",
+          "slots": [
+            {
+              "n": 1,
+              "role": "text",
+              "varies": true,
+              "values": [
+                "Location",
+                "Kansas City Metro Area",
+                "We operate out of rinks across KC."
+              ]
+            }
+          ],
+          "inside": "main",
+          "seenOn": []
+        }
+      ],
+      "forms": [
+        {
+          "id": "p:/contact#f1",
+          "fields": [
+            {
+              "label": "Name",
+              "type": "text",
+              "name": "",
+              "required": true
+            },
+            {
+              "label": "Email",
+              "type": "email",
+              "name": "",
+              "required": true
+            },
+            {
+              "label": "Subject",
+              "type": "select",
+              "name": "",
+              "required": false,
+              "options": [
+                "Camp Inquiry",
+                "Private Lessons",
+                "Rink Information",
+                "Other"
+              ]
+            },
+            {
+              "label": "Message",
+              "type": "textarea",
+              "name": "",
+              "required": true
+            }
+          ],
+          "submit": "Fire Away",
+          "inside": "main"
+        }
+      ],
+      "looseFields": [],
+      "media": {
+        "images": 0,
+        "embeds": [],
+        "videos": 0,
+        "broken": []
+      },
+      "links": {
+        "internal": [
+          "/",
+          "/adult-leagues",
+          "/camps",
+          "/contact",
+          "/new-to-hockey",
+          "/private-lessons",
+          "/rinks",
+          "/youth-leagues"
+        ],
+        "external": [
+          "mailto:info@kchockey.com",
+          "tel:+18165550199"
+        ]
+      }
+    }
+  ],
+  "frame": {
+    "id": "frame",
+    "header": {
+      "links": [
+        {
+          "label": "KC Hockey",
+          "href": "/"
+        },
+        {
+          "label": "Home",
+          "href": "/"
+        },
+        {
+          "label": "Camps & Clinics",
+          "href": "/camps"
+        },
+        {
+          "label": "Private Lessons",
+          "href": "/private-lessons"
+        },
+        {
+          "label": "KC Rinks",
+          "href": "/rinks"
+        },
+        {
+          "label": "New to Hockey",
+          "href": "/new-to-hockey"
+        },
+        {
+          "label": "Youth Leagues",
+          "href": "/youth-leagues"
+        },
+        {
+          "label": "Adult Leagues",
+          "href": "/adult-leagues"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
+      ]
+    },
+    "footer": {
+      "links": [
+        {
+          "label": "KC Hockey",
+          "href": "/"
+        },
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "",
+          "href": "/"
+        },
+        {
+          "label": "Camps & Clinics",
+          "href": "/camps"
+        },
+        {
+          "label": "Private Lessons",
+          "href": "/private-lessons"
+        },
+        {
+          "label": "KC Rink Directory",
+          "href": "/rinks"
+        },
+        {
+          "label": "New to Hockey",
+          "href": "/new-to-hockey"
+        },
+        {
+          "label": "Youth Leagues",
+          "href": "/youth-leagues"
+        },
+        {
+          "label": "Adult Leagues",
+          "href": "/adult-leagues"
+        },
+        {
+          "label": "info@kchockey.com",
+          "href": "mailto:info@kchockey.com"
+        },
+        {
+          "label": "(816) 555-0199",
+          "href": "tel:+18165550199"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/"
+        },
+        {
+          "label": "Terms of Service",
+          "href": "/"
+        }
+      ],
+      "text": "KC Hockey Kansas City's premier hockey resource. Built by rink rats, for rink rats. Find your next camp, clinic, or open skate in the heart of the Midwest. Explore Camps & Clinics Private Lessons KC Rink Directory New to Hockey Youth Leagues Adult Leagues Contact Kansas City, MO The Hockey Capital o"
+    }
+  },
+  "tokens": {
+    "fonts": [
+      {
+        "value": "Inter, sans-serif",
+        "uses": 76
+      },
+      {
+        "value": "Oswald, sans-serif",
+        "uses": 45
+      }
+    ],
+    "colours": [
+      {
+        "value": "rgb(10, 20, 41)",
+        "uses": 47
+      },
+      {
+        "value": "rgb(101, 117, 139)",
+        "uses": 26
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "uses": 15
+      },
+      {
+        "value": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "uses": 10
+      },
+      {
+        "value": "oklab(0.967617 -0.00258672 -0.00645852 / 0.8)",
+        "uses": 10
+      },
+      {
+        "value": "rgb(255, 183, 0)",
+        "uses": 8
+      },
+      {
+        "value": "oklab(0.967617 -0.00258672 -0.00645852 / 0.6)",
+        "uses": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0)",
+        "uses": 1
+      }
+    ],
+    "backgrounds": [
+      {
+        "value": "rgb(10, 20, 41)",
+        "uses": 24
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "uses": 12
+      },
+      {
+        "value": "rgb(255, 183, 0)",
+        "uses": 8
+      },
+      {
+        "value": "rgb(255, 255, 255)",
+        "uses": 5
+      },
+      {
+        "value": "oklab(0.824836 0.0300544 0.168249 / 0.1)",
+        "uses": 3
+      },
+      {
+        "value": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+        "uses": 3
+      },
+      {
+        "value": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "uses": 1
+      },
+      {
+        "value": "rgb(225, 231, 239)",
+        "uses": 1
+      }
+    ],
+    "headingFont": "Oswald, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "variables": {
+      "--button-outline": "rgba(0, 0, 0, 0.1)",
+      "--badge-outline": "rgba(0, 0, 0, 0.05)",
+      "--opaque-button-border-intensity": "-8",
+      "--elevate-1": "rgba(0, 0, 0, 0.03)",
+      "--elevate-2": "rgba(0, 0, 0, 0.08)",
+      "--background": "0 0% 100%",
+      "--foreground": "220 60% 10%",
+      "--border": "214 32% 91%",
+      "--input": "214 32% 91%",
+      "--ring": "220 60% 10%",
+      "--card": "0 0% 100%",
+      "--card-foreground": "220 60% 10%",
+      "--card-border": "214 32% 91%",
+      "--popover": "0 0% 100%",
+      "--popover-foreground": "220 60% 10%",
+      "--popover-border": "214 32% 91%",
+      "--primary": "220 60% 10%",
+      "--primary-foreground": "0 0% 100%",
+      "--secondary": "198 80% 90%",
+      "--secondary-foreground": "220 60% 10%",
+      "--muted": "210 40% 96%",
+      "--muted-foreground": "215 16% 47%",
+      "--accent": "43 100% 50%",
+      "--accent-foreground": "220 60% 10%",
+      "--destructive": "0 84% 60%",
+      "--destructive-foreground": "0 0% 100%",
+      "--chart-1": "43 100% 50%",
+      "--chart-2": "198 80% 60%",
+      "--chart-3": "220 60% 30%",
+      "--chart-4": "210 40% 80%",
+      "--chart-5": "0 84% 60%",
+      "--sidebar": "210 40% 96%",
+      "--sidebar-foreground": "220 60% 10%",
+      "--sidebar-border": "214 32% 91%",
+      "--sidebar-primary": "220 60% 10%",
+      "--sidebar-primary-foreground": "0 0% 100%",
+      "--sidebar-accent": "198 80% 90%",
+      "--sidebar-accent-foreground": "220 60% 10%",
+      "--sidebar-ring": "220 60% 10%",
+      "--app-font-sans": "'Inter', sans-serif",
+      "--app-font-serif": "'Oswald', sans-serif",
+      "--app-font-mono": "Menlo, monospace",
+      "--radius": "0.25rem",
+      "--shadow-2xs": "0px 2px 0px 0px rgba(0,0,0,0.05)",
+      "--shadow-xs": "0px 2px 0px 0px rgba(0,0,0,0.05)",
+      "--shadow-sm": "0px 2px 0px 0px rgba(0,0,0,0.05), 0px 1px 2px -1px rgba(0,0,0,0.05)",
+      "--shadow": "0px 2px 0px 0px rgba(0,0,0,0.05), 0px 1px 2px -1px rgba(0,0,0,0.05)",
+      "--shadow-md": "0px 2px 0px 0px rgba(0,0,0,0.05), 0px 2px 4px -1px rgba(0,0,0,0.05)",
+      "--shadow-lg": "0px 2px 0px 0px rgba(0,0,0,0.05), 0px 4px 6px -1px rgba(0,0,0,0.05)",
+      "--shadow-xl": "0px 2px 0px 0px rgba(0,0,0,0.05), 0px 8px 10px -1px rgba(0,0,0,0.05)",
+      "--shadow-2xl": "0px 2px 0px 0px rgba(0,0,0,0.05)",
+      "--tracking-normal": "0em",
+      "--spacing": "0.25rem",
+      "--sidebar-primary-border": "hsl(var(--sidebar-primary))",
+      "--sidebar-accent-border": "hsl(var(--sidebar-accent))",
+      "--primary-border": "hsl(var(--primary))",
+      "--secondary-border": "hsl(var(--secondary))",
+      "--muted-border": "hsl(var(--muted))",
+      "--accent-border": "hsl(var(--accent))",
+      "--destructive-border": "hsl(var(--destructive))"
+    }
+  },
+  "typefaces": [
+    {
+      "family": "Inter",
+      "texts": 425,
+      "drawn": true
+    },
+    {
+      "family": "Oswald",
+      "texts": 216,
+      "drawn": true
+    }
+  ],
+  "data": [
+    {
+      "id": "d:artifacts/kchockey/src/data/mock-data.ts#Camp",
+      "path": "artifacts/kchockey/src/data/mock-data.ts",
+      "kind": "interface",
+      "name": "Camp",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "date",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "ages",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "skillLevel",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "price",
+          "type": "number",
+          "optional": false
+        },
+        {
+          "name": "featured",
+          "type": "boolean",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/data/mock-data.ts#Rink",
+      "path": "artifacts/kchockey/src/data/mock-data.ts",
+      "kind": "interface",
+      "name": "Rink",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "state",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "amenities",
+          "type": "string[]",
+          "optional": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "website",
+          "type": "string",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/data/mock-data.ts#Coach",
+      "path": "artifacts/kchockey/src/data/mock-data.ts",
+      "kind": "interface",
+      "name": "Coach",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "specialty",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "experience",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "rate",
+          "type": "number",
+          "optional": false
+        },
+        {
+          "name": "imageFallback",
+          "type": "string",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/data/mock-data.ts#CAMPS",
+      "path": "artifacts/kchockey/src/data/mock-data.ts",
+      "kind": "records",
+      "name": "CAMPS",
+      "count": 6,
+      "type": "Camp",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "date",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "location",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "ages",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "skillLevel",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "price",
+          "type": "number",
+          "optional": false
+        },
+        {
+          "name": "featured",
+          "type": "boolean",
+          "optional": true
+        }
+      ],
+      "values": [
+        {
+          "id": "camp-1",
+          "title": "Summer Power Skating Camp",
+          "date": "July 28–Aug 1",
+          "location": "Pepsi Ice Midwest",
+          "ages": "8–14",
+          "skillLevel": "All Skill Levels",
+          "price": 275,
+          "featured": true
+        },
+        {
+          "id": "camp-2",
+          "title": "Goalie Clinic",
+          "date": "Aug 10",
+          "location": "Central Park Ice Arena",
+          "ages": "10–18",
+          "skillLevel": "Intermediate/Advanced",
+          "price": 95
+        },
+        {
+          "id": "camp-3",
+          "title": "Back-to-School Skills Camp",
+          "date": "Aug 18–22",
+          "location": "Cable Dahmer Arena",
+          "ages": "6–16",
+          "skillLevel": "Beginner/Intermediate",
+          "price": 250
+        },
+        {
+          "id": "camp-4",
+          "title": "Fall Puck Development Clinic",
+          "date": "Sept 6",
+          "location": "Pepsi Ice Midwest",
+          "ages": "12–18",
+          "skillLevel": "Advanced",
+          "price": 85
+        },
+        {
+          "id": "camp-5",
+          "title": "Adult Hockey League Showcase",
+          "date": "Sept 14",
+          "location": "Twin Rinks Ice Pavilion",
+          "ages": "18+",
+          "skillLevel": "All Levels",
+          "price": 0
+        },
+        {
+          "id": "camp-6",
+          "title": "USAH Level 1 Coaching Clinic",
+          "date": "Oct 4–5",
+          "location": "Olathe Ice Arena",
+          "ages": "Adults",
+          "skillLevel": "Coaches",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/data/mock-data.ts#RINKS",
+      "path": "artifacts/kchockey/src/data/mock-data.ts",
+      "kind": "records",
+      "name": "RINKS",
+      "count": 8,
+      "type": "Rink",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "state",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "description",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "amenities",
+          "type": "string[]",
+          "optional": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "website",
+          "type": "string",
+          "optional": false
+        }
+      ],
+      "values": [
+        {
+          "id": "rink-1",
+          "name": "Pepsi Ice Midwest",
+          "city": "Overland Park",
+          "state": "KS",
+          "description": "A premier facility offering a full NHL sheet, dedicated pro shop, and extensive programming for all ages.",
+          "amenities": [
+            "NHL Sheet",
+            "Pro Shop",
+            "Lessons",
+            "Leagues"
+          ],
+          "phone": "(913) 555-0101",
+          "website": "https://example.com/pepsi-ice"
+        },
+        {
+          "id": "rink-2",
+          "name": "Cable Dahmer Arena",
+          "city": "Independence",
+          "state": "MO",
+          "description": "Home of the ECHL's Kansas City Mavericks. A professional venue with excellent ice quality and seating.",
+          "amenities": [
+            "Professional Venue",
+            "Event Seating",
+            "Concessions",
+            "Team Store"
+          ],
+          "phone": "(816) 555-0202",
+          "website": "https://example.com/cable-dahmer"
+        },
+        {
+          "id": "rink-3",
+          "name": "Central Park Ice Arena",
+          "city": "Kansas City",
+          "state": "MO",
+          "description": "The heart of KC's recreational skating. Great for families, beginners, and casual drop-in hockey.",
+          "amenities": [
+            "Public Skate",
+            "Learn-to-Skate",
+            "Youth Leagues",
+            "Snack Bar"
+          ],
+          "phone": "(816) 555-0303",
+          "website": "https://example.com/central-park"
+        },
+        {
+          "id": "rink-4",
+          "name": "Twin Rinks Ice Pavilion",
+          "city": "Liberty",
+          "state": "MO",
+          "description": "A massive dual-sheet facility hosting the region's largest tournaments and figure skating competitions.",
+          "amenities": [
+            "Two Sheets",
+            "Tournaments",
+            "Figure Skating",
+            "Meeting Rooms"
+          ],
+          "phone": "(816) 555-0404",
+          "website": "https://example.com/twin-rinks"
+        },
+        {
+          "id": "rink-5",
+          "name": "Olathe Ice Arena",
+          "city": "Olathe",
+          "state": "KS",
+          "description": "A tight-knit community rink focused on youth development and consistent stick-and-puck sessions.",
+          "amenities": [
+            "Community Rink",
+            "Youth Leagues",
+            "Stick-and-Puck",
+            "Party Rooms"
+          ],
+          "phone": "(913) 555-0505",
+          "website": "https://example.com/olathe-ice"
+        },
+        {
+          "id": "rink-6",
+          "name": "Blade Runners Ice Complex",
+          "city": "Blue Springs",
+          "state": "MO",
+          "description": "State-of-the-art training center with two sheets of ice, dedicated off-ice facilities, and competitive leagues.",
+          "amenities": [
+            "Two Sheets",
+            "Leagues",
+            "Camps",
+            "Dryland Training"
+          ],
+          "phone": "(816) 555-0606",
+          "website": "https://example.com/blade-runners"
+        },
+        {
+          "id": "rink-7",
+          "name": "Summit Ice Arena",
+          "city": "Lee's Summit",
+          "state": "MO",
+          "description": "Family-friendly environment perfect for birthday parties, introductory classes, and local youth hockey.",
+          "amenities": [
+            "Public Skate",
+            "Youth Hockey",
+            "Birthday Parties",
+            "Cafe"
+          ],
+          "phone": "(816) 555-0707",
+          "website": "https://example.com/summit-ice"
+        },
+        {
+          "id": "rink-8",
+          "name": "Swope Memorial Ice Rink",
+          "city": "Kansas City",
+          "state": "MO",
+          "description": "A historic, seasonal outdoor rink offering a classic winter skating experience right in the city.",
+          "amenities": [
+            "Historic Venue",
+            "Outdoor Skating",
+            "Seasonal Events",
+            "Skate Rentals"
+          ],
+          "phone": "(816) 555-0808",
+          "website": "https://example.com/swope-memorial"
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/data/mock-data.ts#COACHES",
+      "path": "artifacts/kchockey/src/data/mock-data.ts",
+      "kind": "records",
+      "name": "COACHES",
+      "count": 4,
+      "type": "Coach",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "specialty",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "experience",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "rate",
+          "type": "number",
+          "optional": false
+        },
+        {
+          "name": "imageFallback",
+          "type": "string",
+          "optional": false
+        }
+      ],
+      "values": [
+        {
+          "id": "coach-1",
+          "name": "Coach Mike Donovan",
+          "specialty": "Power skating specialist",
+          "experience": "15 years coaching, former ECHL player",
+          "rate": 75,
+          "imageFallback": "MD"
+        },
+        {
+          "id": "coach-2",
+          "name": "Coach Sarah Tillman",
+          "specialty": "Youth development & learn-to-skate",
+          "experience": "USAH certified Level 4",
+          "rate": 60,
+          "imageFallback": "ST"
+        },
+        {
+          "id": "coach-3",
+          "name": "Coach Jake Reardon",
+          "specialty": "Goalie coach",
+          "experience": "Former D1 college goalie",
+          "rate": 80,
+          "imageFallback": "JR"
+        },
+        {
+          "id": "coach-4",
+          "name": "Coach Elena Voss",
+          "specialty": "Figure skating & edge work",
+          "experience": "ISU certified, crossover training expert",
+          "rate": 65,
+          "imageFallback": "EV"
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/pages/adult-leagues.tsx#formats",
+      "path": "artifacts/kchockey/src/pages/adult-leagues.tsx",
+      "exported": false,
+      "kind": "records",
+      "name": "formats",
+      "count": 3,
+      "type": null,
+      "fields": [
+        {
+          "name": "title"
+        },
+        {
+          "name": "level"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "icon"
+        }
+      ],
+      "values": [
+        {
+          "title": "Recreational",
+          "level": "All skill levels",
+          "description": "Low-pressure games, new friends, and a reason to leave work on time. A great place to get back on the ice or learn the adult game.",
+          "icon": "Users"
+        },
+        {
+          "title": "Intermediate",
+          "level": "C / B level",
+          "description": "Competitive enough to matter and friendly enough to grab a drink afterward. Balanced teams keep every shift moving.",
+          "icon": "Clock3"
+        },
+        {
+          "title": "Advanced",
+          "level": "A / AA level",
+          "description": "Fast, structured hockey for players who want a serious skate and a full 60 minutes of pace.",
+          "icon": "CheckCircle2"
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/pages/adult-leagues.tsx#faqs",
+      "path": "artifacts/kchockey/src/pages/adult-leagues.tsx",
+      "exported": false,
+      "kind": "records",
+      "name": "faqs",
+      "count": 4,
+      "type": null,
+      "fields": [
+        {
+          "name": "question"
+        },
+        {
+          "name": "answer"
+        }
+      ],
+      "values": [
+        {
+          "question": "Do I need a full team to register?",
+          "answer": "Not always. Many KC adult leagues accept individual free agents and place them on a team, while other sessions are built for established teams. Contact the rink before registration closes to ask about open spots."
+        },
+        {
+          "question": "What equipment do adult players need?",
+          "answer": "Players should bring a properly fitted helmet with a full cage or shield, skates, gloves, shoulder and elbow pads, hockey pants, shin guards, socks, and a stick. Your league may have additional safety requirements."
+        },
+        {
+          "question": "What level should I sign up for?",
+          "answer": "Be honest about your skating, pace, and playing experience. Recreational leagues are welcoming to newer adults, while intermediate and advanced divisions are better for players with established game experience. A league director can help place you."
+        },
+        {
+          "question": "Where are adult leagues played?",
+          "answer": "Adult league games run at rinks across the metro, including facilities in Overland Park, Independence, Liberty, Olathe, and Blue Springs. Use the rink directory to see what is closest to home or work."
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#faqs",
+      "path": "artifacts/kchockey/src/pages/new-to-hockey.tsx",
+      "exported": false,
+      "kind": "records",
+      "name": "faqs",
+      "count": 6,
+      "type": null,
+      "fields": [
+        {
+          "name": "question"
+        },
+        {
+          "name": "answer"
+        }
+      ],
+      "values": [
+        {
+          "question": "What age can my child start hockey?",
+          "answer": "Most KC rinks welcome skaters as young as three through introductory programs. Your child does not need to know how to skate first. Learn-to-skate classes are a friendly first step, and coaches will help you choose the right next program when they are ready."
+        },
+        {
+          "question": "What equipment do we need to begin?",
+          "answer": "A helmet with a full face cage, skates, shoulder and elbow pads, hockey pants, shin guards, gloves, and a stick are the usual basics. Many local programs offer equipment rentals or starter packages, so you do not need to buy everything before your first skate."
+        },
+        {
+          "question": "Does my player need to know how to skate?",
+          "answer": "Not at all. Hockey starts with skating, stopping, and feeling comfortable on the ice. A learn-to-skate class or beginner clinic is designed for brand-new skaters and builds those skills before players join a team."
+        },
+        {
+          "question": "How much does it cost to get started?",
+          "answer": "Introductory classes vary by rink, but most families can try a first session for a modest registration fee. Ask about rental equipment, seasonal packages, and scholarship options before purchasing gear. Our rink directory is a good place to compare programs."
+        },
+        {
+          "question": "Is hockey safe for kids?",
+          "answer": "Hockey has contact and speed, but youth programs teach body control, awareness, and safe play from day one. Properly fitted equipment, certified coaches, and age-appropriate rules are all part of a strong program. Talk with the coach about your child's experience level and comfort."
+        },
+        {
+          "question": "What is the difference between a clinic, camp, and league?",
+          "answer": "A clinic focuses on one skill or topic, like skating or shooting. A camp usually combines several skills over multiple days. A league is a season of practices and games with a team. New players often start with lessons or learn-to-skate, then move into a league when they are ready."
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/pages/new-to-hockey.tsx#firstSteps",
+      "path": "artifacts/kchockey/src/pages/new-to-hockey.tsx",
+      "exported": false,
+      "kind": "records",
+      "name": "firstSteps",
+      "count": 3,
+      "type": null,
+      "fields": [
+        {
+          "name": "icon"
+        },
+        {
+          "name": "title"
+        },
+        {
+          "name": "text"
+        }
+      ],
+      "values": [
+        {
+          "icon": "IceCreamBowl",
+          "title": "Find the ice",
+          "text": "Start with a rink that offers learn-to-skate or beginner hockey programs."
+        },
+        {
+          "icon": "Shield",
+          "title": "Get fitted",
+          "text": "Ask the rink about rental gear or a proper equipment fitting before buying."
+        },
+        {
+          "icon": "Sparkles",
+          "title": "Take the first stride",
+          "text": "Book an intro class, clinic, or private lesson and have fun learning."
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/pages/youth-leagues.tsx#divisions",
+      "path": "artifacts/kchockey/src/pages/youth-leagues.tsx",
+      "exported": false,
+      "kind": "records",
+      "name": "divisions",
+      "count": 5,
+      "type": null,
+      "fields": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "ages"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "detail"
+        }
+      ],
+      "values": [
+        {
+          "age": "Mite",
+          "ages": "6U–8U",
+          "description": "A welcoming introduction to team hockey with an emphasis on skating, confidence, and fun.",
+          "detail": "Half-ice games and skill-first practices"
+        },
+        {
+          "age": "Squirt",
+          "ages": "10U",
+          "description": "Players build stronger fundamentals while learning positioning, passing, and playing as a team.",
+          "detail": "Full-ice development and game play"
+        },
+        {
+          "age": "Peewee",
+          "ages": "12U",
+          "description": "A faster pace with more tactical detail, helping players find their strengths on the ice.",
+          "detail": "Competitive rec and travel pathways"
+        },
+        {
+          "age": "Bantam",
+          "ages": "14U",
+          "description": "Players sharpen decision-making, systems, and physical confidence in an age-appropriate environment.",
+          "detail": "Team systems and skill development"
+        },
+        {
+          "age": "High School",
+          "ages": "15U–18U",
+          "description": "A place to keep playing, compete hard, and prepare for the next level of hockey.",
+          "detail": "School-year and club opportunities"
+        }
+      ]
+    },
+    {
+      "id": "d:artifacts/kchockey/src/pages/youth-leagues.tsx#faqs",
+      "path": "artifacts/kchockey/src/pages/youth-leagues.tsx",
+      "exported": false,
+      "kind": "records",
+      "name": "faqs",
+      "count": 4,
+      "type": null,
+      "fields": [
+        {
+          "name": "question"
+        },
+        {
+          "name": "answer"
+        }
+      ],
+      "values": [
+        {
+          "question": "Does my child need prior hockey experience?",
+          "answer": "No. Many players begin with learn-to-skate and introductory hockey before joining a league. If your child can skate, stop, and follow a coach's directions, a rink coordinator can usually point you toward the right entry-level program."
+        },
+        {
+          "question": "How are players placed on teams?",
+          "answer": "Most programs use age group and a short evaluation skate to create balanced teams. The goal is to give every player a positive challenge and a chance to contribute, not to create a perfect ranking."
+        },
+        {
+          "question": "What does a typical season include?",
+          "answer": "A recreational season commonly includes weekly practices, scheduled games, jersey use, and optional tournaments. The exact schedule varies by rink and division, so check the registration details for your preferred facility."
+        },
+        {
+          "question": "Where can I find youth league registration?",
+          "answer": "Start with the rink directory to find a facility near you, then use its website or registration desk for current dates and pricing. League calendars change throughout the year, and KCHockey can help you compare options."
+        }
+      ]
+    },
+    {
+      "id": "d:lib/api-spec/openapi.yaml#api",
+      "path": "lib/api-spec/openapi.yaml",
+      "kind": "api",
+      "name": "api",
+      "paths": [
+        "/healthz"
+      ],
+      "schemas": [
+        "HealthStatus"
+      ],
+      "note": "a health check only: no content in this API"
+    }
+  ],
+  "notes": [
+    "1 database schema file(s) and no table: a template's empty schema"
+  ],
+  "summary": {
+    "routes": 8,
+    "pages": 8,
+    "repeats": 37,
+    "forms": 1,
+    "data": 13,
+    "invalid": 0
+  }
+}

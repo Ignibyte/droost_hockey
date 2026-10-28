@@ -1,0 +1,45 @@
+uuid: 1533b30c-811c-4c07-957c-db54bce5b954
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: 11bb0beceaeb95fe
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Find the fit'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Division guide'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        divisions:
+          title: Divisions
+          description: 'Division rows, in order.'
+label: 'Division guide'
+id: sdc.kchockey.division_guide
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:division_guide'

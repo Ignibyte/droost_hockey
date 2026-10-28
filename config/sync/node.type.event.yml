@@ -1,0 +1,18 @@
+uuid: 955438cd-f061-4038-9e1f-67157538dc9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - kchockey_site
+third_party_settings:
+  kchockey_site:
+    listing: /camps
+_core:
+  default_config_hash: 2owhVLlrINAGaC_iC-3ipx0lsTiube_2GXsTej3o2Pw
+name: 'Camp or clinic'
+type: event
+description: 'A camp or clinic held at one of the rinks, listed on /camps and the home page. It has no page of its own: its address forwards to /camps.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

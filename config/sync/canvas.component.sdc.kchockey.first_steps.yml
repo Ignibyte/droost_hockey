@@ -1,0 +1,21 @@
+uuid: fc6c427d-d407-4a0e-a2c3-61c79c3a5e35
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: 7f83e48af1eb74eb
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        steps:
+          title: Steps
+          description: 'First step cards, in order.'
+label: 'First steps'
+id: sdc.kchockey.first_steps
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:first_steps'

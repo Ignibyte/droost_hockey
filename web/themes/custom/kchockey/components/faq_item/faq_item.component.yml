@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: FAQ question
+description: 'One question and its answer, closed until a visitor opens it. Place it in an FAQ accordion, which keeps one open at a time.'
+status: stable
+group: Questions
+props:
+  type: object
+  required:
+    - question
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    question:
+      type: string
+      title: Question
+      description: 'The question, always shown.'
+      examples:
+        - 'What age can my child start hockey?'
+    answer:
+      type: string
+      title: Answer
+      description: 'The answer, shown while the question is open.'
+      examples:
+        - 'Most KC rinks welcome skaters as young as three through introductory programs. Your child does not need to know how to skate first.'

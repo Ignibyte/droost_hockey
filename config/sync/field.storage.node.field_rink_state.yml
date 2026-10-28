@@ -1,0 +1,27 @@
+uuid: 77b300bc-faf3-4ee1-997b-769affdcf2bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_rink_state
+field_name: field_rink_state
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: KS
+      label: Kansas
+    -
+      value: MO
+      label: Missouri
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

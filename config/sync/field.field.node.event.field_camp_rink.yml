@@ -1,0 +1,28 @@
+uuid: e0ba8b0d-9bf2-4f8a-9321-9a9c160f3b43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_rink
+    - node.type.event
+    - node.type.rink
+id: node.event.field_camp_rink
+field_name: field_camp_rink
+entity_type: node
+bundle: event
+label: Location
+description: 'The rink the camp is held at.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      rink: rink
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

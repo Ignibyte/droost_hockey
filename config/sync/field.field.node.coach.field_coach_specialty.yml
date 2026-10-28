@@ -1,0 +1,19 @@
+uuid: 44a5edb4-6f47-45e7-9283-133ff709a9b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coach_specialty
+    - node.type.coach
+id: node.coach.field_coach_specialty
+field_name: field_coach_specialty
+entity_type: node
+bundle: coach
+label: Specialty
+description: 'What the coach teaches, as the card shows it: "Power skating specialist".'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

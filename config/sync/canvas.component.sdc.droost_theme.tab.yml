@@ -1,0 +1,56 @@
+uuid: 79abfd9d-6b80-4ee9-8ddf-2c98b7029e99
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: bb2fb743632bc082
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Taproom
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        group:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: visit_tabs
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        active:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Panel
+          description: 'The panel content shown when this tab is selected.'
+label: Tab
+id: sdc.droost_theme.tab
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:tab'

@@ -1,0 +1,26 @@
+uuid: f6b96e4d-6e33-483f-b84d-f4f8fe37078b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rinks
+  module:
+    - views
+active_version: a453b5ceadbaae20
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:rinks-directory'
+        label: 'Rinks: directory'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Rinks: directory'
+id: block.views_block.rinks-directory
+provider: views
+source: block
+source_local_id: 'views_block:rinks-directory'

@@ -1,0 +1,15 @@
+uuid: 394ff730-7c5c-4b44-9600-0777416cedbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.kchockey.coach_card
+    - canvas.component.sdc.kchockey.coach_grid
+    - canvas.component.sdc.kchockey.instructor_spotlight
+name: Coaches
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.kchockey.coach_card
+  - sdc.kchockey.coach_grid
+  - sdc.kchockey.instructor_spotlight

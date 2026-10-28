@@ -1,0 +1,14 @@
+ .../canvas.component.sdc.kchockey.check_item.yml   |  33 ++++-
+ ...folder.ba183539-1f97-4f94-b2b2-5da47f2c8d29.yml |   6 +
+ scripts/kch/r01_content.php                        |  47 ++++--
+ scripts/kch/r02_contact.php                        |   4 +-
+ scripts/kch/r03_rinks.php                          |  68 +++++++--
+ scripts/kch/r04_camps.php                          |  77 +++++++++-
+ scripts/kch/r05_coaches.php                        |   4 +-
+ scripts/kch/trees/new-to-hockey.json               | 164 +++++++++++++++++++++
+ scripts/kch/trees/private-lessons.json             |   4 +
+ web/themes/custom/kchockey/README.md               |  33 ++++-
+ .../components/check_item/check_item.component.yml |  15 +-
+ .../kchockey/components/check_item/check_item.twig |   6 +-
+ web/themes/custom/kchockey/css/kchockey.css        |   2 +-
+ 13 files changed, 430 insertions(+), 33 deletions(-)

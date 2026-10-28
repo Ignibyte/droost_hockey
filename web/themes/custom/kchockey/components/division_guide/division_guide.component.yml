@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Division guide
+description: 'A gold eyebrow and a heading over rows of divisions, under a dark rule.'
+status: stable
+group: Leagues
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'The small gold line above the heading.'
+      examples:
+        - 'Find the fit'
+    heading:
+      type: string
+      title: Heading
+      description: 'The guide''s heading.'
+      examples:
+        - 'Division guide'
+slots:
+  divisions:
+    title: Divisions
+    description: 'Division rows, in order.'

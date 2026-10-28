@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Coach grid
+description: 'The grid the coach cards are laid out in: one to a row on a phone, two on a tablet, four on a desktop.'
+status: stable
+group: Coaches
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+slots:
+  items:
+    title: Coaches
+    description: 'The coach cards.'

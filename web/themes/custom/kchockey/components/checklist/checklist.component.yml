@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Checklist
+description: 'Short lines with gold checks, stacked or in a row.'
+status: stable
+group: Sections
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    layout:
+      type: string
+      title: Layout
+      description: 'Stacked, one line under another; or in a row that wraps.'
+      enum:
+        - stacked
+        - row
+      meta:enum:
+        stacked: Stacked
+        row: 'In a row'
+      default: stacked
+      examples:
+        - stacked
+slots:
+  items:
+    title: Lines
+    description: 'Check items, in order.'

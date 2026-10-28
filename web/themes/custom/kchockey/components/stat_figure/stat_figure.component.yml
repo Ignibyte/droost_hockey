@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Stat figure
+description: 'One big figure with a short label under it, as in the season snapshot.'
+status: stable
+group: Leagues
+props:
+  type: object
+  required:
+    - value
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    value:
+      type: string
+      title: Figure
+      description: 'The figure as it should read: 5, 8+, 100%.'
+      examples:
+        - '8+'
+    label:
+      type: string
+      title: Label
+      description: 'What the figure counts.'
+      examples:
+        - 'KC rinks'

@@ -1,0 +1,72 @@
+uuid: cae66588-dc73-4f84-9eef-d1f1cbc49e1a
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: af1817fa854c73f6
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Message Sent!'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        message:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "Thanks for reaching out. We'll get back to you between periods."
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        back_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /contact
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        back_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Send Another'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Form sent'
+id: sdc.kchockey.form_sent
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:form_sent'

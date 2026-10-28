@@ -1,0 +1,18 @@
+<div{{ attributes.addClass('container', 'mx-auto', 'px-4', 'mt-12', 'md:mt-16') }}>
+  <div class="max-w-5xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <div>
+        {% if eyebrow %}
+          <p class="text-accent font-bold uppercase tracking-[0.2em] text-xs mb-3">{{ eyebrow }}</p>
+        {% endif %}
+        <h2 class="text-4xl md:text-5xl font-serif font-bold uppercase tracking-tight leading-none">{{ heading }}{% if heading_line_2 %}<br>{{ heading_line_2 }}{% endif %}</h2>
+      </div>
+      {% if note %}
+        <div class="md:max-w-sm border-l-4 border-accent pl-5 text-muted-foreground leading-relaxed">{{ note }}</div>
+      {% endif %}
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+      {{ formats }}
+    </div>
+  </div>
+</div>

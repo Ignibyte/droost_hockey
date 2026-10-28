@@ -1,0 +1,252 @@
+{
+  "items": [
+    {
+      "uuid": "811e4389-aee1-4609-ad5a-a412ce0f9a81",
+      "component_id": "sdc.kchockey.page_intro",
+      "inputs": {
+        "variant": "guide_dots",
+        "eyebrow": "Build the next generation",
+        "heading": "Youth",
+        "heading_accent": "Leagues",
+        "text": "Find the right place for your young player to learn, compete, make friends, and fall in love with the game across Kansas City."
+      }
+    },
+    {
+      "uuid": "448822b3-8b96-4846-8482-404065b69421",
+      "component_id": "sdc.kchockey.start_panel",
+      "inputs": {
+        "eyebrow": "Start here",
+        "heading": "A team for every stage.",
+        "text": "KC youth hockey has room for first-time skaters, weekend players, and serious competitors. Choose a program that matches your player's age, experience, and goals, then let the rink handle the rest."
+      }
+    },
+    {
+      "uuid": "a5e2d9b4-d900-421e-aa2f-5b9902f2c2d7",
+      "component_id": "sdc.kchockey.checklist",
+      "parent_uuid": "448822b3-8b96-4846-8482-404065b69421",
+      "slot": "checklist",
+      "inputs": {
+        "layout": "row"
+      }
+    },
+    {
+      "uuid": "eb9b62bd-f746-4f49-8c5e-5e5793f11f5c",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "a5e2d9b4-d900-421e-aa2f-5b9902f2c2d7",
+      "slot": "items",
+      "inputs": {
+        "icon": "circle",
+        "text": "Beginner-friendly programs"
+      }
+    },
+    {
+      "uuid": "899f6014-865c-40ee-b0aa-178e288f5a74",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "a5e2d9b4-d900-421e-aa2f-5b9902f2c2d7",
+      "slot": "items",
+      "inputs": {
+        "icon": "circle",
+        "text": "Certified coaches"
+      }
+    },
+    {
+      "uuid": "cf2ad4aa-bc4e-4b44-9ca7-eb3ff4ebb5ec",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "a5e2d9b4-d900-421e-aa2f-5b9902f2c2d7",
+      "slot": "items",
+      "inputs": {
+        "icon": "circle",
+        "text": "Rec and competitive paths"
+      }
+    },
+    {
+      "uuid": "10198077-2ead-4bbb-b141-6aa6ce136f6f",
+      "component_id": "sdc.kchockey.season_snapshot",
+      "parent_uuid": "448822b3-8b96-4846-8482-404065b69421",
+      "slot": "snapshot",
+      "inputs": {
+        "eyebrow": "Season snapshot"
+      }
+    },
+    {
+      "uuid": "d9f35c0c-2b1f-48a2-b64d-71202f8b3b37",
+      "component_id": "sdc.kchockey.stat_figure",
+      "parent_uuid": "10198077-2ead-4bbb-b141-6aa6ce136f6f",
+      "slot": "figures",
+      "inputs": {
+        "value": "5",
+        "label": "Age pathways"
+      }
+    },
+    {
+      "uuid": "4b858629-a448-4d63-a482-7fa4de7bcceb",
+      "component_id": "sdc.kchockey.stat_figure",
+      "parent_uuid": "10198077-2ead-4bbb-b141-6aa6ce136f6f",
+      "slot": "figures",
+      "inputs": {
+        "value": "8+",
+        "label": "KC rinks"
+      }
+    },
+    {
+      "uuid": "f852ecba-d112-4b87-ba3a-19744089fefd",
+      "component_id": "sdc.kchockey.stat_figure",
+      "parent_uuid": "10198077-2ead-4bbb-b141-6aa6ce136f6f",
+      "slot": "figures",
+      "inputs": {
+        "value": "1",
+        "label": "Great first step"
+      }
+    },
+    {
+      "uuid": "8a14f561-fb61-492b-829e-02707dc126c4",
+      "component_id": "sdc.kchockey.stat_figure",
+      "parent_uuid": "10198077-2ead-4bbb-b141-6aa6ce136f6f",
+      "slot": "figures",
+      "inputs": {
+        "value": "100%",
+        "label": "Team energy"
+      }
+    },
+    {
+      "uuid": "2847c17c-1685-4123-a6c9-7db55af78400",
+      "component_id": "sdc.kchockey.division_guide",
+      "inputs": {
+        "eyebrow": "Find the fit",
+        "heading": "Division guide"
+      }
+    },
+    {
+      "uuid": "d2469f63-dfaa-488a-87e3-a26709842fba",
+      "component_id": "sdc.kchockey.division_row",
+      "parent_uuid": "2847c17c-1685-4123-a6c9-7db55af78400",
+      "slot": "divisions",
+      "inputs": {
+        "name": "Mite",
+        "ages": "6U–8U",
+        "description": "A welcoming introduction to team hockey with an emphasis on skating, confidence, and fun.",
+        "detail": "Half-ice games and skill-first practices"
+      }
+    },
+    {
+      "uuid": "947969bb-d169-43f0-9630-d965f786d9fe",
+      "component_id": "sdc.kchockey.division_row",
+      "parent_uuid": "2847c17c-1685-4123-a6c9-7db55af78400",
+      "slot": "divisions",
+      "inputs": {
+        "name": "Squirt",
+        "ages": "10U",
+        "description": "Players build stronger fundamentals while learning positioning, passing, and playing as a team.",
+        "detail": "Full-ice development and game play"
+      }
+    },
+    {
+      "uuid": "be74a8d1-08d3-4fd7-9252-9f09f3553500",
+      "component_id": "sdc.kchockey.division_row",
+      "parent_uuid": "2847c17c-1685-4123-a6c9-7db55af78400",
+      "slot": "divisions",
+      "inputs": {
+        "name": "Peewee",
+        "ages": "12U",
+        "description": "A faster pace with more tactical detail, helping players find their strengths on the ice.",
+        "detail": "Competitive rec and travel pathways"
+      }
+    },
+    {
+      "uuid": "9905ee82-022b-488d-b854-d6665ed6d3cc",
+      "component_id": "sdc.kchockey.division_row",
+      "parent_uuid": "2847c17c-1685-4123-a6c9-7db55af78400",
+      "slot": "divisions",
+      "inputs": {
+        "name": "Bantam",
+        "ages": "14U",
+        "description": "Players sharpen decision-making, systems, and physical confidence in an age-appropriate environment.",
+        "detail": "Team systems and skill development"
+      }
+    },
+    {
+      "uuid": "dabae5cf-e897-40d7-acf5-da3c5fca8f05",
+      "component_id": "sdc.kchockey.division_row",
+      "parent_uuid": "2847c17c-1685-4123-a6c9-7db55af78400",
+      "slot": "divisions",
+      "inputs": {
+        "name": "High School",
+        "ages": "15U–18U",
+        "description": "A place to keep playing, compete hard, and prepare for the next level of hockey.",
+        "detail": "School-year and club opportunities"
+      }
+    },
+    {
+      "uuid": "c8a433e4-1645-44ab-9928-f073ad013333",
+      "component_id": "sdc.kchockey.question_section",
+      "inputs": {
+        "intro_width": "narrow"
+      }
+    },
+    {
+      "uuid": "1c91b714-9efe-4f80-a141-c2f5c6a4f56a",
+      "component_id": "sdc.kchockey.question_intro",
+      "parent_uuid": "c8a433e4-1645-44ab-9928-f073ad013333",
+      "slot": "intro",
+      "inputs": {
+        "eyebrow": "On the bench",
+        "eyebrow_icon": "shield_check",
+        "heading": "Parents,",
+        "heading_size": "medium",
+        "heading_line_2": "we've got answers.",
+        "text": "Starting a new sport comes with a lot of questions. Here are the basics to get your family moving toward the rink with confidence.",
+        "button_label": "Find a rink",
+        "button_url": "/rinks",
+        "second_button_label": "New to hockey?",
+        "second_button_url": "/new-to-hockey"
+      }
+    },
+    {
+      "uuid": "3dad7ae2-21e1-4d27-b65f-4b91b175bd5e",
+      "component_id": "sdc.kchockey.faq_accordion",
+      "parent_uuid": "c8a433e4-1645-44ab-9928-f073ad013333",
+      "slot": "questions",
+      "inputs": {}
+    },
+    {
+      "uuid": "9b9b4c73-b9dd-45ec-868e-c07a271ce2a2",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "3dad7ae2-21e1-4d27-b65f-4b91b175bd5e",
+      "slot": "items",
+      "inputs": {
+        "question": "Does my child need prior hockey experience?",
+        "answer": "No. Many players begin with learn-to-skate and introductory hockey before joining a league. If your child can skate, stop, and follow a coach's directions, a rink coordinator can usually point you toward the right entry-level program."
+      }
+    },
+    {
+      "uuid": "d43de1d1-2d57-49b5-b922-e199832de697",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "3dad7ae2-21e1-4d27-b65f-4b91b175bd5e",
+      "slot": "items",
+      "inputs": {
+        "question": "How are players placed on teams?",
+        "answer": "Most programs use age group and a short evaluation skate to create balanced teams. The goal is to give every player a positive challenge and a chance to contribute, not to create a perfect ranking."
+      }
+    },
+    {
+      "uuid": "e6ca9a3f-5346-48ea-bd1a-f4846bbd2e49",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "3dad7ae2-21e1-4d27-b65f-4b91b175bd5e",
+      "slot": "items",
+      "inputs": {
+        "question": "What does a typical season include?",
+        "answer": "A recreational season commonly includes weekly practices, scheduled games, jersey use, and optional tournaments. The exact schedule varies by rink and division, so check the registration details for your preferred facility."
+      }
+    },
+    {
+      "uuid": "f46c98f9-b270-4fcb-b66e-cc3a14c80a43",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "3dad7ae2-21e1-4d27-b65f-4b91b175bd5e",
+      "slot": "items",
+      "inputs": {
+        "question": "Where can I find youth league registration?",
+        "answer": "Start with the rink directory to find a facility near you, then use its website or registration desk for current dates and pricing. League calendars change throughout the year, and KCHockey can help you compare options."
+      }
+    }
+  ]
+}

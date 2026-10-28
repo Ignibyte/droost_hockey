@@ -1,0 +1,26 @@
+uuid: 87fb7a9a-8643-4490-8ce0-b6a4ef98f974
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.coaches
+  module:
+    - views
+active_version: 975d0c9182481881
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:coaches-listing'
+        label: 'Coaches: listing'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Coaches: listing'
+id: block.views_block.coaches-listing
+provider: views
+source: block
+source_local_id: 'views_block:coaches-listing'

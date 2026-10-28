@@ -1,0 +1,42 @@
+uuid: d8305aa3-e552-421a-bc7b-9b3d071b3f9f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: 2644d5c726d8abf1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        question:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'What age can my child start hockey?'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        answer:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Most KC rinks welcome skaters as young as three through introductory programs. Your child does not need to know how to skate first.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'FAQ question'
+id: sdc.kchockey.faq_item
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:faq_item'

@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Call-to-action band
+description: 'A dark band with a gold slant: a heading, a sentence or two and a gold button.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    heading:
+      type: string
+      title: Heading
+      description: 'The band''s heading.'
+      examples:
+        - 'Need a Coach Recommendation?'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence or two under the heading.'
+      examples:
+        - 'Not sure who to work with? Tell us about the player''s age, current level, and what they want to improve. We''ll match you with the right professional.'
+    button_label:
+      type: string
+      title: Button label
+      description: 'The gold button''s words; the button shows when it and the link are set.'
+      examples:
+        - 'Get Matched'
+    button_url:
+      type: string
+      format: uri-reference
+      title: Button link
+      description: 'Where the button goes.'
+      examples:
+        - '/contact'

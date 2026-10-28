@@ -1,0 +1,22 @@
+uuid: de10946a-b908-44c9-bc40-04c285bd9fc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kchockey
+_core:
+  default_config_hash: T006wAQaVLoHLuwzOVPHAsCc1g9tQ6gl2GjL1ZRY0Yg
+id: kchockey_messages
+theme: kchockey
+region: content
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: messages
+  label_display: '0'
+  provider: system
+visibility: {  }

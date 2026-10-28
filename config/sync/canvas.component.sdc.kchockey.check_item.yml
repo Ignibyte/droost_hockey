@@ -1,0 +1,61 @@
+uuid: 52cfbe74-2ee4-4df5-9930-804b6e4d5594
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - kchockey
+active_version: 8538ee19bcb8a1e2
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: check
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Former ECHL player'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  89a335e56b9881c7:
+    settings:
+      prop_field_definitions:
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Former ECHL player'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Check item'
+id: sdc.kchockey.check_item
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:check_item'

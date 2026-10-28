@@ -1,0 +1,21 @@
+uuid: 40c13ac3-6cb1-44ad-82fd-d0eb664db3c2
+langcode: en
+status: false
+dependencies:
+  theme:
+    - kchockey
+active_version: 989bc0fac588f0bf
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        camp:
+          title: Camp
+          description: 'The featured camp: the "Camps: home page featured" block.'
+label: 'Featured camp band'
+id: sdc.kchockey.featured_band
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:featured_band'

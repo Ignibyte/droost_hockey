@@ -1,0 +1,7 @@
+kchockey_site.settings:
+  path: '/admin/config/system/site-details'
+  defaults:
+    _form: '\Drupal\kchockey_site\Form\SiteDetailsForm'
+    _title: 'Site details'
+  requirements:
+    _permission: 'edit site details'

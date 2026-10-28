@@ -1,0 +1,49 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Rink tile
+description: 'A rink on the home page''s navy band: name, town, a few amenities and a link to the directory.'
+status: stable
+group: Rinks
+props:
+  type: object
+  required:
+    - name
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    name:
+      type: string
+      title: Name
+      description: 'The rink''s name.'
+      examples:
+        - 'Pepsi Ice Midwest'
+    city:
+      type: string
+      title: City
+      description: 'The town the rink is in.'
+      examples:
+        - 'Overland Park'
+    state:
+      type: string
+      title: State
+      description: 'The state''s two letters.'
+      examples:
+        - 'KS'
+    link_label:
+      type: string
+      title: Link label
+      description: 'The link under the amenities.'
+      examples:
+        - 'View Rink'
+    link_url:
+      type: string
+      format: uri-reference
+      title: Link
+      description: 'Where the link goes.'
+      examples:
+        - '/rinks'
+slots:
+  amenities:
+    title: Amenities
+    description: 'A few of the rink''s amenities, as dark amenity tags.'

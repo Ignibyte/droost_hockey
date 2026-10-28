@@ -1,0 +1,14 @@
+{"set_aside": [
+  {"route": "*", "text": "(816) 555-0199", "decided": "Q7", "why": "a placeholder number: the footer shows the phone once staff enter the real one"},
+  {"route": "*", "text": "Privacy Policy", "decided": "Q8", "why": "the link shows to visitors once staff publish the privacy page"},
+  {"route": "*", "text": "Terms of Service", "decided": "Q8", "why": "the link shows to visitors once staff publish the terms page"},
+  {"route": "/rinks", "text": "Visit Website", "decided": "Q3", "why": "rink websites are placeholders, left empty until real ones are sent"},
+  {"route": "/rinks", "text": "(913) 555-0101", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"},
+  {"route": "/rinks", "text": "(816) 555-0202", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"},
+  {"route": "/rinks", "text": "(816) 555-0303", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"},
+  {"route": "/rinks", "text": "(816) 555-0404", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"},
+  {"route": "/rinks", "text": "(913) 555-0505", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"},
+  {"route": "/rinks", "text": "(816) 555-0606", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"},
+  {"route": "/rinks", "text": "(816) 555-0707", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"},
+  {"route": "/rinks", "text": "(816) 555-0808", "decided": "Q3", "why": "a placeholder rink phone, left empty until the real one is sent"}
+]}

@@ -1,0 +1,41 @@
+uuid: e5c4958c-3f1a-4da1-b2a5-fbbcdcc0244f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: aaa2f831d7dfb284
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        value:
+          required: true
+          field_type: float
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 4.0
+          expression: ℹ︎float␟value
+          derived_schema_metadata: {  }
+        label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '4.0'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Rating
+id: sdc.droost_theme.rating
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:rating'

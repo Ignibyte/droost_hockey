@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# The Canvas tools: read the component registry, read, validate and write a
+# page's component tree, lint the SDCs. Run from the project root:
+#
+#   droost/bin/canvas status
+#   droost/bin/canvas components [<component id>]
+#   droost/bin/canvas tree:get <entity id>
+#   droost/bin/canvas tree:validate <entity id> --items=<file|->
+#   droost/bin/canvas tree:set <entity id> --items=<file|-> [--dry-run]
+#   droost/bin/canvas lint [<sdc id>] [--custom] [--all]
+#
+# The work is droost/gates/lib/canvas/cli.php, run inside the site by drush
+# (through ddev from the host, directly inside the container). It prints one
+# JSON object; this script exits with its `exit`: 0 ok, 1 refused, 2 could
+# not answer. No JSON at all means drush could not boot the site: 2.
+set -uo pipefail
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+cd "$root" || exit 2
+script=droost/gates/lib/canvas/cli.php
+
+if [ "${IS_DDEV_PROJECT:-}" = "true" ] || [ ! -f .ddev/config.yaml ] || ! command -v ddev >/dev/null 2>&1; then
+  drush=(vendor/bin/drush)
+else
+  drush=(ddev drush)
+fi
+
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ] || [ $# -eq 0 ]; then
+  sed -n '2,15p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
+  exit 0
+fi
+
+out="$("${drush[@]}" php:script "$script" -- "$@" 2>/tmp/droost-canvas-stderr.$$)"
+status=$?
+err="$(cat /tmp/droost-canvas-stderr.$$ 2>/dev/null)"
+rm -f /tmp/droost-canvas-stderr.$$
+
+json="$(printf '%s\n' "$out" | sed -n '/^{/,$p')"
+if [ -z "$json" ]; then
+  printf '{"exit": 2, "ok": false, "message": "drush could not run the Canvas tools (exit %s): %s", "data": {}}\n' \
+    "$status" "$(printf '%s %s' "$out" "$err" | tr '\n"\\' "  /" | cut -c1-400)"
+  exit 2
+fi
+printf '%s\n' "$json"
+code="$(printf '%s\n' "$json" | sed -n 's/^    "exit": \([0-9]\),$/\1/p' | head -1)"
+exit "${code:-2}"

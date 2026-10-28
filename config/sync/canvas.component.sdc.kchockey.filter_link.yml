@@ -1,0 +1,59 @@
+uuid: 44a4436c-9479-4da1-ab97-04351a24b373
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: ec3b74b70610c9f0
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Youth Hockey'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /camps
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        active:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Filter link'
+id: sdc.kchockey.filter_link
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:filter_link'

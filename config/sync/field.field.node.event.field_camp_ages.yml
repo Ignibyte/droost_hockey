@@ -1,0 +1,19 @@
+uuid: 5a0fb028-8634-4351-a2a6-02b836b7bbe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_ages
+    - node.type.event
+id: node.event.field_camp_ages
+field_name: field_camp_ages
+entity_type: node
+bundle: event
+label: Ages
+description: 'As it should read, for example "8–14", "18+" or "Adults".'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

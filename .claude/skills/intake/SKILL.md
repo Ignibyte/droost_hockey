@@ -1,0 +1,334 @@
+---
+name: intake
+description: Plan a WHOLE site from a design source with the human, before anything is built — a Replit or Vite app, a static HTML folder, a zip of either. Read the source with droost-source, propose the Drupal content model (content types, fields, vocabularies, Views, landing pages, Webforms, menus, components, custom code), put it to droost, ask the human what the source cannot say, write the roadmap of rungs, and hand it to the operator to approve. Use when the human says "build me a site off this …". Claude Code also offers it as /droost:workflow:intake.
+---
+
+The human has handed you a design and asked for a site ("build me a site,
+no mistakes, off this html"). Your job here is the PLAN, made with them:
+what the source holds, what each part of it becomes in Drupal, what only
+they can decide, and the order it gets built in. **Nothing is built in an
+intake.** While one is open, no run opens; the operator approves the
+roadmap, and only then does each rung run through `/droost:workflow:start`.
+
+This is not for one feature on a site that exists: that is a run
+(`/droost:workflow:start`). An intake is for a source that becomes a site.
+
+## The record you are held to
+
+Everything lives in `droost/intake/`, and `intake check` says what approval
+still needs. Five things are checked, and none of them judges whether a
+decision is good (that is the human's, at approval):
+
+- **files**: `audit.json` (written by the audit, never by you), `model.md`,
+  `questions.md`, `roadmap.md`, and each rung's ticket in `tickets/`;
+- **evidence**: every id a decision cites is in the audit;
+- **coverage**: every route, every repeated structure and form in a page's
+  main content, every set of records the source declares, and the frame
+  (header and footer) is decided, or set aside with a reason;
+- **answered**: every question has the human's answer on record, and your
+  file says what the record says;
+- **ladder**: rungs in order, each consuming one below it, each with its
+  ticket, and every construct shown only on pages a rung at or after its own
+  builds.
+
+The commands are `droost workflow:intake <verb>`. Under DDEV, run them in the
+container (`ddev exec tools/droost/vendor/bin/droost …`).
+
+## 1. Open the intake
+
+```
+droost workflow:intake start --request="<the human's words, verbatim>" --source=<path or URL>
+```
+
+The request is their words, exactly as they said them: it is the record of
+what was asked. Unpack a zip first (into the project, never into
+`droost/droost-workflow/`), and name the folder as the source.
+
+## 2. Serve the source, then audit it
+
+The audit reads the source the way a visitor sees it, so it needs the
+source served, and it needs Playwright (the project's `node_modules`, which
+the browser gate already uses). Run the server **where the audit runs**:
+under DDEV the audit runs in the web container, so serve the source there
+too (`ddev exec …`), or give the audit a URL the container reaches.
+
+- **Static HTML**: `vendor/bin/droost-source serve <folder> --port 4321`,
+  in the background; add `--static` to the audit so each HTML file is read
+  as a route.
+- **A Replit or Vite app** (`package.json`, often a pnpm workspace): install
+  and start its dev server as its README or `replit.md` says. Replit apps
+  read `PORT` and `BASE_PATH` from the environment; a pnpm workspace may pin
+  native packages for another platform, which `pnpm install` then refuses —
+  read the error before changing anything. The app's own files are the
+  `--files` folder: the audit reads its router, its data files and its
+  schemas from there.
+
+```
+droost workflow:intake audit --url=<where it is served> --files=<the source folder>
+```
+
+This writes `droost/intake/audit.json` and `audit.md`, and records the
+audit's sha256 where you cannot write. **Read `audit.md` whole** before you
+decide anything. Never edit `audit.json`: a changed audit fails the check,
+because every decision cites it. If the audit missed a route (one behind a
+form, say), run it again with `--routes=/that,/other`.
+
+### Reading the audit
+
+- **Routes**: the router's own table, a crawl from `/`, and patterns
+  (`/events/:id`) with the instances the crawl found. A route that reads as
+  the source's not-found page is marked so.
+- **Repeated structures** (`p:/events#r1`): three or more siblings of one
+  shape. `cards` and `items` in a page's main content are what content types,
+  Views and lists are made of; `links` are menus; `chips` and `buttons` are
+  usually a filter bar, tags or decoration. Each slot says whether it
+  **varies** (a field) or is the same in every item (a label, never a
+  field), and what pattern its values share (price, date, phone).
+- **"renders d:…#EVENTS"**: the structure's values are a set of records the
+  files declare, slot by slot (`= date`). That is the strongest evidence a
+  content type has: the fields are the record's, the content is the
+  records'. A structure on two pages rendering the same records is one type
+  shown twice (a listing and a home-page block), never two types.
+- **A section that "shows" one record** is a spotlight: a View block or a
+  reference field, not a type of its own.
+- **A field that "names a record of" another set** (the data section says
+  so, with how many values matched) holds a reference written as the other
+  record's name: every camp's `location` is one of the rinks. Model it as a
+  reference to that type, never as text, or put it to the human when a value
+  might one day name something the site does not list.
+- **A broken image** (the audit marks it, and its slot says how many of
+  the items' images are broken) holds content nobody has seen. Never say
+  what it shows from its file name or alt text: say it is missing, and ask
+  the human what it held. If a record's name, price or text might be drawn
+  into it, that is a question, not a field.
+- **An image's alt text is a claim, not its content**, broken or not. A
+  photo the source hotlinks from elsewhere, recommended for the site, is
+  looked at first: one source's "Hockey player on ice" was a basketball in
+  a hoop, and an intake recommended copying it on the strength of its alt.
+- **A value worked out from another** is shown, not stored: initials from a
+  name, a full name from its parts, a "FREE" for a price of 0. A record field
+  of the source can be one (a mock data file stores what a template should
+  compute); when you keep one as a field, say in Why what an editor gains by
+  typing it.
+- **Data**: records (exported or kept in a page), the interfaces that type
+  them, database tables, API paths. A schema with no table, or an API with
+  only a health check, is a template's scaffolding: set it aside.
+
+## 3. The content model: `droost/intake/model.md`
+
+Write it in this shape; `intake check` reads it:
+
+```markdown
+# <Site> — content model
+
+## Constructs
+
+| Construct | What it is | Evidence | Rung | Confidence | Why |
+|---|---|---|---|---|---|
+| Event | a content type | p:/events#r1, p:/#r2, d:src/data/events.ts#EVENTS | 2 | high | six records the event cards render |
+| Event: date | a field | p:/events#r1 | 2 | medium | free text in the source ("Mar 4–6"): a date range, to ask |
+| Events listing | a View page | p:/events#r1, r:/events | 2 | high | |
+| Contact form | a Webform | p:/contact#f1 | 3 | high | |
+| Main menu | a menu | frame | 1 | high | the header's links |
+
+## Routes
+
+- / — the home page, a landing page
+- /events — the events listing
+
+## Not built
+
+| Evidence | Why not |
+|---|---|
+| d:lib/api-spec/openapi.yaml#api | a template's health check, no content |
+```
+
+- **One row per construct**: each content type, each field (`Type: field`),
+  each vocabulary, View display, landing page, Webform, menu, block,
+  component and piece of custom code. What it is goes in its own column, in
+  plain Drupal words ("a content type", "a View page").
+- **Evidence** cites the audit's ids. Every structure, form and set of
+  records the check names must be cited by a construct or set aside.
+- **Rung** is the roadmap's rung that builds it.
+- **Confidence** says how sure the source makes you; a low one is usually a
+  question.
+- **Every page** under `## Routes`, as `- /path — what it is`.
+- **A page the site answers at another address than the source** (a static
+  source's `/vehicles.html`, built at `/vehicles`) keeps the source's address
+  answering: a redirect from it (Drupal CMS ships the Redirect module), as a
+  construct citing the route, built and named in a criterion by the rung that
+  builds the page, with its query string carried (`?type=Truck`). Or ask the
+  human whether the old addresses matter: a source never deployed has no
+  visitor holding them. Leaving them to answer 404 unsaid is neither.
+
+## 4. Check it against the site
+
+Before the model goes to the human, look at what the site already has, so no
+construct duplicates one that exists and none breaks the site's house rules:
+
+- `droost brief` — the site's versions, its custom and contrib modules, what
+  the last configuration export enabled, and its house rules.
+- `droost code:wiki` and `droost code:tree` — what already exists, and what
+  each installed module and theme already gives you. The running site's
+  content model (bundles, fields) is drush's to read, or the exported
+  configuration's.
+- `droost workflow:rules` — the house rules alone: each rung's
+  work is held to them, by a gate or by the seeker.
+
+A construct the site already has is reused, and the row says so; one a house
+rule shapes says which rule. How each is built is the rungs' call, not the
+model's.
+
+## 5. Ask the human: `droost/intake/questions.md`
+
+Ask only what the source cannot settle, and never what it can (the audit
+already says how many records there are). What a source cannot say:
+
+- **who edits what**: which content an editor changes, and which is fixed
+  copy;
+- **what is real**: whether the source's records are the site's content or
+  placeholders. When the source says they are samples (a handoff, a README,
+  a "sample" tag), whether to import them is only half of it: ask for the
+  real ones too (the business's name, address, phone, email and hours; where
+  real records will come from and who keeps them current; which facts a
+  record carries that the sample does not). Never ask the human to confirm a
+  sample value;
+- **where things go**: a form's submissions, a booking, a payment;
+- **what is out of scope**: a backend the source sketches, accounts, a
+  second language;
+- **what a free-text value is**: a date written as words, a price that is
+  sometimes "FREE".
+
+```markdown
+| Id | Question | Why the source cannot settle it | Recommendation | Answer | Decided by |
+|---|---|---|---|---|---|
+| Q1 | Who edits the events? | the source hardcodes them | Staff editors, in the admin | Staff editors | human |
+| Q2 | Are the six events real? | events.ts holds them | Import them as the first content | Defer to your recommendation → import them | recommendation |
+```
+
+**Ask each through AskUserQuestion**, with the question's words exactly as
+the file has them (up to four in one call). Put your recommendation first,
+labelled `(Recommended)`, then the alternatives, and always an option to
+defer ("Defer to your recommendation"); the human may also type their own
+answer, or say they do not know. Then:
+
+- copy the answer they chose or typed into **Answer**, verbatim;
+- **Decided by** is `human` when they decided, and `recommendation` when they
+  deferred or did not know: then write your recommendation after their answer
+  in the same cell (`Defer to your recommendation → import them`), and the
+  model follows it.
+
+The guard records each answer as the human gave it, in a file you cannot
+write; `intake check` holds `questions.md` to that record.
+
+**On a host with no AskUserQuestion** (a Droost Cockpit seat denies it, since
+nobody sits at your terminal), put the same questions on record instead.
+Write the batch, up to four questions, to `droost/intake/ask.json`, each in
+the words `questions.md` carries, your recommendation first:
+
+```json
+{"questions": [
+  {"question": "Who edits the events?",
+   "options": ["Staff editors, in the admin", "Each venue, through an account", "Defer to your recommendation"],
+   "recommended": 0}
+]}
+```
+
+then run:
+
+```
+droost workflow:intake ask --file=droost/intake/ask.json
+```
+
+and **stop your turn**. The host shows the questions to the human and records
+each answer through `intake answer` (never run it yourself: it is the
+operator's, and refused). When you are resumed, `droost
+workflow:intake status` lists what is still `pending` and what is
+`recorded`; copy each recorded answer into `questions.md` as above, and ask
+again only what is still unanswered. Without a host either, the operator
+records each answer in their terminal (`droost workflow:intake answer
+"<question>" "<answer>"`).
+
+Revise the model with the answers.
+
+**The source's words about its own behaviour** ("nothing is sent", "your
+message has not left this page", "status uses your device's clock", "not a
+real map") are claims a construct can make false. When one you choose
+behaves otherwise (a server-side form for a page that drafts in the
+browser), either build it so the claim stays true, or change the words and
+say so: a question when the human must decide, and a set-aside in
+`droost/parity/decided.json` when the parity gate would hold the site to the
+old words.
+
+**A typeface the audit calls NEVER DRAWN** is one the source declares and
+the browser cannot draw, so every visitor of the source sees a fallback face.
+Ask whether the site should load it (the source's intent) or match what the
+source shows; until the source loads it, a parity reference cannot be
+captured from it.
+
+**When an answer means the site will not show something the source shows**
+(a link hidden until an editor sets it, a language switch on a site in one
+language), the parity gate would hold every page to it. Name each such text
+in `droost/parity/decided.json`, with the question that decided it, and the
+gate leaves it out of that page's reference and says so in its verdict:
+
+```json
+{"set_aside": [
+  {"route": "/", "text": "Spanish", "decided": "Q7", "why": "the site is in English only"},
+  {"route": "/about", "text": "Learn More", "decided": "Q6", "why": "hidden until an editor sets its address"}
+]}
+```
+
+`"route": "*"` sets a text aside on every page (the frame's). Only a
+question in `questions.md` can set a text aside, and only a text the source
+shows on that page: a later rung's page is checked once its reference is
+captured. Never set aside what the build has not managed: that is a gate to
+pass, not a decision.
+
+## 6. The roadmap: `droost/intake/roadmap.md`
+
+```markdown
+| Rung | Ticket | Builds | Consumes | Pages |
+|---|---|---|---|---|
+| 1 | tickets/R01.md | the theme's tokens and the frame | — | frame, / |
+| 2 | tickets/R02.md | Event, its six events, /events, the home page's three | 1 | /events, / |
+```
+
+- **Design from the first rung**: rung 1 builds the theme's tokens, the
+  frame (header, footer, menus) and the home page's shell, held to the
+  source's look; each later rung builds its pages as the source shows them.
+- **Each rung consumes one below it**, and builds something whole: a type
+  with its content and its pages, never "all the types" then "all the
+  pages".
+- **A page that grows** (the home page's sections) is listed in every rung
+  that adds to it.
+- **Each ticket** (`tickets/R01.md`) says what the rung builds, what it
+  consumes, its acceptance criteria from the source (what a visitor sees and
+  an editor can do, never how it is built), and its pages, which are its
+  parity routes.
+
+## 7. Check, then hand it to the operator
+
+```
+droost workflow:intake check
+```
+
+Repeat until it reads `ready: true`. Then show the human the roadmap in a
+few lines (the rungs and what each builds, the decisions you made for them),
+and **ask them through AskUserQuestion whether to approve it** ("Approve this
+roadmap?", with Approve and Not yet). The guard records their answer. On a
+host with no AskUserQuestion, ask it the same way as the questions: a batch
+of that one question with the options `Approve` and `Not yet`, `intake ask`,
+and stop your turn. Only on their yes, approve it yourself:
+
+```
+droost workflow:intake approve
+```
+
+Never approve without that yes: `approve` is refused until the human's
+latest answer to "Approve this roadmap?" (in those words) is Approve, and the
+approval records whose yes it was. Abandoning the intake and recording
+an answer outside AskUserQuestion stay the operator's; the guard refuses them
+from your shell. Do not start a run before approval: it is refused, and the
+refusal says why. After approval, each rung runs through
+`/droost:workflow:start` with its ticket, one at a time, in order.

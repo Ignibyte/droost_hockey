@@ -1,0 +1,14 @@
+ ...folder.2c27e259-99ff-4efd-b174-a1908c1ade1e.yml |  4 +++
+ ...folder.ba183539-1f97-4f94-b2b2-5da47f2c8d29.yml |  2 ++
+ config/sync/core.extension.yml                     |  2 ++
+ config/sync/user.role.content_editor.yml           |  8 ++++++
+ config/sync/views.settings.yml                     |  3 ++-
+ config/sync/workflows.workflow.basic_editorial.yml |  2 ++
+ scripts/kch/trees/home.json                        | 22 ++++++++++++++++
+ scripts/kch/trees/rinks.json                       | 23 +++++++++++++++++
+ web/modules/custom/kchockey_site/README.md         | 21 +++++++++++++++
+ .../config/schema/kchockey_site.schema.yml         |  8 ++++++
+ .../custom/kchockey_site/kchockey_site.info.yml    |  3 ++-
+ web/themes/custom/kchockey/README.md               | 30 +++++++++++++++++++++-
+ web/themes/custom/kchockey/css/kchockey.css        |  2 +-
+ 13 files changed, 126 insertions(+), 4 deletions(-)

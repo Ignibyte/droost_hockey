@@ -1,0 +1,40 @@
+{% set panel_id = 'site-header-panel' %}
+<nav{{ attributes.addClass('sticky', 'top-0', 'z-50', 'w-full', 'border-b', 'border-border/50', 'bg-background/80', 'backdrop-blur-md').setAttribute('aria-label', 'Main'|t).setAttribute('data-site-header', '') }}>
+  <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+    {#- The mark's two parts touch, as in the design: its link reads "KCHockey". #}
+    <a href="{{ home_url }}" class="flex items-center gap-2 group" rel="home">
+      {%- apply spaceless -%}
+      <div class="w-8 h-8 bg-accent rounded flex items-center justify-center transform -skew-x-12 group-hover:scale-105 transition-transform">
+        <span class="font-serif font-bold text-accent-foreground text-xl leading-none">KC</span>
+      </div>
+      <span class="font-serif text-xl font-bold tracking-tight uppercase group-hover:text-accent transition-colors">Hockey</span>
+      {%- endapply -%}
+    </a>
+
+    <div class="hidden md:flex items-center gap-6">
+      <div class="flex gap-1">
+        {{ links }}
+      </div>
+      <div class="h-6 w-px bg-border mx-2"></div>
+      <a href="{{ contact_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring bg-primary text-primary-foreground border border-primary-border min-h-9 py-2 font-serif uppercase tracking-wider rounded-none transform -skew-x-12 px-6">
+        <span class="skew-x-12 inline-block">{{ contact_label }}</span>
+      </a>
+    </div>
+
+    <button type="button" class="md:hidden p-2 text-foreground" aria-controls="{{ panel_id }}" aria-expanded="false" data-site-header-toggle>
+      <span class="sr-only" data-label-open>{{ 'Open menu'|t }}</span>
+      <span class="sr-only hidden" data-label-close>{{ 'Close menu'|t }}</span>
+      <svg data-icon-open xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <svg data-icon-close class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <div id="{{ panel_id }}" class="md:hidden absolute top-16 left-0 w-full bg-background border-b border-border shadow-lg animate-in slide-in-from-top-2" hidden data-site-header-panel>
+    <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+      {{ mobile_links }}
+      <div class="pt-4 mt-2 border-t border-border">
+        <a href="{{ contact_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium bg-primary text-primary-foreground border border-primary-border min-h-9 px-4 py-2 w-full font-serif uppercase tracking-wider rounded-none h-12">{{ contact_label }}</a>
+      </div>
+    </div>
+  </div>
+</nav>

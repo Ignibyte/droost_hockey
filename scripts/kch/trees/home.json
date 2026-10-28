@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "uuid": "e3feaebe-adf2-425e-8d5b-24bd73d00dfc",
+      "component_id": "sdc.kchockey.home_hero",
+      "inputs": {
+        "badge": "The Heart of KC Hockey",
+        "heading": "Kansas City's",
+        "heading_accent": "Ice Headquarters",
+        "text": "Built by rink rats, for rink rats. Find your next camp, private lesson, or drop-in skate anywhere in the metro.",
+        "primary_label": "Find a Camp",
+        "primary_url": "/camps",
+        "secondary_label": "Explore KC Rinks",
+        "secondary_url": "/rinks",
+        "image": {
+          "target_id": "__MEDIA_HERO__"
+        }
+      }
+    },
+    {
+      "uuid": "86410773-bba5-4d3e-9d12-a96ebc576313",
+      "component_id": "sdc.kchockey.ticker",
+      "inputs": {
+        "item_1": "Next USAH Level 1 Clinic: Oct 4-5",
+        "item_2": "Adult League Reg Open",
+        "item_3": "Fall Puck Dev Clinic filling fast!"
+      }
+    },
+    {
+      "uuid": "e4584ae4-a5cb-4e78-924a-8372ad13c86a",
+      "component_id": "block.views_block.camps-home_featured",
+      "inputs": {
+        "label": "Camps: home page featured",
+        "label_display": "0",
+        "views_label": "",
+        "items_per_page": null
+      }
+    },
+    {
+      "uuid": "a7f3d770-addd-428b-9b61-e24ffa247f1a",
+      "component_id": "sdc.kchockey.upcoming_band",
+      "inputs": {
+        "heading": "Upcoming Action",
+        "link_label": "View All Events",
+        "link_url": "/camps"
+      }
+    },
+    {
+      "uuid": "5b0d2c8e-3f41-4a6b-9d7e-1c2f8a9b0e47",
+      "component_id": "block.views_block.camps-home_upcoming",
+      "parent_uuid": "a7f3d770-addd-428b-9b61-e24ffa247f1a",
+      "slot": "camps",
+      "inputs": {
+        "label": "Camps: home page upcoming",
+        "label_display": "0",
+        "views_label": "",
+        "items_per_page": null
+      }
+    },
+    {
+      "uuid": "0f6b9e3c-8a27-4d51-b6e4-3c92a1f07d5e",
+      "component_id": "sdc.kchockey.rinks_band",
+      "inputs": {
+        "heading": "Find Your Ice",
+        "text": "Whether you're looking for drop-in hockey, a learn-to-skate program for the kids, or late-night stick and puck. We've mapped out every sheet of ice in the KC metro.",
+        "link_label": "Directory of All KC Rinks",
+        "link_url": "/rinks"
+      }
+    },
+    {
+      "uuid": "7e2c5a91-d4b8-43f6-8e0a-b5d1c9f3a264",
+      "component_id": "block.views_block.rinks-home",
+      "parent_uuid": "0f6b9e3c-8a27-4d51-b6e4-3c92a1f07d5e",
+      "slot": "rinks",
+      "inputs": {
+        "label": "Rinks: home page",
+        "label_display": "0",
+        "views_label": "",
+        "items_per_page": null
+      }
+    }
+  ]
+}

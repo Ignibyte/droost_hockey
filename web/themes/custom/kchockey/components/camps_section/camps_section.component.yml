@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Camps section
+description: 'The /camps column under the intro, holding the camps list with its filter bar.'
+status: stable
+group: Sections
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+slots:
+  content:
+    title: Content
+    description: 'The camps list: the "Camps: listing" block.'

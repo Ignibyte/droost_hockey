@@ -1,0 +1,16 @@
+uuid: 1666d9af-2767-41fa-94e5-4c2da649af48
+langcode: en
+status: true
+dependencies:
+  module:
+    - kchockey_site
+third_party_settings:
+  kchockey_site:
+    listing: /private-lessons
+name: Coach
+type: coach
+description: 'A private-lessons coach. Shown on /private-lessons by sort order. A coach has no page of its own: its address forwards to /private-lessons.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

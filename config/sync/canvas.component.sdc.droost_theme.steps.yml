@@ -1,0 +1,35 @@
+uuid: 96551730-3dc5-4923-8343-06a67a815466
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - droost_theme
+active_version: 5a4a6aa5505245a2
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        direction:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: responsive
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Steps
+          description: 'One step component per stage of the flow.'
+label: Steps
+id: sdc.droost_theme.steps
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:steps'

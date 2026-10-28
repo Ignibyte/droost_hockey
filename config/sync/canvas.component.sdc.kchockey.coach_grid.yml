@@ -1,0 +1,21 @@
+uuid: e457d9b8-8ed8-4124-87da-672e55fcf344
+langcode: en
+status: false
+dependencies:
+  theme:
+    - kchockey
+active_version: b163ed15067b54f2
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Coaches
+          description: 'The coach cards.'
+label: 'Coach grid'
+id: sdc.kchockey.coach_grid
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:coach_grid'

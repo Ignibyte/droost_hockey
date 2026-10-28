@@ -1,0 +1,72 @@
+uuid: 4a1ec7dd-437b-452f-a05e-ce1b03297fe1
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+    - options
+  theme:
+    - kchockey
+active_version: 540838dd00873d82
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Camps & Clinics'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /camps
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        active:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: false
+          expression: ℹ︎boolean␟value
+          derived_schema_metadata: {  }
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: desktop
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Navigation link'
+id: sdc.kchockey.nav_link
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:nav_link'

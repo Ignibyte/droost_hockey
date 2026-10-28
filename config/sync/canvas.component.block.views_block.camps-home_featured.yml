@@ -1,0 +1,26 @@
+uuid: 6e0a4ef1-9457-47e4-8d45-5980c3d03458
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.camps
+  module:
+    - views
+active_version: 966af856ea029a1b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:camps-home_featured'
+        label: 'Camps: home page featured'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Camps: home page featured'
+id: block.views_block.camps-home_featured
+provider: views
+source: block
+source_local_id: 'views_block:camps-home_featured'

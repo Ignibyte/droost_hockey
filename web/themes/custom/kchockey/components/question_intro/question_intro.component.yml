@@ -1,0 +1,92 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Question intro
+description: 'The words beside an FAQ accordion: a gold eyebrow with an icon, a two-line heading, a sentence or two, a checklist, and a gold button with an optional outline button.'
+status: stable
+group: Questions
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'The small gold line above the heading.'
+      examples:
+        - 'The beginner''s bench'
+    eyebrow_icon:
+      type: string
+      title: Eyebrow icon
+      description: 'The icon before the eyebrow.'
+      enum:
+        - help
+        - shield_check
+        - users
+      meta:enum:
+        help: 'Question mark'
+        shield_check: 'Shield with a check'
+        users: People
+      default: help
+      examples:
+        - help
+    heading:
+      type: string
+      title: Heading
+      description: 'The heading''s first line.'
+      examples:
+        - 'Questions?'
+    heading_size:
+      type: string
+      title: Heading size
+      description: 'Large grows on wider screens; medium keeps one size.'
+      enum:
+        - large
+        - medium
+      meta:enum:
+        large: Large
+        medium: Medium
+      default: large
+      examples:
+        - large
+    heading_line_2:
+      type: string
+      title: Heading, second line
+      description: 'The heading''s second line, if it has one.'
+      examples:
+        - 'We''ve got you.'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence or two under the heading.'
+      examples:
+        - 'No question is too basic. Hockey has a lot of gear, lingo, and rink schedules to decode. Start with the answers below, then reach out if you still need a hand.'
+    button_label:
+      type: string
+      title: Button label
+      description: 'The gold button''s words; the button shows when it and the link are set.'
+      examples:
+        - 'Find a beginner rink'
+    button_url:
+      type: string
+      format: uri-reference
+      title: Button link
+      description: 'Where the gold button goes.'
+      examples:
+        - '/rinks'
+    second_button_label:
+      type: string
+      title: Second button label
+      description: 'The outline button''s words; it shows when it and its link are set.'
+    second_button_url:
+      type: string
+      format: uri-reference
+      title: Second button link
+      description: 'Where the outline button goes.'
+slots:
+  checklist:
+    title: Checklist
+    description: 'A checklist under the text.'

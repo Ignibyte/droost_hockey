@@ -1,0 +1,1 @@
+This is a Drupal CMS site built from the droost_cms recipe: every page renders through Single Directory Components, and Canvas pages are written with `droost/bin/canvas` (`status`, `components`, `tree:get`, `tree:validate`, `tree:set`, `lint`), never by pasting HTML. Read the `canvas-build` skill before you build a page, a component, a display or a list.

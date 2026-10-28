@@ -1,0 +1,23 @@
+uuid: e5fd0be4-4da0-47ae-b8c2-1b8d9adc459a
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.kchockey.camp_card
+    - canvas.component.sdc.kchockey.camp_empty
+    - canvas.component.sdc.kchockey.camp_filter
+    - canvas.component.sdc.kchockey.camp_grid
+    - canvas.component.sdc.kchockey.camp_tile
+    - canvas.component.sdc.kchockey.featured_camp
+    - canvas.component.sdc.kchockey.filter_link
+name: Camps
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.kchockey.camp_card
+  - sdc.kchockey.camp_empty
+  - sdc.kchockey.camp_filter
+  - sdc.kchockey.camp_grid
+  - sdc.kchockey.camp_tile
+  - sdc.kchockey.featured_camp
+  - sdc.kchockey.filter_link

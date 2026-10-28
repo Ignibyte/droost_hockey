@@ -1,0 +1,63 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Event spotlight
+description: 'A gold band for one event: an eyebrow, a heading and a sentence or two, beside its date, place, who it is for and a link.'
+status: stable
+group: Leagues
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'The small line above the heading.'
+      examples:
+        - 'Fall season spotlight'
+    heading:
+      type: string
+      title: Heading
+      description: 'The event''s name.'
+      examples:
+        - 'Adult Hockey League Showcase'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence or two about the event.'
+      examples:
+        - 'Want to see the adult hockey scene before you commit? The showcase at Twin Rinks Ice Pavilion is a free chance to watch local teams, meet players, and find your next league.'
+    date:
+      type: string
+      title: Date
+      description: 'When it is, as it should read.'
+      examples:
+        - 'Sept 14'
+    place:
+      type: string
+      title: Place
+      description: 'Where it is.'
+      examples:
+        - 'Twin Rinks Ice Pavilion'
+    audience:
+      type: string
+      title: Audience
+      description: 'Who it is for.'
+      examples:
+        - '18+ · All levels'
+    link_label:
+      type: string
+      title: Link label
+      description: 'The link''s words; the link shows when it and its address are set.'
+      examples:
+        - 'View event details'
+    link_url:
+      type: string
+      format: uri-reference
+      title: Link
+      description: 'Where the link goes.'
+      examples:
+        - '/camps'

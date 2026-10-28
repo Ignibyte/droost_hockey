@@ -1,0 +1,49 @@
+uuid: acdf89bc-1eca-41dd-bbd8-b57b3e243495
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - kchockey
+active_version: 071a8c28b57240d5
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        intro_width:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: standard
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        intro:
+          title: Intro
+          description: 'A question intro.'
+        questions:
+          title: Questions
+          description: 'An FAQ accordion.'
+  8996b58869d81abf:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        intro:
+          title: Intro
+          description: 'A question intro.'
+        questions:
+          title: Questions
+          description: 'An FAQ accordion.'
+label: 'Question section'
+id: sdc.kchockey.question_section
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:question_section'

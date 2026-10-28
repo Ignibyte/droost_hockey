@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Ticker
+description: 'A gold band of up to three short announcements, repeated across the page.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - item_1
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    item_1:
+      type: string
+      title: First announcement
+      description: 'A short announcement.'
+      examples:
+        - 'Next USAH Level 1 Clinic: Oct 4-5'
+    item_2:
+      type: string
+      title: Second announcement
+      description: 'A short announcement.'
+      examples:
+        - 'Adult League Reg Open'
+    item_3:
+      type: string
+      title: Third announcement
+      description: 'A short announcement.'
+      examples:
+        - 'Fall Puck Dev Clinic filling fast!'

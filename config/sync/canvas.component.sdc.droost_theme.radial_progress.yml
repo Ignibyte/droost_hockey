@@ -1,0 +1,64 @@
+uuid: f7f84a31-ff71-43e1-8083-165928774952
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: 7c122d65b36c7930
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        value:
+          required: true
+          field_type: float
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 6.8
+          expression: ℹ︎float␟value
+          derived_schema_metadata: {  }
+        max:
+          required: false
+          field_type: float
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 10.0
+          expression: ℹ︎float␟value
+          derived_schema_metadata: {  }
+        suffix:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '%'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: ABV
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Radial progress'
+id: sdc.droost_theme.radial_progress
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:radial_progress'

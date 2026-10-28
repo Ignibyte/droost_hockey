@@ -1,0 +1,33 @@
+uuid: f8e104e9-e6a1-41a1-97c9-334bdb7d2a57
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: 0e3c598667adc2b8
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Season snapshot'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        figures:
+          title: Figures
+          description: 'Stat figures, in order.'
+label: 'Season snapshot'
+id: sdc.kchockey.season_snapshot
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:season_snapshot'

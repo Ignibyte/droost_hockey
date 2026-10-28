@@ -1,0 +1,66 @@
+uuid: 824fccf0-54e6-43e5-a478-e123a75854fe
+langcode: en
+status: false
+dependencies:
+  theme:
+    - kchockey
+active_version: 6be1bac9a1db1753
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Contact Info'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        email:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: info@kchockey.com
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        area:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Kansas City Metro Area'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        note:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'We operate out of rinks across KC.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Contact info'
+id: sdc.kchockey.contact_info
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:contact_info'

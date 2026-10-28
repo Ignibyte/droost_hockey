@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Callout
+description: 'A short note on a pale panel with a gold rule down its left side.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    heading:
+      type: string
+      title: Heading
+      description: 'The note''s heading.'
+      examples:
+        - 'Are you a coach?'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence or two under the heading.'
+      examples:
+        - 'We''re always looking to add qualified instructors to our directory. Send us an email with your resume and USA Hockey credentials.'

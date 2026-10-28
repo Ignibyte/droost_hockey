@@ -1,0 +1,44 @@
+uuid: ae09a794-6e72-43a7-bbaf-cb5bda353685
+langcode: en
+status: false
+dependencies:
+  module:
+    - options
+  theme:
+    - kchockey
+active_version: ba211388b09bf892
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Pro Shop'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: light
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Amenity tag'
+id: sdc.kchockey.amenity_tag
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:amenity_tag'

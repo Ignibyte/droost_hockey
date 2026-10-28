@@ -1,0 +1,36 @@
+{% set details_url = details_url ?: '/camps' %}
+<div{{ attributes.addClass('group', 'relative', 'bg-card', 'border', 'border-border', 'p-6', 'shadow-sm', 'hover:shadow-md', 'transition-all', 'hover:border-primary') }}>
+  <div class="absolute top-0 left-0 w-1 h-0 bg-accent group-hover:h-full transition-all duration-300"></div>
+
+  <h3 class="font-serif text-xl font-bold uppercase leading-tight mb-2 group-hover:text-primary transition-colors">{{ title }}</h3>
+
+  {% if location %}
+    <div class="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>{{ location }}</span>
+    </div>
+  {% endif %}
+
+  <div class="grid grid-cols-2 gap-y-2 mb-6 text-sm border-t border-border pt-4">
+    <div>
+      <p class="text-xs text-muted-foreground uppercase">{{ 'Date'|t }}</p>
+      <p class="font-semibold text-foreground">{{ date }}</p>
+    </div>
+    <div>
+      <p class="text-xs text-muted-foreground uppercase">{{ 'Ages'|t }}</p>
+      <p class="font-semibold text-foreground">{{ ages }}</p>
+    </div>
+    <div>
+      <p class="text-xs text-muted-foreground uppercase">{{ 'Level'|t }}</p>
+      <p class="font-semibold text-foreground">{{ level }}</p>
+    </div>
+    <div>
+      <p class="text-xs text-muted-foreground uppercase">{{ 'Price'|t }}</p>
+      <p class="font-semibold text-foreground">{{ price == 0 ? 'Free'|t : '$' ~ price }}</p>
+    </div>
+  </div>
+
+  <a href="{{ details_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border [border-color:var(--button-outline)] shadow-xs min-h-9 px-4 py-2 w-full font-serif uppercase tracking-wider rounded-none group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
+    {{ 'Details'|t }}<span class="sr-only"> {{ 'of @camp'|t({'@camp': title}) }}</span>
+  </a>
+</div>

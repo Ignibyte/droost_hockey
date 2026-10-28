@@ -1,0 +1,8 @@
+uuid: 33984a2e-e92e-4569-8dcb-e0efcc1def8e
+langcode: en
+status: true
+dependencies: {  }
+id: legal
+label: Legal
+description: "The links on the footer's bottom line. A link to an unpublished page shows only once the page is published."
+locked: false

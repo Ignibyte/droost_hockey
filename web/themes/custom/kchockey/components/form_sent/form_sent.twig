@@ -1,0 +1,12 @@
+<div{{ attributes.addClass('bg-green-50', 'text-green-800', 'p-6', 'border', 'border-green-200', 'text-center', 'rounded-sm', 'animate-in', 'fade-in', 'zoom-in-95').setAttribute('role', 'status') }}>
+  <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+  </div>
+  <h3 class="font-serif text-xl font-bold uppercase mb-2">{{ heading }}</h3>
+  {% if message %}
+    <p>{{ message }}</p>
+  {% endif %}
+  {% if back_url and back_label %}
+    <a href="{{ back_url }}" class="inline-flex items-center justify-center mt-6 h-9 px-4 border border-[var(--button-outline)] bg-background text-foreground shadow-xs font-serif uppercase tracking-wider text-sm font-medium hover:bg-muted transition-colors">{{ back_label }}</a>
+  {% endif %}
+</div>

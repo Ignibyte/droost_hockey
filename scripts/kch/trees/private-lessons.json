@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "uuid": "02621205-3be8-410e-8b3b-8b8451ba1d4d",
+      "component_id": "sdc.kchockey.page_intro",
+      "inputs": {
+        "variant": "light",
+        "heading": "Private Lessons",
+        "text": "1-on-1 and small group development. Work with Kansas City's top hockey and skating professionals to target specific areas of your game."
+      }
+    },
+    {
+      "uuid": "7d3e9a14-52c8-4f0b-a6e1-0c9b8d2f4e71",
+      "component_id": "sdc.kchockey.instructor_spotlight",
+      "inputs": {
+        "eyebrow": "Featured Instructor",
+        "kicker": "This month at KCHockey",
+        "tagline": "Level Up.",
+        "specialty": "Power Skating & Edge Work",
+        "name": "Coach Mike Donovan",
+        "rate_label": "Featured rate",
+        "rate": 75,
+        "bio": "Former ECHL player with 15 years behind the bench, Mike helps players build speed, balance, and confidence one stride at a time. His sessions are a great fit for players ready to make their skating the foundation of their game.",
+        "button_label": "Book a session",
+        "button_url": "/contact"
+      }
+    },
+    {
+      "uuid": "b1c4e8f2-6a3d-4e97-8b05-2f7a9c1d3e60",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "7d3e9a14-52c8-4f0b-a6e1-0c9b8d2f4e71",
+      "slot": "highlights",
+      "inputs": {
+        "icon": "check",
+        "text": "Former ECHL player"
+      }
+    },
+    {
+      "uuid": "c2d5f9a3-7b4e-4fa8-9c16-3a8b0d2e4f71",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "7d3e9a14-52c8-4f0b-a6e1-0c9b8d2f4e71",
+      "slot": "highlights",
+      "inputs": {
+        "icon": "check",
+        "text": "15 years coaching"
+      }
+    },
+    {
+      "uuid": "d3e6a0b4-8c5f-40b9-ad27-4b9c1e3f5a82",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "7d3e9a14-52c8-4f0b-a6e1-0c9b8d2f4e71",
+      "slot": "highlights",
+      "inputs": {
+        "icon": "check",
+        "text": "Youth through adult"
+      }
+    },
+    {
+      "uuid": "e4f7b1c5-9d60-41ca-be38-5cad2f4a6b93",
+      "component_id": "sdc.kchockey.check_item",
+      "parent_uuid": "7d3e9a14-52c8-4f0b-a6e1-0c9b8d2f4e71",
+      "slot": "highlights",
+      "inputs": {
+        "icon": "check",
+        "text": "Individual game plan"
+      }
+    },
+    {
+      "uuid": "f5a8c2d6-0e71-42db-8f49-6dbe3a5b7ca4",
+      "component_id": "block.views_block.coaches-listing",
+      "inputs": {
+        "label": "Coaches: listing",
+        "label_display": "0",
+        "views_label": "",
+        "items_per_page": null
+      }
+    },
+    {
+      "uuid": "0a6b9d3e-1f82-43ec-9a5a-7ecf4b6c8db5",
+      "component_id": "sdc.kchockey.cta_band",
+      "inputs": {
+        "heading": "Need a Coach Recommendation?",
+        "text": "Not sure who to work with? Tell us about the player's age, current level, and what they want to improve. We'll match you with the right professional.",
+        "button_label": "Get Matched",
+        "button_url": "/contact"
+      }
+    }
+  ]
+}

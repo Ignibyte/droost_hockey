@@ -1,0 +1,21 @@
+uuid: 5d68f2b8-7fdf-4ae9-8a72-7187deb7cab3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: 21b540cefbf1aca0
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Tabs
+          description: 'One tab component per panel; give every tab the same group and mark exactly one active.'
+label: Tabs
+id: sdc.droost_theme.tabs
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:tabs'

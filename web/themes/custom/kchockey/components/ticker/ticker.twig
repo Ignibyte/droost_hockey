@@ -1,0 +1,18 @@
+{% set items = [item_1, item_2, item_3]|filter(i => i) %}
+{#
+  Six copies of the announcements running off the edge, as the design draws
+  the band. The design names a marquee but gives it no motion, so the band
+  holds still. Only the first copy is read out.
+#}
+<div{{ attributes.addClass('bg-accent', 'text-accent-foreground', 'py-3', 'border-y-4', 'border-foreground', 'overflow-hidden') }}>
+  <div class="flex whitespace-nowrap items-center gap-8 font-serif font-bold uppercase tracking-widest text-sm md:text-base">
+    {% for copy in 1..6 %}
+      <div class="flex items-center gap-8"{% if copy > 1 %} aria-hidden="true"{% endif %}>
+        {% for item in items %}
+          <span>{{ item }}</span>
+          <span class="w-2 h-2 bg-foreground rounded-full transform rotate-45"></span>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

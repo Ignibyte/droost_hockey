@@ -1,0 +1,94 @@
+uuid: 0434319d-0732-4dcb-bc58-2a78e2b6010c
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: a6fc7ef2b4394301
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        name:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Pepsi Ice Midwest'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        city:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Overland Park'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        state:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: KS
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'A premier facility offering a full NHL sheet, dedicated pro shop, and extensive programming for all ages.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        phone:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        website:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value: null
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        amenities:
+          title: Amenities
+          description: "The rink's amenities, as amenity tags."
+label: 'Rink card'
+id: sdc.kchockey.rink_card
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:rink_card'

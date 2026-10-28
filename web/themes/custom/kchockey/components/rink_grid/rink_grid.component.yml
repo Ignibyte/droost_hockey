@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Rink grid
+description: 'The grid a list of rinks is laid out in: two to a row on the directory, three on the home page''s band.'
+status: stable
+group: Rinks
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    layout:
+      type: string
+      title: Layout
+      description: 'Directory: two to a row in the page''s own column, with the page''s bottom space. Band: three to a row, inside a section that has its own column.'
+      enum:
+        - directory
+        - band
+      'meta:enum':
+        directory: Directory
+        band: Band
+      default: directory
+      examples:
+        - directory
+slots:
+  items:
+    title: Rinks
+    description: 'The rink cards or tiles.'

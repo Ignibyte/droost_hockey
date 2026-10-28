@@ -1,0 +1,12 @@
+name: 'KC Hockey site details'
+type: module
+description: 'Site details (the blurb, email, phone, location and social addresses the footer and contact page show, edited in one place), the contact page''s blocks, record pages (rinks, camps, coaches) forwarding to their listings, and the camps: their dates, the lists that renew at midnight, the filter bar and the guard on deleting a rink a camp is held at.'
+package: Custom
+core_version_requirement: ^11
+configure: kchockey_site.settings
+dependencies:
+  - drupal:datetime
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:views
+  - webform:webform

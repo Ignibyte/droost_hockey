@@ -1,0 +1,25 @@
+uuid: 2c27e259-99ff-4efd-b174-a1908c1ade1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.block.kchockey_site_camp_filter
+    - canvas.component.block.kchockey_site_contact_info
+    - canvas.component.block.views_block.camps-home_featured
+    - canvas.component.block.views_block.camps-home_upcoming
+    - canvas.component.block.views_block.camps-listing
+    - canvas.component.block.views_block.coaches-listing
+    - canvas.component.block.views_block.rinks-directory
+    - canvas.component.block.views_block.rinks-home
+name: 'KC Hockey'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.kchockey_site_camp_filter
+  - block.kchockey_site_contact_info
+  - block.views_block.camps-home_featured
+  - block.views_block.camps-home_upcoming
+  - block.views_block.camps-listing
+  - block.views_block.coaches-listing
+  - block.views_block.rinks-directory
+  - block.views_block.rinks-home

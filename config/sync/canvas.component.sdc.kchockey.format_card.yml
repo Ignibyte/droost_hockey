@@ -1,0 +1,68 @@
+uuid: 98b21e24-52ef-420f-8608-7b5404d2ea00
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - kchockey
+active_version: 527bf1c588a04489
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: users
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        level:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'All skill levels'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Recreational
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        description:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Low-pressure games, new friends, and a reason to leave work on time. A great place to get back on the ice or learn the adult game.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Format card'
+id: sdc.kchockey.format_card
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:format_card'

@@ -1,0 +1,45 @@
+uuid: c1bd24e3-06bd-4adc-993c-5ed0d49b71e8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: 782a6670910dc4f4
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        question:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Is the taproom dog-friendly?'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        answer:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Yes! Well-behaved dogs are welcome.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'Composed answer content (used when the answer prop is not enough).'
+label: 'FAQ item'
+id: sdc.droost_theme.faq_item
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:faq_item'

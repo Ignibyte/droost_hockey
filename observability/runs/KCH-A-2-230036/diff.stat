@@ -1,0 +1,8 @@
+ .gitignore                                                         | 5 +++++
+ config/sync/canvas.folder.b7da864f-aac3-4cdb-8389-fa01790b10dd.yml | 2 ++
+ config/sync/core.extension.yml                                     | 2 ++
+ config/sync/metatag.metatag_defaults.front.yml                     | 2 +-
+ config/sync/system.site.yml                                        | 6 +++---
+ config/sync/system.theme.yml                                       | 2 +-
+ config/sync/user.role.content_editor.yml                           | 2 ++
+ 7 files changed, 16 insertions(+), 5 deletions(-)

@@ -1,0 +1,58 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Rink map
+description: 'A Google map of a search (the metro''s ice rinks) beside a navy panel with a heading, a few words and a button that opens Google Maps.'
+status: stable
+group: Rinks
+props:
+  type: object
+  required:
+    - map_query
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    map_query:
+      type: string
+      title: Map search
+      description: 'What the map searches for and shows, as typed into Google Maps.'
+      examples:
+        - 'Kansas City MO ice rinks'
+    map_title:
+      type: string
+      title: Map description
+      description: 'What the map shows, read out by screen readers.'
+      examples:
+        - 'Map of Kansas City area ice rinks'
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'A short gold line above the heading.'
+      examples:
+        - 'The KC Ice Map'
+    heading:
+      type: string
+      title: Heading
+      description: 'The panel''s heading.'
+      examples:
+        - 'Find your sheet.'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence or two under the heading.'
+      examples:
+        - 'From the Northland to Johnson County, the metro''s ice is closer than you think. Use the map to get oriented, then scroll down for rink details and amenities.'
+    link_label:
+      type: string
+      title: Button label
+      description: 'The gold button, opened in a new tab.'
+      examples:
+        - 'Open in Google Maps'
+    link_url:
+      type: string
+      format: uri
+      title: Button link
+      description: 'Where the button goes: the same search on Google Maps.'
+      examples:
+        - 'https://www.google.com/maps/search/ice+rinks+in+Kansas+City/'

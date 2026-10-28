@@ -1,0 +1,19 @@
+name: 'KC Hockey'
+type: theme
+description: 'The KC Hockey site theme: the design''s tokens, Oswald and Inter, the header, footer and page sections as SDCs. A sub-theme of Droost Theme.'
+package: Custom
+core_version_requirement: ^11
+base theme: droost_theme
+libraries:
+  - kchockey/global
+# droost_theme's daisyUI stylesheets (compiled or browser JIT) and its daisyUI
+# tokens are replaced by this theme's own compiled Tailwind build: the design
+# has no daisyUI, and its component classes would restyle the design's markup.
+libraries-override:
+  droost_theme/global: false
+  droost_theme/jit: false
+  droost_theme/tokens: false
+regions:
+  header: Header
+  content: Content
+  footer: Footer

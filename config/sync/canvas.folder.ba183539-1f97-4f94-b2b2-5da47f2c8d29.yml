@@ -1,0 +1,43 @@
+uuid: ba183539-1f97-4f94-b2b2-5da47f2c8d29
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.kchockey.callout
+    - canvas.component.sdc.kchockey.camps_section
+    - canvas.component.sdc.kchockey.check_item
+    - canvas.component.sdc.kchockey.checklist
+    - canvas.component.sdc.kchockey.contact_info
+    - canvas.component.sdc.kchockey.contact_section
+    - canvas.component.sdc.kchockey.cta_band
+    - canvas.component.sdc.kchockey.featured_band
+    - canvas.component.sdc.kchockey.first_step
+    - canvas.component.sdc.kchockey.first_steps
+    - canvas.component.sdc.kchockey.form_sent
+    - canvas.component.sdc.kchockey.home_hero
+    - canvas.component.sdc.kchockey.not_found
+    - canvas.component.sdc.kchockey.page_intro
+    - canvas.component.sdc.kchockey.rinks_band
+    - canvas.component.sdc.kchockey.ticker
+    - canvas.component.sdc.kchockey.upcoming_band
+name: Sections
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.kchockey.callout
+  - sdc.kchockey.camps_section
+  - sdc.kchockey.check_item
+  - sdc.kchockey.checklist
+  - sdc.kchockey.contact_info
+  - sdc.kchockey.contact_section
+  - sdc.kchockey.cta_band
+  - sdc.kchockey.featured_band
+  - sdc.kchockey.first_step
+  - sdc.kchockey.first_steps
+  - sdc.kchockey.form_sent
+  - sdc.kchockey.home_hero
+  - sdc.kchockey.not_found
+  - sdc.kchockey.page_intro
+  - sdc.kchockey.rinks_band
+  - sdc.kchockey.ticker
+  - sdc.kchockey.upcoming_band

@@ -1,0 +1,19 @@
+uuid: 7cbfbc53-beb3-4428-a842-d93de631f6d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.kchockey.amenity_tag
+    - canvas.component.sdc.kchockey.rink_card
+    - canvas.component.sdc.kchockey.rink_grid
+    - canvas.component.sdc.kchockey.rink_map
+    - canvas.component.sdc.kchockey.rink_tile
+name: Rinks
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.kchockey.amenity_tag
+  - sdc.kchockey.rink_card
+  - sdc.kchockey.rink_grid
+  - sdc.kchockey.rink_map
+  - sdc.kchockey.rink_tile

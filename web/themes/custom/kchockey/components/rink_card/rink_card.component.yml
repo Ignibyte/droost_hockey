@@ -1,0 +1,51 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Rink card
+description: 'A rink on the directory: name, town, description and amenities, then its phone and website once they are set.'
+status: stable
+group: Rinks
+props:
+  type: object
+  required:
+    - name
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    name:
+      type: string
+      title: Name
+      description: 'The rink''s name.'
+      examples:
+        - 'Pepsi Ice Midwest'
+    city:
+      type: string
+      title: City
+      description: 'The town the rink is in.'
+      examples:
+        - 'Overland Park'
+    state:
+      type: string
+      title: State
+      description: 'The state''s two letters.'
+      examples:
+        - 'KS'
+    description:
+      type: string
+      title: Description
+      description: 'A sentence or two about the rink.'
+      examples:
+        - 'A premier facility offering a full NHL sheet, dedicated pro shop, and extensive programming for all ages.'
+    phone:
+      type: string
+      title: Phone
+      description: 'Shown as a call link; nothing shows while it is empty.'
+    website:
+      type: string
+      format: uri-reference
+      title: Website
+      description: 'The rink''s own site, opened in a new tab by "Visit Website"; nothing shows while it is empty.'
+slots:
+  amenities:
+    title: Amenities
+    description: 'The rink''s amenities, as amenity tags.'

@@ -1,0 +1,69 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Home hero
+description: 'The home page''s opening: a tall dark band on a faded photo with a badge, a two-line heading (the second in gold), a paragraph and two buttons.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    badge:
+      type: string
+      title: Badge
+      description: The small gold label above the heading.
+      examples:
+        - 'The Heart of KC Hockey'
+    heading:
+      type: string
+      title: Heading
+      description: 'The first heading line, in white.'
+      examples:
+        - 'Kansas City''s'
+    heading_accent:
+      type: string
+      title: Heading, gold line
+      description: 'The second heading line, in gold.'
+      examples:
+        - 'Ice Headquarters'
+    text:
+      type: string
+      title: Text
+      description: 'The paragraph under the heading.'
+      examples:
+        - 'Built by rink rats, for rink rats.'
+    primary_label:
+      type: string
+      title: First button
+      description: 'The solid button''s text.'
+      examples:
+        - 'Find a Camp'
+    primary_url:
+      type: string
+      format: uri-reference
+      title: First button link
+      description: 'Where the solid button links.'
+      examples:
+        - '/camps'
+    secondary_label:
+      type: string
+      title: Second button
+      description: 'The outlined button''s text.'
+      examples:
+        - 'Explore KC Rinks'
+    secondary_url:
+      type: string
+      format: uri-reference
+      title: Second button link
+      description: 'Where the outlined button links.'
+      examples:
+        - '/rinks'
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Background image
+      description: Faded behind the band.
+      type: object

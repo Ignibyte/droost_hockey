@@ -1,0 +1,37 @@
+uuid: 6423b708-dba8-4e5b-b6a1-4745d61fba33
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.droost_theme.avatar
+    - canvas.component.sdc.droost_theme.code
+    - canvas.component.sdc.droost_theme.faq_item
+    - canvas.component.sdc.droost_theme.radial_progress
+    - canvas.component.sdc.droost_theme.rating
+    - canvas.component.sdc.droost_theme.stat
+    - canvas.component.sdc.droost_theme.stats
+    - canvas.component.sdc.droost_theme.step
+    - canvas.component.sdc.droost_theme.steps
+    - canvas.component.sdc.droost_theme.tab
+    - canvas.component.sdc.droost_theme.tabs
+    - canvas.component.sdc.droost_theme.text
+    - canvas.component.sdc.droost_theme.timeline
+    - canvas.component.sdc.droost_theme.timeline_item
+name: Content
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.droost_theme.avatar
+  - sdc.droost_theme.code
+  - sdc.droost_theme.faq_item
+  - sdc.droost_theme.radial_progress
+  - sdc.droost_theme.rating
+  - sdc.droost_theme.stat
+  - sdc.droost_theme.stats
+  - sdc.droost_theme.step
+  - sdc.droost_theme.steps
+  - sdc.droost_theme.tab
+  - sdc.droost_theme.tabs
+  - sdc.droost_theme.text
+  - sdc.droost_theme.timeline
+  - sdc.droost_theme.timeline_item

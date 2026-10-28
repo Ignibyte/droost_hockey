@@ -1,0 +1,54 @@
+uuid: 8fa45634-b369-4a44-9186-16ca128a79d0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: e14d45367bd74a57
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        item_1:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Next USAH Level 1 Clinic: Oct 4-5'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        item_2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Adult League Reg Open'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        item_3:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Fall Puck Dev Clinic filling fast!'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Ticker
+id: sdc.kchockey.ticker
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:ticker'

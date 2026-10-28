@@ -1,0 +1,6 @@
+<div{{ attributes.addClass('bg-muted', 'p-6', 'border-l-4', 'border-accent') }}>
+  <h3 class="font-serif font-bold uppercase mb-2">{{ heading }}</h3>
+  {% if text %}
+    <p class="text-sm text-muted-foreground mb-4">{{ text }}</p>
+  {% endif %}
+</div>

@@ -1,0 +1,20 @@
+uuid: 4970675f-f785-4a18-a480-ab3e42ef5a7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_camp_price
+field_name: field_camp_price
+entity_type: node
+type: integer
+settings:
+  unsigned: true
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

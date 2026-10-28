@@ -1,0 +1,59 @@
+uuid: 78f8e7af-aeb2-4b63-9ea8-1e327089f4d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - droost_theme
+active_version: af811b9325b23433
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "From this week's lot"
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: base-100
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        padding:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: normal
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'The section body.'
+label: Section
+id: sdc.droost_theme.section
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:section'

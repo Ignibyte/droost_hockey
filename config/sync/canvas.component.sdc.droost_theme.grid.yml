@@ -1,0 +1,35 @@
+uuid: c9b1c43b-d0da-4852-80b1-bb7c4abc3b85
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - droost_theme
+active_version: 30c295584912c931
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        columns:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '3'
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'The grid children (cards, stats, anything).'
+label: Grid
+id: sdc.droost_theme.grid
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:grid'

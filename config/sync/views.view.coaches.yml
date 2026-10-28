@@ -1,0 +1,218 @@
+uuid: ebbc671b-c40f-4f71-8fa5-c44c25efffa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coach_photo
+    - image.style.1_1_500x500_focal_point_webp
+    - node.type.coach
+  module:
+    - image
+    - node
+    - ui_patterns
+    - ui_patterns_views
+    - user
+  theme:
+    - kchockey
+id: coaches
+label: Coaches
+module: views
+description: 'The coaches, by sort order: every coach on /private-lessons.'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: Coaches
+      fields:
+        field_coach_photo:
+          id: field_coach_photo
+          table: node__field_coach_photo
+          field: field_coach_photo
+          relationship: none
+          group_type: group
+          admin_label: Photo
+          entity_type: node
+          entity_field: field_coach_photo
+          plugin_id: field
+          label: ''
+          exclude: false
+          element_type: '0'
+          element_class: ''
+          element_label_type: '0'
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: '0'
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: ''
+            image_style: 1_1_500x500_focal_point_webp
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      pager:
+        type: none
+        options:
+          offset: 0
+          items_per_page: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        field_coach_weight_value:
+          id: field_coach_weight_value
+          table: node__field_coach_weight
+          field: field_coach_weight_value
+          relationship: none
+          group_type: group
+          admin_label: 'Sort order'
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: Name
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            coach: coach
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+      style:
+        type: ui_patterns
+        options:
+          ui_patterns:
+            ui_patterns:
+              component_id: 'kchockey:coach_grid'
+              variant_id: null
+              props: {  }
+              slots:
+                items:
+                  sources:
+                    -
+                      source_id: view_rows
+                      source:
+                        ui_patterns_views_field: ''
+                      _weight: 0
+      row:
+        type: ui_patterns
+        options:
+          hide_empty: false
+          ui_patterns:
+            component_id: 'kchockey:coach_card'
+            variant_id: null
+            props:
+              name:
+                source_id: 'field_property:node:title:value'
+              specialty:
+                source_id: 'field_property:node:field_coach_specialty:value'
+              experience:
+                source_id: 'field_property:node:field_coach_experience:value'
+              rate:
+                source_id: 'field_property:node:field_coach_rate:value'
+            slots:
+              photo:
+                sources:
+                  -
+                    source_id: view_field
+                    source:
+                      ui_patterns_views_field: field_coach_photo
+                    _weight: 0
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
+  listing:
+    id: listing
+    display_title: Listing
+    display_plugin: block
+    position: 1
+    display_options:
+      display_description: 'Every coach, four to a row: the /private-lessons listing.'
+      display_extenders: {  }
+      block_description: 'Coaches: listing'
+      block_category: 'KC Hockey'
+      block_hide_empty: false
+      allow:
+        items_per_page: false

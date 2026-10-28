@@ -1,0 +1,20 @@
+<section{{ attributes.addClass('bg-foreground', 'text-background', 'py-24', 'md:py-32', 'relative', 'overflow-hidden', 'border-b-4', 'border-accent') }}>
+  <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 12px, #ffffff 12px, #ffffff 14px)"></div>
+  <div class="absolute -right-20 -top-28 w-80 h-80 rounded-full border-[32px] border-accent/10"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-3xl">
+      {% if eyebrow %}
+        <p class="text-accent font-bold uppercase tracking-[0.22em] text-sm mb-5">{{ eyebrow }}</p>
+      {% endif %}
+      <h1 class="text-5xl md:text-7xl font-serif font-bold uppercase tracking-tight leading-[0.9] text-white mb-6">
+        {{ heading }}{% if heading_accent %}<br><span class="text-accent">{{ heading_accent }}</span>{% endif %}
+      </h1>
+      {% if text %}
+        <p class="text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed mb-10">{{ text }}</p>
+      {% endif %}
+      <a href="{{ link_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap h-14 px-8 font-serif uppercase tracking-wider text-lg rounded-none transform -skew-x-12 bg-accent text-accent-foreground border border-accent hover:scale-105 transition-transform">
+        <span class="skew-x-12 inline-block">{{ link_label }}</span>
+      </a>
+    </div>
+  </div>
+</section>

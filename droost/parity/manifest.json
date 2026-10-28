@@ -1,0 +1,23 @@
+{
+ "source": "http://localhost:5199",
+ "width": 1280,
+ "routes": [
+  "/",
+  "/rinks",
+  "/camps",
+  "/private-lessons",
+  "/contact",
+  "/new-to-hockey",
+  "/youth-leagues",
+  "/adult-leagues"
+ ],
+ "captured_at": "2026-10-21T10:16:03.905Z",
+ "read_on": {
+  "platform": "darwin",
+  "browser": "156.0.8078.4"
+ },
+ "widths": [
+  1280,
+  390
+ ]
+}

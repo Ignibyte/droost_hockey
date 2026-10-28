@@ -1,0 +1,21 @@
+uuid: fb3a1d7e-f242-491d-8a6c-3dd00785331e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: 95702e45488525d1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Items
+          description: 'Stat components shown side by side.'
+label: Stats
+id: sdc.droost_theme.stats
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:stats'

@@ -1,0 +1,54 @@
+{% set inquire_url = inquire_url ?: '/contact?subject=Private%20Lessons' %}
+{# The initials stand in for a photo: a leading "Coach" is dropped, then the first letters of the first and last words. #}
+{% set words = name|trim|split(' ')|filter(w => w is not empty) %}
+{% if words|length > 1 and words|first|lower == 'coach' %}
+  {% set words = words|slice(1) %}
+{% endif %}
+{% set initials = (words|first|first ~ (words|length > 1 ? words|last|first : ''))|upper %}
+{% set photo_markup = photo|render %}
+<div{{ attributes.addClass('bg-card', 'border', 'border-border', 'flex', 'flex-col', 'group', 'hover:shadow-xl', 'transition-all') }}>
+  <div class="aspect-square bg-muted border-b border-border flex items-center justify-center relative overflow-hidden">
+    {% if photo_markup|trim is not empty %}
+      <div class="absolute inset-0 [&_img]:w-full [&_img]:h-full [&_img]:object-cover">{{ photo_markup }}</div>
+    {% else %}
+      <div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+      <span class="text-6xl font-serif font-bold text-foreground/20 uppercase tracking-tighter" aria-hidden="true">{{ initials }}</span>
+    {% endif %}
+    {# "View Profile" is the design's hover label; coaches have no page of their own, so it links nowhere. #}
+    <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity flex items-end p-4" aria-hidden="true">
+      <span class="text-white font-serif uppercase tracking-wider text-sm font-bold">{{ 'View Profile'|t }}</span>
+    </div>
+  </div>
+
+  <div class="p-6 flex-1 flex flex-col">
+    <h3 class="text-xl font-serif font-bold uppercase tracking-tight mb-1 text-foreground">{{ name }}</h3>
+    {% if specialty %}
+      <p class="text-accent font-bold text-sm uppercase tracking-wider mb-4">{{ specialty }}</p>
+    {% endif %}
+
+    <div class="space-y-3 mb-6 flex-1 text-sm">
+      {% if experience %}
+        <div class="flex items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground shrink-0 mt-0.5" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+          <span class="text-muted-foreground">{{ experience }}</span>
+        </div>
+      {% endif %}
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        <span class="text-muted-foreground">{{ 'All Ages & Skill Levels'|t }}</span>
+      </div>
+    </div>
+
+    <div class="pt-4 border-t border-border flex items-center justify-between">
+      <div>
+        <p class="text-xs font-bold text-muted-foreground uppercase tracking-widest">{{ 'Rate'|t }}</p>
+        {% if rate is not null %}
+          <p class="font-serif font-bold text-lg text-foreground">${{ rate }}<span class="text-sm font-sans text-muted-foreground font-normal">/hr</span></p>
+        {% endif %}
+      </div>
+      <a href="{{ inquire_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border [border-color:var(--button-outline)] shadow-xs min-h-8 px-3 text-xs rounded-none font-serif uppercase tracking-wider group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+        {{ 'Inquire'|t }}<span class="sr-only"> {{ 'with @coach'|t({'@coach': name}) }}</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+uuid: 579b75d4-26e6-4c66-9e01-1c8f9d104333
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_camp_ages
+    - field.field.node.event.field_camp_end_date
+    - field.field.node.event.field_camp_featured
+    - field.field.node.event.field_camp_level
+    - field.field.node.event.field_camp_price
+    - field.field.node.event.field_camp_programs
+    - field.field.node.event.field_camp_rink
+    - field.field.node.event.field_camp_summary
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_image
+    - node.type.event
+_core:
+  default_config_hash: cMQ1yFI7G8txh_ZZJsaxBt6GDQgGRRpBtYHf6CZVifM
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content: {  }
+hidden:
+  content_moderation_control: true
+  field_camp_ages: true
+  field_camp_end_date: true
+  field_camp_featured: true
+  field_camp_level: true
+  field_camp_price: true
+  field_camp_programs: true
+  field_camp_rink: true
+  field_camp_summary: true
+  field_event_date: true
+  field_event_image: true
+  links: true

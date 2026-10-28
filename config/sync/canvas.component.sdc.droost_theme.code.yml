@@ -1,0 +1,42 @@
+uuid: 09c134de-1f66-4f50-a898-4e6087803f5f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: 4718833b9c61e760
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        code:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'ddev drush droost:install'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: composer.json
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Code
+id: sdc.droost_theme.code
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:code'

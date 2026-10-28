@@ -1,0 +1,23 @@
+uuid: 7c154295-d79c-4850-98b5-9aded71c83d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - node
+id: camp_content
+label: 'Camp or clinic'
+type: 'canonical_entities:node'
+pattern: '/camps/[node:title]'
+selection_criteria:
+  4d089271-046b-4131-8f74-a1cc0c83c2b3:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      event: event
+selection_logic: and
+weight: -5
+relationships: {  }

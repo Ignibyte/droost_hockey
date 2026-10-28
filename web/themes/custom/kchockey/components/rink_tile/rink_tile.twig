@@ -1,0 +1,15 @@
+<div{{ attributes.addClass('bg-white/5', 'border', 'border-white/10', 'p-6', 'backdrop-blur-sm', 'hover:bg-white/10', 'transition-colors') }}>
+  <h3 class="font-serif text-xl font-bold uppercase text-white mb-2">{{ name }}</h3>
+  {% if city or state %}
+    <p class="text-accent text-sm font-semibold mb-4">{{ [city, state]|filter(v => v)|join(', ') }}</p>
+  {% endif %}
+  {% if amenities is not empty %}
+    <div class="flex flex-wrap gap-2 mb-6">{{ amenities }}</div>
+  {% endif %}
+  {% if link_label and link_url %}
+    <a href="{{ link_url }}" class="text-sm font-bold uppercase tracking-wider text-white flex items-center gap-1 hover:text-accent transition-colors">
+      {{ link_label }}
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  {% endif %}
+</div>

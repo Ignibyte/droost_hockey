@@ -1,0 +1,113 @@
+uuid: 718ad450-8c3c-4764-ae18-af17adfd318e
+langcode: en
+status: true
+dependencies:
+  config:
+    - dashboard.dashboard.welcome
+    - filter.format.content_format
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.svg_image
+    - media.type.video
+    - node.type.coach
+    - node.type.event
+    - node.type.page
+    - node.type.rink
+    - taxonomy.vocabulary.program
+    - workflows.workflow.basic_editorial
+  module:
+    - canvas
+    - content_moderation
+    - dashboard
+    - filter
+    - kchockey_site
+    - media
+    - media_library_bulk_upload
+    - node
+    - path
+    - redirect
+    - scheduler
+    - system
+    - taxonomy
+    - trash
+    - webform
+_core:
+  default_config_hash: g-zSnaBXJnH7VoimReFb6KcLjIgHCU-hisiShtZ9hjQ
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access trash'
+  - 'access webform overview'
+  - 'administer menu'
+  - 'administer redirects'
+  - 'administer url aliases'
+  - 'create canvas_page'
+  - 'create coach content'
+  - 'create document media'
+  - 'create event content'
+  - 'create image media'
+  - 'create page content'
+  - 'create remote_video media'
+  - 'create rink content'
+  - 'create svg_image media'
+  - 'create terms in program'
+  - 'create url aliases'
+  - 'create video media'
+  - 'delete any coach content'
+  - 'delete any document media'
+  - 'delete any event content'
+  - 'delete any image media'
+  - 'delete any page content'
+  - 'delete any remote_video media'
+  - 'delete any rink content'
+  - 'delete any svg_image media'
+  - 'delete any video media'
+  - 'delete canvas_page'
+  - 'delete own coach content'
+  - 'delete own event content'
+  - 'delete own rink content'
+  - 'delete page revisions'
+  - 'edit any coach content'
+  - 'edit any document media'
+  - 'edit any event content'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any rink content'
+  - 'edit any svg_image media'
+  - 'edit any video media'
+  - 'edit canvas_page'
+  - 'edit own coach content'
+  - 'edit own event content'
+  - 'edit own rink content'
+  - 'edit site details'
+  - 'edit terms in program'
+  - 'revert all revisions'
+  - 'revert coach revisions'
+  - 'revert event revisions'
+  - 'revert rink revisions'
+  - 'schedule publishing of nodes'
+  - 'use basic_editorial transition create_new_draft'
+  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition unpublish'
+  - 'use media document bulk upload form'
+  - 'use media image bulk upload form'
+  - 'use media remote_video bulk upload form'
+  - 'use media svg_image bulk upload form'
+  - 'use media video bulk upload form'
+  - 'use text format content_format'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view coach revisions'
+  - 'view event revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view rink revisions'
+  - 'view scheduled content'
+  - 'view welcome dashboard'

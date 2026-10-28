@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "uuid": "1b925f3f-df64-4de7-accf-76f63fd11064",
+      "component_id": "sdc.kchockey.page_intro",
+      "inputs": {
+        "variant": "glow",
+        "heading": "KC Rink Directory",
+        "text": "Every sheet of ice in the Kansas City metro area. Find locations, amenities, and contact info."
+      }
+    },
+    {
+      "uuid": "5c0e7a1d-3f62-4b8e-9a41-d2b7c6e85f13",
+      "component_id": "sdc.kchockey.rink_map",
+      "inputs": {
+        "map_query": "Kansas City MO ice rinks",
+        "map_title": "Map of Kansas City area ice rinks",
+        "eyebrow": "The KC Ice Map",
+        "heading": "Find your sheet.",
+        "text": "From the Northland to Johnson County, the metro's ice is closer than you think. Use the map to get oriented, then scroll down for rink details and amenities.",
+        "link_label": "Open in Google Maps",
+        "link_url": "https://www.google.com/maps/search/ice+rinks+in+Kansas+City/"
+      }
+    },
+    {
+      "uuid": "a8d4f2b6-71c9-4e05-b3a2-6f19e0c4d7a8",
+      "component_id": "block.views_block.rinks-directory",
+      "inputs": {
+        "label": "Rinks: directory",
+        "label_display": "0",
+        "views_label": "",
+        "items_per_page": null
+      }
+    }
+  ]
+}

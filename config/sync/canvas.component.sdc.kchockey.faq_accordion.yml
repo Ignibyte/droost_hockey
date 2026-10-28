@@ -1,0 +1,21 @@
+uuid: d7dbc18f-1e60-4b5b-898b-dfecaa2c190d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: d98e1368914684a5
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Questions
+          description: 'FAQ questions, in order.'
+label: 'FAQ accordion'
+id: sdc.kchockey.faq_accordion
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:faq_accordion'

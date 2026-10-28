@@ -1,0 +1,70 @@
+uuid: eac4e720-5d1f-4fc8-bdf6-87d4b6a60da0
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: 72fd6443abb10c42
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        home_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        contact_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /contact
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        contact_label:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Contact Us'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        links:
+          title: Links
+          description: "The main menu's links for wide windows (nav_link, desktop)."
+        mobile_links:
+          title: 'Panel links'
+          description: 'The same links for the narrow-width panel (nav_link, mobile).'
+label: 'Site header'
+id: sdc.kchockey.site_header
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:site_header'

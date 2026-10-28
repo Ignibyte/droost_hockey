@@ -1,0 +1,42 @@
+uuid: ac585eb8-9b38-4fb3-8276-13497d59e939
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: 78770aa238b8f219
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        value:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 8+
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'KC rinks'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Stat figure'
+id: sdc.kchockey.stat_figure
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:stat_figure'

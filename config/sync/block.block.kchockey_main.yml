@@ -1,0 +1,22 @@
+uuid: 408e77d6-e4c9-4cb7-a20a-674d50713810
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kchockey
+_core:
+  default_config_hash: PMft0GDcUomzHPtq6vlnX3rMNvA07xBjVXmPX2DusuI
+id: kchockey_main
+theme: kchockey
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: main
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,16 @@
+uuid: 24e1c2dc-100c-4469-886a-2dd4fe4d8df2
+langcode: en
+status: true
+dependencies:
+  module:
+    - kchockey_site
+third_party_settings:
+  kchockey_site:
+    listing: /rinks
+name: Rink
+type: rink
+description: 'An ice rink in the KC metro. Shown on /rinks and, the first three by sort order, on the home page. A rink has no page of its own: its address forwards to /rinks.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

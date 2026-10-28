@@ -1,0 +1,12 @@
+{#
+  The page shell. All markup lives in components/: this template only places
+  the page_frame component around the header and footer that
+  kchockey_preprocess_page() builds and the regions. It replaces Droost
+  Theme's daisyUI navbar shell.
+#}
+{{ include('kchockey:page_frame', {
+  attributes: create_attribute(),
+  header: [site_header, page.header],
+  content: page.content,
+  footer: [page.footer, site_footer],
+}, with_context = false) }}

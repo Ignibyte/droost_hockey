@@ -1,0 +1,21 @@
+uuid: 2180567e-4454-4c2c-af99-9a7402092986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_featured
+    - node.type.event
+id: node.event.field_camp_featured
+field_name: field_camp_featured
+entity_type: node
+bundle: event
+label: Featured
+description: 'Carries the "Featured Event" band on /camps, and the home page features the next featured camp.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Featured
+  off_label: 'Not featured'
+field_type: boolean

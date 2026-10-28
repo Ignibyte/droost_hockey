@@ -1,0 +1,22 @@
+uuid: a109c113-3626-42f5-b8db-2e410ef38457
+langcode: en
+status: true
+dependencies:
+  module:
+    - kchockey_site
+active_version: f57da068f793c69b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: kchockey_site_camp_filter
+        label: 'Camp filter'
+        label_display: '0'
+        provider: kchockey_site
+    fallback_metadata:
+      slot_definitions: null
+label: 'Camp filter'
+id: block.kchockey_site_camp_filter
+provider: kchockey_site
+source: block
+source_local_id: kchockey_site_camp_filter

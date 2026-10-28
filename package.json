@@ -1,0 +1,7 @@
+{
+  "name": "kch-a",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

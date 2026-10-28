@@ -1,0 +1,114 @@
+diff --git a/.gitignore b/.gitignore
+index e01c6fe..f8673d2 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -17,3 +17,8 @@ droost/droost-workflow/
+ .stylelintcache
+ test-results/
+ playwright-report/
++
++# The design zip unpacked for the intake audit, and its serving copy (node_modules,
++# platform overrides): both rebuilt from design/KC-Hockey-Hub.zip.
++/design/KC-Hockey-Hub/
++/design/_serve/
+diff --git a/config/sync/canvas.folder.b7da864f-aac3-4cdb-8389-fa01790b10dd.yml b/config/sync/canvas.folder.b7da864f-aac3-4cdb-8389-fa01790b10dd.yml
+index 2ee0a78..5ed5bb6 100644
+--- a/config/sync/canvas.folder.b7da864f-aac3-4cdb-8389-fa01790b10dd.yml
++++ b/config/sync/canvas.folder.b7da864f-aac3-4cdb-8389-fa01790b10dd.yml
+@@ -7,6 +7,7 @@ dependencies:
+     - canvas.component.block.system_menu_block.admin
+     - canvas.component.block.system_menu_block.content
+     - canvas.component.block.system_menu_block.footer
++    - canvas.component.block.system_menu_block.legal
+     - canvas.component.block.system_menu_block.main
+     - canvas.component.block.system_menu_block.navigation-user-links
+     - canvas.component.block.system_menu_block.tools
+@@ -19,6 +20,7 @@ items:
+   - block.system_menu_block.admin
+   - block.system_menu_block.content
+   - block.system_menu_block.footer
++  - block.system_menu_block.legal
+   - block.system_menu_block.main
+   - block.system_menu_block.navigation-user-links
+   - block.system_menu_block.tools
+diff --git a/config/sync/core.extension.yml b/config/sync/core.extension.yml
+index 675ba2c..47c167a 100644
+--- a/config/sync/core.extension.yml
++++ b/config/sync/core.extension.yml
+@@ -46,6 +46,7 @@ module:
+   image: 0
+   jquery_ui: 0
+   jquery_ui_resizable: 0
++  kchockey_site: 0
+   klaro: 0
+   layout_builder: 0
+   layout_discovery: 0
+@@ -114,4 +115,5 @@ theme:
+   gin: 0
+   mercury: 0
+   droost_theme: 0
++  kchockey: 0
+ profile: minimal
+diff --git a/config/sync/metatag.metatag_defaults.front.yml b/config/sync/metatag.metatag_defaults.front.yml
+index afc36b0..4ba3699 100644
+--- a/config/sync/metatag.metatag_defaults.front.yml
++++ b/config/sync/metatag.metatag_defaults.front.yml
+@@ -24,7 +24,7 @@ tags:
+   referrer: unsafe-url
+   rights: 'Copyright © All rights reserved.'
+   shortlink: '[site:url]'
+-  title: '[canvas_page:title|node:field_seo_title|node:title] | [site:name]'
++  title: '[site:name]'
+   twitter_cards_description: '[canvas_page:description|node:field_seo_description|node:field_description]'
+   twitter_cards_image: '[canvas_page:image:entity:field_media_image:social_media_x|node:field_seo_image:entity:field_media_image:social_media_x|node:field_image:entity:field_media_image:social_media_x]'
+   twitter_cards_image_alt: '[canvas_page:image:entity:field_media_image:entity:alt|node:field_seo_image:entity:field_media_image:alt|node:field_image:entity:field_media_image:alt]'
+diff --git a/config/sync/system.site.yml b/config/sync/system.site.yml
+index 7e4221d..e5ff7c9 100644
+--- a/config/sync/system.site.yml
++++ b/config/sync/system.site.yml
+@@ -2,12 +2,12 @@ _core:
+   default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
+ langcode: en
+ uuid: 6d5f427c-a124-4866-96b9-c1b01203b747
+-name: 'Drush Site-Install'
+-mail: admin@example.com
++name: 'KC Hockey'
++mail: info@kchockey.com
+ slogan: ''
+ page:
+   403: /user/login
+-  404: ''
++  404: /page-not-found
+   front: /home
+ admin_compact_mode: false
+ weight_select_max: 100
+diff --git a/config/sync/system.theme.yml b/config/sync/system.theme.yml
+index 7e900b8..4e86d64 100644
+--- a/config/sync/system.theme.yml
++++ b/config/sync/system.theme.yml
+@@ -1,4 +1,4 @@
+ _core:
+   default_config_hash: 6lQ55NXM9ysybMQ6NzJj4dtiQ1dAkOYxdDompa-r_kk
+ admin: gin
+-default: droost_theme
++default: kchockey
+diff --git a/config/sync/user.role.content_editor.yml b/config/sync/user.role.content_editor.yml
+index 3d55a1b..87f2a36 100644
+--- a/config/sync/user.role.content_editor.yml
++++ b/config/sync/user.role.content_editor.yml
+@@ -17,6 +17,7 @@ dependencies:
+     - content_moderation
+     - dashboard
+     - filter
++    - kchockey_site
+     - media
+     - media_library_bulk_upload
+     - node
+@@ -62,6 +63,7 @@ permissions:
+   - 'edit any svg_image media'
+   - 'edit any video media'
+   - 'edit canvas_page'
++  - 'edit kchockey site details'
+   - 'revert all revisions'
+   - 'schedule publishing of nodes'
+   - 'use basic_editorial transition create_new_draft'

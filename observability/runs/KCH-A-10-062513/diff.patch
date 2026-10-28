@@ -1,0 +1,98 @@
+diff --git a/config/sync/simple_sitemap.bundle_settings.default.node.event.yml b/config/sync/simple_sitemap.bundle_settings.default.node.event.yml
+index d285374..e3f8eaa 100644
+--- a/config/sync/simple_sitemap.bundle_settings.default.node.event.yml
++++ b/config/sync/simple_sitemap.bundle_settings.default.node.event.yml
+@@ -1,4 +1,4 @@
+-index: true
++index: false
+ priority: '0.9'
+ changefreq: daily
+ include_images: false
+diff --git a/config/sync/simple_sitemap.custom_links.default.yml b/config/sync/simple_sitemap.custom_links.default.yml
+index 18a8d45..85d04f1 100644
+--- a/config/sync/simple_sitemap.custom_links.default.yml
++++ b/config/sync/simple_sitemap.custom_links.default.yml
+@@ -5,3 +5,31 @@ links:
+     path: /
+     priority: '1.0'
+     changefreq: daily
++  -
++    path: /camps
++    priority: '0.8'
++    changefreq: daily
++  -
++    path: /rinks
++    priority: '0.8'
++    changefreq: weekly
++  -
++    path: /private-lessons
++    priority: '0.8'
++    changefreq: weekly
++  -
++    path: /new-to-hockey
++    priority: '0.8'
++    changefreq: weekly
++  -
++    path: /youth-leagues
++    priority: '0.8'
++    changefreq: weekly
++  -
++    path: /adult-leagues
++    priority: '0.8'
++    changefreq: weekly
++  -
++    path: /contact
++    priority: '0.8'
++    changefreq: weekly
+diff --git a/web/themes/custom/kchockey/README.md b/web/themes/custom/kchockey/README.md
+index b95a4a4..590ac41 100644
+--- a/web/themes/custom/kchockey/README.md
++++ b/web/themes/custom/kchockey/README.md
+@@ -82,7 +82,8 @@ The form's markup is Drupal's, so `contact_section.css` (attached with the
+ component) styles it to the design: uppercase labels, square fields with a
+ gold focus ring, Name and Email side by side from 768px, and the skewed
+ "Fire Away" button (the actions row is the skewed band, the input stands
+-upright inside it, the send icon is a background image after the words).
++upright inside it, the send icon is the row's `::after` after the words, so
++the words sit on plain navy and their contrast can be measured).
+ Server-side errors show under their field (core's Inline Form Errors).
+ 
+ Once sent, the form shows `form_sent` ("Message Sent!" and "Send Another"),
+diff --git a/web/themes/custom/kchockey/components/contact_section/contact_section.css b/web/themes/custom/kchockey/components/contact_section/contact_section.css
+index 2e7dbda..dd3e56d 100644
+--- a/web/themes/custom/kchockey/components/contact_section/contact_section.css
++++ b/web/themes/custom/kchockey/components/contact_section/contact_section.css
+@@ -96,8 +96,11 @@
+ }
+ 
+ /* "Fire Away": the actions row is the skewed button, the input inside it
+- * stands upright, and the send icon sits after the words. */
++ * stands upright, and the send icon sits after the words. The icon is drawn
++ * by the row, not as the input's background, so the words sit on plain navy
++ * and their contrast can be measured. */
+ .kch-contact-form .form-actions {
++  position: relative;
+   display: flex;
+   height: 3.5rem;
+   margin: 0;
+@@ -127,7 +130,19 @@
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+-  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E") no-repeat calc(50% + 2.25rem) center;
++  background: transparent;
++}
++
++.kch-contact-form .form-actions::after {
++  position: absolute;
++  top: calc(50% - 8px);
++  left: calc(50% + 2.25rem - 8px);
++  width: 16px;
++  height: 16px;
++  content: "";
++  pointer-events: none;
++  transform: skewX(12deg);
++  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E") no-repeat center;
+ }
+ 
+ .kch-contact-form .form-actions .form-submit:focus {

@@ -1,0 +1,22 @@
+uuid: 984b380b-88f4-4784-9a5d-2e0db337b8ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - kchockey_site
+active_version: d82907ba144e0809
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: kchockey_site_contact_info
+        label: 'Contact info'
+        label_display: '0'
+        provider: kchockey_site
+    fallback_metadata:
+      slot_definitions: null
+label: 'Contact info'
+id: block.kchockey_site_contact_info
+provider: kchockey_site
+source: block
+source_local_id: kchockey_site_contact_info

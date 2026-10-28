@@ -1,0 +1,23 @@
+uuid: 819d5218-70c7-4b53-bf83-b67007549a41
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.rink
+  module:
+    - node
+id: rink_content
+label: Rink
+type: 'canonical_entities:node'
+pattern: '/rinks/[node:title]'
+selection_criteria:
+  c98febbe-950f-4c21-a1a8-6a4f5f0ca358:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      rink: rink
+selection_logic: and
+weight: -5
+relationships: {  }

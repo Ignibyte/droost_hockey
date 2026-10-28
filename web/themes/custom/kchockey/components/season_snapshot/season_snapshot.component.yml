@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Season snapshot
+description: 'A dark panel of figures, two to a row, under a gold eyebrow.'
+status: stable
+group: Leagues
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'The small gold line above the figures.'
+      examples:
+        - 'Season snapshot'
+slots:
+  figures:
+    title: Figures
+    description: 'Stat figures, in order.'

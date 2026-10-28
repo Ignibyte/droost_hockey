@@ -1,0 +1,25 @@
+uuid: 26f77c68-c9c3-43df-85a0-c9fdd95938ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coach_weight
+    - node.type.coach
+id: node.coach.field_coach_weight
+field_name: field_coach_weight
+entity_type: node
+bundle: coach
+label: 'Sort order'
+description: 'Coaches are listed from the lowest number up.'
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

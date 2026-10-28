@@ -1,0 +1,21 @@
+uuid: 85024526-ee37-4df6-ab95-4b0ce229f388
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+active_version: d54b181baa9953d9
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions: {  }
+    fallback_metadata:
+      slot_definitions:
+        content:
+          title: Content
+          description: 'The camps list: the "Camps: listing" block.'
+label: 'Camps section'
+id: sdc.kchockey.camps_section
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:camps_section'

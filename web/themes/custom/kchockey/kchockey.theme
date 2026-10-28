@@ -1,0 +1,236 @@
+<?php
+
+/**
+ * @file
+ * Builds the KC Hockey frame: the header and footer components.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * The header and footer are SDCs fed from the main, footer and legal menus
+ * and from Site details. Each carries the cacheability of what it read, so a
+ * menu or Site details edit shows on the next page view without a cache
+ * clear.
+ *
+ * @phpstan-param array<string, mixed> $variables
+ */
+function kchockey_preprocess_page(array &$variables): void {
+  $variables['site_header'] = kchockey_site_header();
+  $variables['site_footer'] = kchockey_site_footer();
+}
+
+/**
+ * The header component: the mark, the main menu and the Contact Us button.
+ *
+ * @return array<string, mixed>
+ *   A render array.
+ */
+function kchockey_site_header(): array {
+  $cacheability = new CacheableMetadata();
+  $links = [];
+  $mobile_links = [];
+  foreach (kchockey_menu_links('main', $cacheability) as $link) {
+    $links[] = kchockey_nav_link($link, 'desktop');
+    $mobile_links[] = kchockey_nav_link($link, 'mobile');
+  }
+
+  $build = [
+    '#type' => 'component',
+    '#component' => 'kchockey:site_header',
+    '#props' => [
+      'home_url' => kchockey_url(Url::fromRoute('<front>'), $cacheability),
+      'contact_url' => kchockey_url(Url::fromUserInput('/contact'), $cacheability),
+      'contact_label' => (string) t('Contact Us'),
+    ],
+    '#slots' => [
+      'links' => $links,
+      'mobile_links' => $mobile_links,
+    ],
+  ];
+  $cacheability->applyTo($build);
+  return $build;
+}
+
+/**
+ * The footer component: Site details, the Explore and legal menus.
+ *
+ * @return array<string, mixed>
+ *   A render array.
+ */
+function kchockey_site_footer(): array {
+  $cacheability = new CacheableMetadata();
+  $details = \Drupal::config('kchockey_site.settings');
+  $cacheability->addCacheableDependency($details);
+
+  $social = [];
+  foreach (['instagram', 'twitter', 'facebook'] as $network) {
+    $address = trim((string) $details->get($network));
+    if ($address !== '') {
+      $social[] = [
+        '#type' => 'component',
+        '#component' => 'kchockey:social_link',
+        '#props' => [
+          'network' => $network,
+          'url' => UrlHelper::stripDangerousProtocols($address),
+        ],
+      ];
+    }
+  }
+
+  $explore = [];
+  foreach (kchockey_menu_links('footer', $cacheability) as $link) {
+    $explore[] = kchockey_nav_link($link, 'footer');
+  }
+  $legal = [];
+  foreach (kchockey_menu_links('legal', $cacheability) as $link) {
+    $legal[] = kchockey_nav_link($link, 'legal');
+  }
+
+  $phone = trim((string) $details->get('phone'));
+
+  // The year in the copyright line turns over on 1 January.
+  $now = \Drupal::time()->getRequestTime();
+  $formatter = \Drupal::service('date.formatter');
+  $year = (int) $formatter->format($now, 'custom', 'Y');
+  $new_year = (new \DateTimeImmutable('@' . $now))
+    ->setTimezone(new \DateTimeZone(date_default_timezone_get()))
+    ->setDate($year + 1, 1, 1)
+    ->setTime(0, 0);
+  $cacheability->mergeCacheMaxAge(max(60, $new_year->getTimestamp() - $now));
+
+  $build = [
+    '#type' => 'component',
+    '#component' => 'kchockey:site_footer',
+    '#props' => [
+      'home_url' => kchockey_url(Url::fromRoute('<front>'), $cacheability),
+      'blurb' => (string) $details->get('blurb'),
+      'location_line_1' => (string) $details->get('location_line_1'),
+      'location_line_2' => (string) $details->get('location_line_2'),
+      'email' => (string) $details->get('email'),
+      'phone' => $phone,
+      'phone_href' => $phone !== '' ? kchockey_tel_href($phone) : '',
+      'copyright' => (string) t('© @year KCHockey. All rights reserved.', ['@year' => $year]),
+    ],
+    '#slots' => [
+      'social' => $social,
+      'explore' => $explore,
+      'legal' => $legal,
+    ],
+  ];
+  $cacheability->applyTo($build);
+  return $build;
+}
+
+/**
+ * The top-level links of a menu a visitor may see, in order.
+ *
+ * A link whose target the visitor may not see (an unpublished page) is left
+ * out, which is how the legal links wait for their pages to be published.
+ *
+ * @param string $menu_name
+ *   The menu.
+ * @param \Drupal\Core\Cache\CacheableMetadata $cacheability
+ *   Collects the cacheability of the menu and its links.
+ *
+ * @return list<array{title: string, url: string, active: bool}>
+ *   One entry per link.
+ */
+function kchockey_menu_links(string $menu_name, CacheableMetadata $cacheability): array {
+  $menu_tree = \Drupal::menuTree();
+  $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+  $parameters->setMaxDepth(1)->onlyEnabledLinks();
+  $tree = $menu_tree->load($menu_name, $parameters);
+  $tree = $menu_tree->transform($tree, [
+    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+  ]);
+  $build = $menu_tree->build($tree);
+  $cacheability->addCacheableDependency(CacheableMetadata::createFromRenderArray($build));
+  $cacheability->addCacheContexts(['url.path.is_front']);
+
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+  $links = [];
+  foreach ($build['#items'] ?? [] as $item) {
+    /** @var \Drupal\Core\Url $url */
+    $url = $item['url'];
+    $to_front = $url->isRouted() && $url->getRouteName() === '<front>';
+    $links[] = [
+      'title' => (string) $item['title'],
+      'url' => kchockey_url($url, $cacheability),
+      'active' => $to_front ? $is_front : !empty($item['in_active_trail']),
+    ];
+  }
+  return $links;
+}
+
+/**
+ * A nav_link component for one menu link.
+ *
+ * @param array{title: string, url: string, active: bool} $link
+ *   The link, from kchockey_menu_links().
+ * @param string $variant
+ *   Where it sits: desktop, mobile, footer or legal.
+ *
+ * @return array<string, mixed>
+ *   A render array.
+ */
+function kchockey_nav_link(array $link, string $variant): array {
+  return [
+    '#type' => 'component',
+    '#component' => 'kchockey:nav_link',
+    '#props' => [
+      'label' => $link['title'],
+      'url' => $link['url'],
+      'active' => in_array($variant, ['desktop', 'mobile'], TRUE) && $link['active'],
+      'variant' => $variant,
+    ],
+  ];
+}
+
+/**
+ * A URL as a string, its cacheability collected.
+ *
+ * @param \Drupal\Core\Url $url
+ *   The URL.
+ * @param \Drupal\Core\Cache\CacheableMetadata $cacheability
+ *   Collects the generated URL's cacheability.
+ *
+ * @return string
+ *   The URL.
+ */
+function kchockey_url(Url $url, CacheableMetadata $cacheability): string {
+  $generated = $url->toString(TRUE);
+  $cacheability->addCacheableDependency($generated);
+  return $generated->getGeneratedUrl();
+}
+
+/**
+ * A tel: link for a phone number as staff typed it.
+ *
+ * @param string $phone
+ *   The number, e.g. "(816) 555-0199".
+ *
+ * @return string
+ *   The link, e.g. "tel:+18165550199"; a ten-digit number is taken as North
+ *   American.
+ */
+function kchockey_tel_href(string $phone): string {
+  $digits = preg_replace('/\D+/', '', $phone) ?? '';
+  if (str_starts_with(trim($phone), '+')) {
+    return 'tel:+' . $digits;
+  }
+  if (strlen($digits) === 10) {
+    return 'tel:+1' . $digits;
+  }
+  if (strlen($digits) === 11 && str_starts_with($digits, '1')) {
+    return 'tel:+' . $digits;
+  }
+  return 'tel:' . $digits;
+}

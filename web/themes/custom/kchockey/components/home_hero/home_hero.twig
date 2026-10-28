@@ -1,0 +1,41 @@
+{% set button = 'inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border h-14 px-8 font-serif uppercase tracking-wider text-lg rounded-none transform -skew-x-12' %}
+<section{{ attributes.addClass('relative', 'h-[85vh]', 'min-h-[600px]', 'flex', 'items-center', 'justify-center', 'bg-foreground', 'overflow-hidden') }}>
+  {% if image.src %}
+    <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay bg-cover bg-center bg-no-repeat" style="background-image: url('{{ image.src }}')"></div>
+  {% endif %}
+  <div class="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/50 to-transparent z-0"></div>
+
+  <div class="container relative z-10 mx-auto px-4 mt-16 text-center">
+    <div class="animate-rise">
+      {% if badge %}
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-accent/30 bg-accent/10 text-accent mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <span class="text-sm font-semibold uppercase tracking-wider">{{ badge }}</span>
+        </div>
+      {% endif %}
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-[0.9] uppercase tracking-tighter drop-shadow-lg">
+        {{ heading }}{% if heading_accent %} <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-yellow-300">{{ heading_accent }}</span>{% endif %}
+      </h1>
+      {% if text %}
+        <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">{{ text }}</p>
+      {% endif %}
+      {% if (primary_label and primary_url) or (secondary_label and secondary_url) %}
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {% if primary_label and primary_url %}
+            <a href="{{ primary_url }}" class="{{ button }} bg-primary text-primary-foreground border-primary-border hover:scale-105 transition-transform">
+              <span class="skew-x-12 inline-block">{{ primary_label }}</span>
+            </a>
+          {% endif %}
+          {% if secondary_label and secondary_url %}
+            <a href="{{ secondary_url }}" class="{{ button }} shadow-xs bg-transparent text-white border-white/30 hover:bg-white/10 hover:border-white transition-all">
+              <span class="skew-x-12 inline-block">{{ secondary_label }}</span>
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {# The design's faint ice scratch along the bottom edge. #}
+  <div class="absolute bottom-0 left-0 w-full h-32 z-0 pointer-events-none" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxsaW5lIHgxPSIwIiB5MT0iMTAwIiB4Mj0iMTAwIiB5Mj0iMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiBzdHJva2Utd2lkdGg9IjIiIC8+PC9zdmc+')"></div>
+</section>

@@ -1,0 +1,23 @@
+ ...folder.2c27e259-99ff-4efd-b174-a1908c1ade1e.yml |   8 ++
+ ...folder.ba183539-1f97-4f94-b2b2-5da47f2c8d29.yml |   6 +
+ ...core.entity_form_display.node.event.default.yml |  87 +++++++++++----
+ ...core.entity_view_display.node.event.default.yml | 123 ++++-----------------
+ config/sync/field.field.node.event.body.yml        |  26 -----
+ .../field.field.node.event.field_event_date.yml    |   4 +-
+ .../field.field.node.event.field_event_image.yml   |   4 +-
+ ...field.field.node.event.field_event_location.yml |  21 ----
+ config/sync/field.storage.node.body.yml            |  21 ----
+ .../sync/field.storage.node.field_event_date.yml   |   2 +-
+ .../field.storage.node.field_event_location.yml    |  23 ----
+ config/sync/node.type.event.yml                    |  13 ++-
+ config/sync/recipe_locale.shipped.droost_cms.yml   |   8 --
+ config/sync/user.role.content_editor.yml           |  12 ++
+ scripts/kch/trees/camps.json                       |  27 +++++
+ scripts/kch/trees/home.json                        |  31 ++++++
+ web/modules/custom/kchockey_site/README.md         |  55 ++++++++-
+ .../config/schema/kchockey_site.schema.yml         |  32 ++++++
+ .../custom/kchockey_site/kchockey_site.info.yml    |   5 +-
+ .../kchockey_site/kchockey_site.services.yml       |  13 +++
+ web/themes/custom/kchockey/README.md               |  29 ++++-
+ web/themes/custom/kchockey/css/kchockey.css        |   2 +-
+ 22 files changed, 314 insertions(+), 238 deletions(-)

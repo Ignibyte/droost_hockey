@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Filter link
+description: 'One skewed choice in a filter bar: blue when it is the current one.'
+status: stable
+group: Camps
+props:
+  type: object
+  required:
+    - label
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    label:
+      type: string
+      title: Label
+      description: 'The choice''s words.'
+      examples:
+        - 'Youth Hockey'
+    url:
+      type: string
+      format: uri-reference
+      title: Link
+      description: 'The address that shows this choice.'
+      examples:
+        - '/camps'
+    active:
+      type: boolean
+      title: Current
+      description: 'Whether this is the choice being shown.'
+      examples:
+        - false

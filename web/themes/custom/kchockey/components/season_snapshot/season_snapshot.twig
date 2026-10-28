@@ -1,0 +1,9 @@
+<div{{ attributes.addClass('bg-foreground', 'text-background', 'p-7', 'md:p-8', 'relative', 'overflow-hidden') }}>
+  <div class="absolute right-[-2rem] bottom-[-3rem] w-40 h-40 rounded-full border-[16px] border-accent/20"></div>
+  {% if eyebrow %}
+    <p class="text-accent text-xs font-bold uppercase tracking-[0.2em] mb-5">{{ eyebrow }}</p>
+  {% endif %}
+  <div class="grid grid-cols-2 gap-6 relative z-10">
+    {{ figures }}
+  </div>
+</div>

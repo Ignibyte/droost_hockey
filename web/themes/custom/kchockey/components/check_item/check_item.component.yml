@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Check item
+description: 'One short line with a gold check before it, as in the featured instructor''s highlights and the checklists.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - text
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    icon:
+      type: string
+      title: Icon
+      description: 'A plain check, or a check in a circle.'
+      enum:
+        - check
+        - circle
+      meta:enum:
+        check: Check
+        circle: 'Check in a circle'
+      default: check
+      examples:
+        - check
+    text:
+      type: string
+      title: Text
+      description: 'The line.'
+      examples:
+        - 'Former ECHL player'

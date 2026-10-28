@@ -1,0 +1,108 @@
+uuid: b2aa18cb-4979-4f94-b46d-72788bd39cb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: fe7a1bb2d07fd33c
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        map_query:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Kansas City MO ice rinks'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        map_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Map of Kansas City area ice rinks'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'The KC Ice Map'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Find your sheet.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "From the Northland to Johnson County, the metro's ice is closer than you think. Use the map to get oriented, then scroll down for rink details and amenities."
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Open in Google Maps'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 16
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'https://www.google.com/maps/search/ice+rinks+in+Kansas+City/'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Rink map'
+id: sdc.kchockey.rink_map
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:rink_map'

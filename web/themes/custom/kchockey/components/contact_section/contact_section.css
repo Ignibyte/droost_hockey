@@ -1,0 +1,150 @@
+/*
+ * The form in the contact section's card, drawn as the design draws it
+ * (artifacts/kchockey/src/pages/contact.tsx): uppercase labels, square
+ * fields with a gold focus ring, Name and Email side by side from 768px, and
+ * a full-width skewed navy "Fire Away" button with a send icon.
+ *
+ * The form's markup is Drupal's (a webform), so it is styled here, by the
+ * classes Drupal gives it, rather than with utility classes.
+ */
+.kch-contact-form form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .kch-contact-form form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .kch-contact-form form > * {
+    grid-column: 1 / -1;
+  }
+  .kch-contact-form form > .form-item-name,
+  .kch-contact-form form > .form-item-email {
+    grid-column: auto;
+  }
+}
+
+/* Hidden inputs and the honeypot take no row. */
+.kch-contact-form form > input[type="hidden"] {
+  display: none;
+}
+
+.kch-contact-form .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.kch-contact-form label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--muted-foreground));
+}
+
+/* The design marks nothing as required: every field it asks for is. */
+.kch-contact-form label.form-required::after {
+  content: none;
+}
+
+.kch-contact-form input[type="text"],
+.kch-contact-form input[type="email"],
+.kch-contact-form select,
+.kch-contact-form textarea {
+  width: 100%;
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: hsl(var(--foreground));
+  transition: box-shadow 150ms, border-color 150ms;
+}
+
+.kch-contact-form input::placeholder,
+.kch-contact-form textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.kch-contact-form input:focus,
+.kch-contact-form select:focus,
+.kch-contact-form textarea:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px hsl(var(--accent));
+}
+
+.kch-contact-form textarea {
+  resize: none;
+}
+
+/* A field the server refused (Inline Form Errors): its message under it. */
+.kch-contact-form .error {
+  border-color: hsl(var(--destructive));
+}
+
+.kch-contact-form .form-item--error-message {
+  font-size: 0.875rem;
+  color: hsl(var(--destructive));
+}
+
+/* "Fire Away": the actions row is the skewed button, the input inside it
+ * stands upright, and the send icon sits after the words. The icon is drawn
+ * by the row, not as the input's background, so the words sit on plain navy
+ * and their contrast can be measured. */
+.kch-contact-form .form-actions {
+  position: relative;
+  display: flex;
+  height: 3.5rem;
+  margin: 0;
+  background-color: hsl(var(--primary));
+  transform: skewX(-12deg);
+  transition: background-color 150ms;
+}
+
+.kch-contact-form .form-actions:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.kch-contact-form .form-actions:focus-within {
+  box-shadow: 0 0 0 2px hsl(var(--background)), 0 0 0 4px hsl(var(--ring));
+}
+
+.kch-contact-form .form-actions .form-submit {
+  flex: 1;
+  margin: 0;
+  border: 0;
+  padding: 0 1.5rem 0 0;
+  transform: skewX(12deg);
+  cursor: pointer;
+  color: hsl(var(--primary-foreground));
+  font-family: var(--app-font-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: transparent;
+}
+
+.kch-contact-form .form-actions::after {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% + 2.25rem - 8px);
+  width: 16px;
+  height: 16px;
+  content: "";
+  pointer-events: none;
+  transform: skewX(12deg);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4Z'/%3E%3Cpath d='M22 2 11 13'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.kch-contact-form .form-actions .form-submit:focus {
+  outline: none;
+}

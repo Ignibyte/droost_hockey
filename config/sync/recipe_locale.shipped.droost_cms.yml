@@ -1,0 +1,15 @@
+recipe: 'Droost CMS'
+config:
+  -
+    name: field.field.node.event.field_event_date
+    data:
+      label: 'Event date'
+  -
+    name: field.field.node.event.field_event_image
+    data:
+      label: 'Event image'
+  -
+    name: node.type.event
+    data:
+      name: Event
+      description: 'A dated event with a location. Created for the Droost Phase 2 proof gate.'

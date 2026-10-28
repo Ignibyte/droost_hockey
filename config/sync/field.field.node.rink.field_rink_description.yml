@@ -1,0 +1,19 @@
+uuid: 9c6cd6ae-5281-4a2c-861d-9fbc30006c10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rink_description
+    - node.type.rink
+id: node.rink.field_rink_description
+field_name: field_rink_description
+entity_type: node
+bundle: rink
+label: Description
+description: "A sentence or two for the rink's card."
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

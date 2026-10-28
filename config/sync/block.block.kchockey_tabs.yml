@@ -1,0 +1,22 @@
+uuid: 5f06c3c5-a010-4da3-8c49-915e167dbc6d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - kchockey
+_core:
+  default_config_hash: B8hZEctzrZ4_85e7Ry9CZypJCy4qwRvP3cRy0-Mg8_Y
+id: kchockey_tabs
+theme: kchockey
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: tabs
+  label_display: '0'
+  provider: system
+  primary: true
+  secondary: true
+visibility: {  }

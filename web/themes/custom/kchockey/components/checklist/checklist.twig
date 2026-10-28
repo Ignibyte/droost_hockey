@@ -1,0 +1,7 @@
+{% set classes = layout == 'row'
+  ? ['flex', 'flex-wrap', 'gap-x-6', 'gap-y-3', 'text-sm', 'text-foreground']
+  : ['space-y-3', 'text-sm', 'text-muted-foreground', '[&>*]:gap-3']
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ items }}
+</div>

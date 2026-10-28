@@ -1,0 +1,7 @@
+ config/sync/canvas.folder.3be058a6-70bd-4bad-bada-e5bb180b071f.yml | 2 ++
+ config/sync/core.extension.yml                                     | 2 ++
+ config/sync/metatag.metatag_defaults.front.yml                     | 2 +-
+ config/sync/system.site.yml                                        | 6 +++---
+ config/sync/system.theme.yml                                       | 2 +-
+ config/sync/user.role.content_editor.yml                           | 2 ++
+ 6 files changed, 11 insertions(+), 5 deletions(-)

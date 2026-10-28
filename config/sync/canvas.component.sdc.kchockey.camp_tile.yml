@@ -1,0 +1,98 @@
+uuid: 3318e96d-bf25-479a-a98a-fb1cce9b1f2f
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: 16a825492ac2a4c1
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Goalie Clinic'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        location:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Central Park Ice Arena'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        ages:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 10–18
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        level:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Intermediate/Advanced
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        price:
+          required: false
+          field_type: integer
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: number
+          default_value:
+            -
+              value: 95
+          expression: ℹ︎integer␟value
+          derived_schema_metadata: {  }
+        details_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /camps
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        date:
+          title: Date
+          description: 'The camp''s dates as the design writes them ("Aug 10").'
+label: 'Camp tile'
+id: sdc.kchockey.camp_tile
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:camp_tile'

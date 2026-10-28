@@ -1,0 +1,30 @@
+<div{{ attributes }}>
+  <h2 class="text-2xl font-serif font-bold uppercase tracking-tight text-foreground mb-6">{{ heading }}</h2>
+  <div class="space-y-6">
+    {% if email %}
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 shrink-0 bg-accent/10 flex items-center justify-center text-accent border border-accent/20">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+        <div>
+          <p class="font-bold uppercase tracking-wider text-sm text-muted-foreground mb-1">{{ 'Email'|t }}</p>
+          <a href="mailto:{{ email }}" class="text-lg font-medium text-foreground hover:text-accent transition-colors">{{ email }}</a>
+        </div>
+      </div>
+    {% endif %}
+    {% if area %}
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 shrink-0 bg-accent/10 flex items-center justify-center text-accent border border-accent/20">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <p class="font-bold uppercase tracking-wider text-sm text-muted-foreground mb-1">{{ 'Location'|t }}</p>
+          <p class="text-lg font-medium text-foreground">{{ area }}</p>
+          {% if note %}
+            <p class="text-sm text-muted-foreground mt-1">{{ note }}</p>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

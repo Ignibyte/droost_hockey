@@ -1,0 +1,21 @@
+Workflow run run-68867d04c61b
+  started 2026-10-21T04:14:09+00:00 · effort low · mode agentic · lead autonomous · browser none · tasks claude-code
+  ✓ plan: passed
+  ✓ code: passed
+      phpcs          passed
+      phpstan        passed
+      eslint         off — by preset low
+      stylelint      off — by preset low
+      prettier       off — by preset low
+      phpunit        off — by preset low
+      mutation       off — by preset low
+      coverage       off — by preset low
+      house_rules    reported — report — house_rules — 1 break(s) of the house rules (HR1): web/themes/custom/kchockey/templates/page.html.twig (HR1)
+      custom:component_lint passed
+  ✓ test: passed
+      playwright     passed — [the run `droost workflow:specs` recorded at 2026-10-21T05:24:11+00:00, on this tree: not run again]
+      parity         passed
+      house_rules    reported — report — house_rules — 1 break(s) of the house rules (HR1): web/themes/custom/kchockey/templates/page.html.twig (HR1)
+  ✓ complete: passed
+      wiki_fresh     off — by preset low
+  criteria: 16 verified by a test, 0 manual, 0 unverified

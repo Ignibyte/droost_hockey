@@ -1,0 +1,35 @@
+uuid: 84adc726-71c7-4271-beac-4840865ddaf4
+langcode: en
+status: false
+dependencies:
+  module:
+    - options
+  theme:
+    - kchockey
+active_version: 1c305f4f77b12f7a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        layout:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: listing
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        items:
+          title: Camps
+          description: 'The camp cards or tiles.'
+label: 'Camp grid'
+id: sdc.kchockey.camp_grid
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:camp_grid'

@@ -1,0 +1,5 @@
+ ..._sitemap.bundle_settings.default.node.event.yml |  2 +-
+ .../sync/simple_sitemap.custom_links.default.yml   | 28 ++++++++++++++++++++++
+ web/themes/custom/kchockey/README.md               |  3 ++-
+ .../components/contact_section/contact_section.css | 19 +++++++++++++--
+ 4 files changed, 48 insertions(+), 4 deletions(-)

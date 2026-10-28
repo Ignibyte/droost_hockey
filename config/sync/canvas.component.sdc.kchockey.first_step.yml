@@ -1,0 +1,56 @@
+uuid: dbda26e7-50e4-4e5c-a81f-3e7e3d76ba60
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - kchockey
+active_version: 3bfe45363befa2fe
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        icon:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: ice
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Find the ice'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Start with a rink that offers learn-to-skate or beginner hockey programs.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'First step'
+id: sdc.kchockey.first_step
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:first_step'

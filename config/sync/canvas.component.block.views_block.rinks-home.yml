@@ -1,0 +1,26 @@
+uuid: 5492b7c3-6191-4493-8292-58373908cddb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.rinks
+  module:
+    - views
+active_version: e5b305c72978b324
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:rinks-home'
+        label: 'Rinks: home page'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Rinks: home page'
+id: block.views_block.rinks-home
+provider: views
+source: block
+source_local_id: 'views_block:rinks-home'

@@ -1,0 +1,132 @@
+uuid: c5fe2368-a86e-49d3-9660-789dc2371e60
+langcode: en
+status: false
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: a97037b89e8e7ad0
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        home_url:
+          required: true
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        blurb:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "Kansas City's premier hockey resource."
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        location_line_1:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Kansas City, MO'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        location_line_2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'The Hockey Capital of the Midwest'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        email:
+          required: false
+          field_type: email
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: email_default
+          default_value:
+            -
+              value: info@kchockey.com
+          expression: ℹ︎email␟value
+          derived_schema_metadata: {  }
+        phone:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '(816) 555-0100'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        phone_href:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: 'tel:+18165550100'
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        copyright:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '© 2026 KCHockey. All rights reserved.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions:
+        social:
+          title: 'Social links'
+          description: 'One social_link per address that is set.'
+        explore:
+          title: 'Explore links'
+          description: "The footer menu's links (nav_link, footer), one per item."
+        legal:
+          title: 'Legal links'
+          description: "The legal menu's links (nav_link, legal)."
+label: 'Site footer'
+id: sdc.kchockey.site_footer
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:site_footer'

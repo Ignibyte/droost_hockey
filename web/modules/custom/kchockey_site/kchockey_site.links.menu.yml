@@ -1,0 +1,6 @@
+kchockey_site.settings:
+  title: 'Site details'
+  description: 'The blurb, email, phone, location and social addresses the footer and contact page show.'
+  route_name: kchockey_site.settings
+  parent: system.admin_config_system
+  weight: -5

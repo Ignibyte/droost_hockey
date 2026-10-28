@@ -1,0 +1,21 @@
+uuid: 22b20df6-57cc-49c3-b71f-a4d9a414965e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rink_phone
+    - node.type.rink
+  module:
+    - telephone
+id: node.rink.field_rink_phone
+field_name: field_rink_phone
+entity_type: node
+bundle: rink
+label: Phone
+description: 'Shown on the card as a call link once entered.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

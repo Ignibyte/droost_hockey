@@ -1,0 +1,26 @@
+uuid: 72fc4d2b-9fdc-4a1e-8b5f-d9d70bd2288e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.camps
+  module:
+    - views
+active_version: e4b2bfdfa563983a
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:camps-listing'
+        label: 'Camps: listing'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Camps: listing'
+id: block.views_block.camps-listing
+provider: views
+source: block
+source_local_id: 'views_block:camps-listing'

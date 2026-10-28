@@ -1,0 +1,43 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Rinks band
+description: 'The home page''s navy "Find Your Ice" section: a heading and text, a few rinks, and a gold button to the directory.'
+status: stable
+group: Sections
+props:
+  type: object
+  required:
+    - heading
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    heading:
+      type: string
+      title: Heading
+      description: 'The section''s heading.'
+      examples:
+        - 'Find Your Ice'
+    text:
+      type: string
+      title: Text
+      description: 'A sentence or two under the heading.'
+      examples:
+        - 'Whether you''re looking for drop-in hockey, a learn-to-skate program for the kids, or late-night stick and puck. We''ve mapped out every sheet of ice in the KC metro.'
+    link_label:
+      type: string
+      title: Button label
+      description: 'The gold button under the rinks.'
+      examples:
+        - 'Directory of All KC Rinks'
+    link_url:
+      type: string
+      format: uri-reference
+      title: Button link
+      description: 'Where the button goes.'
+      examples:
+        - '/rinks'
+slots:
+  rinks:
+    title: Rinks
+    description: 'The rinks shown: the home page''s rinks list.'

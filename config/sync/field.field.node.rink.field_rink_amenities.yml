@@ -1,0 +1,19 @@
+uuid: a194b87e-1188-4097-b991-999dbc1b97ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rink_amenities
+    - node.type.rink
+id: node.rink.field_rink_amenities
+field_name: field_rink_amenities
+entity_type: node
+bundle: rink
+label: Amenities
+description: 'One per line, in order. The home page shows the first three.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

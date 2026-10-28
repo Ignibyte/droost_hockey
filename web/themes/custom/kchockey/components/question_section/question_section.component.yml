@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Question section
+description: 'Two columns: a question intro beside an FAQ accordion, one above the other on narrow screens.'
+status: stable
+group: Questions
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    intro_width:
+      type: string
+      title: Intro width
+      description: 'How much of the row the intro takes beside the questions.'
+      enum:
+        - standard
+        - narrow
+      meta:enum:
+        standard: 'Standard (two fifths)'
+        narrow: 'Narrow (three eighths)'
+      default: standard
+      examples:
+        - standard
+slots:
+  intro:
+    title: Intro
+    description: 'A question intro.'
+  questions:
+    title: Questions
+    description: 'An FAQ accordion.'

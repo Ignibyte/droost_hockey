@@ -1,0 +1,79 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Instructor spotlight
+description: 'The featured instructor: a gold panel ("Featured Instructor", a kicker and a tagline) beside the coach''s specialty, name, featured rate, a bio, highlights and a button. Its words are written for the spotlight and edited here.'
+status: stable
+group: Coaches
+props:
+  type: object
+  required:
+    - name
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper HTML attributes.
+    eyebrow:
+      type: string
+      title: Eyebrow
+      description: 'The gold panel''s label, beside the award icon.'
+      examples:
+        - 'Featured Instructor'
+    kicker:
+      type: string
+      title: Kicker
+      description: 'The small line above the tagline.'
+      examples:
+        - 'This month at KCHockey'
+    tagline:
+      type: string
+      title: Tagline
+      description: 'The gold panel''s big words; the line breaks after the first word.'
+      examples:
+        - 'Level Up.'
+    specialty:
+      type: string
+      title: Specialty
+      description: 'The gold line above the name.'
+      examples:
+        - 'Power Skating & Edge Work'
+    name:
+      type: string
+      title: Name
+      description: 'The coach''s name.'
+      examples:
+        - 'Coach Mike Donovan'
+    rate_label:
+      type: string
+      title: Rate label
+      description: 'The small line above the rate.'
+      examples:
+        - 'Featured rate'
+    rate:
+      type: integer
+      title: Rate
+      description: 'In whole dollars per hour; nothing shows while it is empty.'
+      examples:
+        - 75
+    bio:
+      type: string
+      title: Bio
+      description: 'A few sentences about the coach.'
+      examples:
+        - 'Former ECHL player with 15 years behind the bench, Mike helps players build speed, balance, and confidence one stride at a time. His sessions are a great fit for players ready to make their skating the foundation of their game.'
+    button_label:
+      type: string
+      title: Button label
+      description: 'The gold button''s words; the button shows when it and the link are set.'
+      examples:
+        - 'Book a session'
+    button_url:
+      type: string
+      format: uri-reference
+      title: Button link
+      description: 'Where the button goes.'
+      examples:
+        - '/contact'
+slots:
+  highlights:
+    title: Highlights
+    description: 'Short lines, two to a row, as check items.'

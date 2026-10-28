@@ -1,0 +1,147 @@
+{
+  "items": [
+    {
+      "uuid": "9abbeb6e-2ab4-4294-98c5-c10918a96e04",
+      "component_id": "sdc.kchockey.page_intro",
+      "inputs": {
+        "variant": "guide_diagonal",
+        "eyebrow": "Your week needs a skate",
+        "heading": "Adult",
+        "heading_accent": "Leagues",
+        "text": "Find your next league, join a team, or lace up as a free agent. Kansas City adult hockey is fast, social, and ready for your next shift."
+      }
+    },
+    {
+      "uuid": "f3facb46-fa8f-46e9-b6cc-cc4240bb051c",
+      "component_id": "sdc.kchockey.format_section",
+      "inputs": {
+        "eyebrow": "Pick your pace",
+        "heading": "A league for",
+        "heading_line_2": "every level.",
+        "note": "From first-time adult players to former college skaters, the right division makes every game more fun."
+      }
+    },
+    {
+      "uuid": "ed84b9e4-2541-4d9b-a37b-a0fa9b3b0eec",
+      "component_id": "sdc.kchockey.format_card",
+      "parent_uuid": "f3facb46-fa8f-46e9-b6cc-cc4240bb051c",
+      "slot": "formats",
+      "inputs": {
+        "icon": "users",
+        "level": "All skill levels",
+        "title": "Recreational",
+        "description": "Low-pressure games, new friends, and a reason to leave work on time. A great place to get back on the ice or learn the adult game."
+      }
+    },
+    {
+      "uuid": "6c5c560d-7feb-47e4-9bcf-68c8acc68221",
+      "component_id": "sdc.kchockey.format_card",
+      "parent_uuid": "f3facb46-fa8f-46e9-b6cc-cc4240bb051c",
+      "slot": "formats",
+      "inputs": {
+        "icon": "clock",
+        "level": "C / B level",
+        "title": "Intermediate",
+        "description": "Competitive enough to matter and friendly enough to grab a drink afterward. Balanced teams keep every shift moving."
+      }
+    },
+    {
+      "uuid": "73ec82b0-a540-4365-bf2b-a983ebe9fcff",
+      "component_id": "sdc.kchockey.format_card",
+      "parent_uuid": "f3facb46-fa8f-46e9-b6cc-cc4240bb051c",
+      "slot": "formats",
+      "inputs": {
+        "icon": "check_circle",
+        "level": "A / AA level",
+        "title": "Advanced",
+        "description": "Fast, structured hockey for players who want a serious skate and a full 60 minutes of pace."
+      }
+    },
+    {
+      "uuid": "49f24ae6-3e4e-4358-b9bc-26ad91fedc78",
+      "component_id": "sdc.kchockey.event_spotlight",
+      "inputs": {
+        "eyebrow": "Fall season spotlight",
+        "heading": "Adult Hockey League Showcase",
+        "text": "Want to see the adult hockey scene before you commit? The showcase at Twin Rinks Ice Pavilion is a free chance to watch local teams, meet players, and find your next league.",
+        "date": "Sept 14",
+        "place": "Twin Rinks Ice Pavilion",
+        "audience": "18+ · All levels",
+        "link_label": "View event details",
+        "link_url": "/camps"
+      }
+    },
+    {
+      "uuid": "8a324671-791b-43bb-9fa4-c9b905ed4856",
+      "component_id": "sdc.kchockey.question_section",
+      "inputs": {
+        "intro_width": "narrow"
+      }
+    },
+    {
+      "uuid": "9f323822-f2c2-40df-8b6b-9989767c0089",
+      "component_id": "sdc.kchockey.question_intro",
+      "parent_uuid": "8a324671-791b-43bb-9fa4-c9b905ed4856",
+      "slot": "intro",
+      "inputs": {
+        "eyebrow": "Before your first game",
+        "eyebrow_icon": "users",
+        "heading": "New to the",
+        "heading_size": "medium",
+        "heading_line_2": "adult game?",
+        "text": "You do not need a perfect beer-league résumé. Start with the basics, find a comfortable division, and let the first shift take care of the nerves.",
+        "button_label": "Start with the basics",
+        "button_url": "/new-to-hockey",
+        "second_button_label": "Browse KC rinks",
+        "second_button_url": "/rinks"
+      }
+    },
+    {
+      "uuid": "ad09600d-b757-4a03-9125-e82dc41cf1ae",
+      "component_id": "sdc.kchockey.faq_accordion",
+      "parent_uuid": "8a324671-791b-43bb-9fa4-c9b905ed4856",
+      "slot": "questions",
+      "inputs": {}
+    },
+    {
+      "uuid": "ac6f6299-24b9-4235-87f0-34cc6c22210e",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "ad09600d-b757-4a03-9125-e82dc41cf1ae",
+      "slot": "items",
+      "inputs": {
+        "question": "Do I need a full team to register?",
+        "answer": "Not always. Many KC adult leagues accept individual free agents and place them on a team, while other sessions are built for established teams. Contact the rink before registration closes to ask about open spots."
+      }
+    },
+    {
+      "uuid": "a6bd2680-a19c-4631-99e5-e537317179e4",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "ad09600d-b757-4a03-9125-e82dc41cf1ae",
+      "slot": "items",
+      "inputs": {
+        "question": "What equipment do adult players need?",
+        "answer": "Players should bring a properly fitted helmet with a full cage or shield, skates, gloves, shoulder and elbow pads, hockey pants, shin guards, socks, and a stick. Your league may have additional safety requirements."
+      }
+    },
+    {
+      "uuid": "589b8235-52b1-451f-9253-deaf6c84208a",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "ad09600d-b757-4a03-9125-e82dc41cf1ae",
+      "slot": "items",
+      "inputs": {
+        "question": "What level should I sign up for?",
+        "answer": "Be honest about your skating, pace, and playing experience. Recreational leagues are welcoming to newer adults, while intermediate and advanced divisions are better for players with established game experience. A league director can help place you."
+      }
+    },
+    {
+      "uuid": "5b35999d-e42e-4595-9f55-1426fbefeabf",
+      "component_id": "sdc.kchockey.faq_item",
+      "parent_uuid": "ad09600d-b757-4a03-9125-e82dc41cf1ae",
+      "slot": "items",
+      "inputs": {
+        "question": "Where are adult leagues played?",
+        "answer": "Adult league games run at rinks across the metro, including facilities in Overland Park, Independence, Liberty, Olathe, and Blue Springs. Use the rink directory to see what is closest to home or work."
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<section{{ attributes.addClass('py-20', 'bg-foreground', 'text-background', 'relative', 'overflow-hidden') }}>
+  <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl md:text-5xl font-serif font-bold uppercase tracking-tight text-white mb-4">{{ heading }}</h2>
+      {% if text %}
+        <p class="text-white/70 text-lg">{{ text }}</p>
+      {% endif %}
+    </div>
+
+    {{ rinks }}
+
+    {% if link_label and link_url %}
+      <div class="text-center">
+        <a href="{{ link_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-primary-border min-h-10 px-8 bg-accent text-accent-foreground hover:bg-accent/90 font-serif uppercase tracking-wider rounded-none transform -skew-x-12">
+          <span class="skew-x-12 inline-block">{{ link_label }}</span>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>

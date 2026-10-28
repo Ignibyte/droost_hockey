@@ -1,0 +1,6 @@
+<div{{ attributes.addClass('container', 'mx-auto', 'px-4', 'pb-24') }}>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 {{ intro_width == 'narrow' ? 'lg:grid-cols-[0.75fr_1.25fr]' : 'lg:grid-cols-[0.8fr_1.2fr]' }} gap-12 items-start">
+    <div>{{ intro }}</div>
+    <div>{{ questions }}</div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div{{ attributes.addClass('container', 'mx-auto', 'px-4', 'pb-24') }}>
+  <div class="bg-foreground text-background p-8 md:p-12 relative overflow-hidden">
+    <div class="absolute right-0 top-0 w-1/2 h-full bg-accent/20 transform skew-x-12 translate-x-20"></div>
+
+    <div class="relative z-10 max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold uppercase tracking-tight text-white mb-4">{{ heading }}</h2>
+      {% if text %}
+        <p class="text-white/80 text-lg mb-8 max-w-xl">{{ text }}</p>
+      {% endif %}
+      {% if button_label and button_url %}
+        <a href="{{ button_url }}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring border border-primary-border min-h-10 px-8 bg-accent text-accent-foreground hover:bg-accent/90 font-serif uppercase tracking-wider rounded-none transform -skew-x-12">
+          <span class="skew-x-12 inline-flex items-center gap-2">{{ button_label }}
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

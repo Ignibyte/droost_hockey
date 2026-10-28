@@ -1,0 +1,54 @@
+uuid: c7c24398-680c-42c3-89ac-e757f6007897
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droost_theme
+active_version: 64c8eebd974e4b36
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Doors Open'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        meta:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '2014'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'First batch: 7 barrels of Amber Ottomatic.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Timeline item'
+id: sdc.droost_theme.timeline_item
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:timeline_item'

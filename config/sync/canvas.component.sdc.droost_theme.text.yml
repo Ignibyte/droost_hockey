@@ -1,0 +1,56 @@
+uuid: 87d57a62-3ff1-400a-8ced-a038cd588d26
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - droost_theme
+active_version: 006e1214930b346b
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Straight talk and fair prices, six days a week.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        size:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: base
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+        align:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: left
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Text
+id: sdc.droost_theme.text
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:text'

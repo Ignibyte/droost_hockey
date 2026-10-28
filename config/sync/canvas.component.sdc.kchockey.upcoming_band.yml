@@ -1,0 +1,63 @@
+uuid: 9ce54f68-1871-4c28-a62c-347a52ebf988
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+  theme:
+    - kchockey
+active_version: 1ee3da1e907f5905
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Upcoming Action'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'View All Events'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        link_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /camps
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        camps:
+          title: Camps
+          description: 'The camps shown: the "Camps: home page upcoming" block.'
+label: 'Upcoming camps band'
+id: sdc.kchockey.upcoming_band
+provider: kchockey
+source: sdc
+source_local_id: 'kchockey:upcoming_band'

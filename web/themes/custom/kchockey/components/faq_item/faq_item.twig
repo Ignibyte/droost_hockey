@@ -1,0 +1,14 @@
+{#
+  A native disclosure: the summary is keyboard-operable and exposes its open
+  state to assistive technology, and it opens with no JavaScript. The
+  accordion around it closes the others when one opens.
+#}
+<details{{ attributes.addClass('group', 'border-b', 'border-border') }} data-faq-item>
+  <summary class="flex flex-1 items-center justify-between py-6 text-base md:text-lg font-serif font-bold uppercase tracking-tight text-left transition-all hover:text-primary cursor-pointer list-none [&::-webkit-details-marker]:hidden focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+    {{ question }}
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+  </summary>
+  {% if answer %}
+    <div class="text-sm text-muted-foreground leading-relaxed pb-6 pr-6">{{ answer }}</div>
+  {% endif %}
+</details>

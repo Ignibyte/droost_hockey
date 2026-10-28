@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "uuid": "1e450f37-936b-485f-9ae6-1a7b580730c1",
+      "component_id": "sdc.kchockey.not_found",
+      "inputs": {
+        "eyebrow": "Error 404",
+        "heading": "Off the",
+        "heading_accent": "Ice",
+        "text": "The page you were looking for isn't here. It may have moved, or the address may be mistyped.",
+        "link_label": "Back to Home",
+        "link_url": "/"
+      }
+    }
+  ]
+}

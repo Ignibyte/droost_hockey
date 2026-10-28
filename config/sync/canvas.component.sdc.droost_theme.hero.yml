@@ -1,0 +1,76 @@
+uuid: b1217f21-16d7-4917-aef7-e417679ab7e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - options
+  theme:
+    - droost_theme
+active_version: 533dc09c7bf17982
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Find your next ride'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Straight-talking deals from folks who love cars.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        image_url:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /sites/default/files/hero.jpg
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        min_height:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: half
+          expression: ℹ︎list_string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions:
+        actions:
+          title: Actions
+          description: 'Call-to-action buttons rendered under the subtitle.'
+label: Hero
+id: sdc.droost_theme.hero
+provider: droost_theme
+source: sdc
+source_local_id: 'droost_theme:hero'
